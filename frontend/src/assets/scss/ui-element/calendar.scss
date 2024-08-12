@@ -1,0 +1,106 @@
+.ant-picker-calendar {
+  & .ant-picker-panel {
+    @apply dark:bg-[#141414];
+  }
+
+  &-full {
+    & .ant-picker-panel {
+      @apply dark:bg-transparent;
+    }
+
+    & .ant-picker-cell-selected,
+    & .ant-picker-cell-selected:hover {
+      & .ant-picker-calendar-date,
+      & .ant-picker-calendar-date-today {
+        @apply dark:bg-[#141414];
+      }
+    }
+
+    & .ant-picker-calendar-date {
+      @apply border-t-2 dark:border-[#303030];
+    }
+
+    & .ant-picker-calendar-date-content {
+      @apply dark:text-white/60;
+    }
+
+    & .ant-picker-calendar-date-today {
+      & .ant-picker-calendar-date-value {
+        @apply dark:text-white/80;
+      }
+    }
+  }
+}
+
+.ant-picker-cell-in-view {
+  @apply dark:text-white/80;
+  &.ant-picker-cell-in-range::before {
+    @apply dark:bg-[#111b26];
+  }
+
+  &.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single)::before,
+  &.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single)::before {
+    @apply dark:bg-[#111b26];
+  }
+
+  &.ant-picker-cell-range-end .ant-picker-cell-inner,
+  &.ant-picker-cell-range-start .ant-picker-cell-inner,
+  &.ant-picker-cell-selected .ant-picker-cell-inner {
+    @apply dark:text-white;
+  }
+}
+
+.ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+.ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end) .ant-picker-cell-inner {
+  @apply dark:bg-[#111b26];
+}
+
+.ant-select:not(.ant-select-customize-input) {
+  & .ant-select-selector {
+    @apply dark:border-t-1 border-[#434343];
+  }
+
+  & .ant-select-arrow {
+    @apply dark:text-white/30;
+  }
+}
+
+.ant-picker-content {
+  & th {
+    @apply dark:text-white/80;
+  }
+}
+
+.ant-picker-cell {
+  & .ant-picker-cell-inner:hover,
+  & {
+    @apply dark:text-white/30;
+  }
+}
+
+.ant-picker-calendar {
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    @apply border-normal dark:border-white/10 dark:bg-white/10 ;
+  }
+  .ant-select{
+    @apply dark:text-white/[.87]
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+    @apply dark:bg-white/10
+  }
+  .ant-radio-button-wrapper:first-child{
+    @apply dark:border-white/10;
+  }
+  .ant-radio-button-wrapper{
+    @apply dark:bg-white/10 dark:border-white/10 dark:text-white/[.87];
+  }
+  .ant-radio-button-wrapper:first-child{
+    @apply dark:border-white/10;
+  }
+  .ant-radio-button-wrapper:not(:first-child)::before{
+    @apply dark:bg-white/10;
+  }
+  .ant-badge-status-text{
+    @apply dark:text-white/[.87];
+  }
+}

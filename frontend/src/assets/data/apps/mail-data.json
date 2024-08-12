@@ -1,0 +1,188 @@
+[
+    {
+        "name": "Hasan Mahmud",
+        "avatar": "assets/images/sellers/1.png",
+        "title": "Email subject lorem ipsum",
+        "date": "12:06PM",
+        "to": "name@example.com",
+        "respect":"Hi Hasan",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu",
+        "checked" : false,
+        "attachShow":"hidden",
+        "inboxActive":"unread",
+        "star":"active",
+        "attachment": []
+    },
+    {
+        "name": "Mohammad Delower Hossain",
+        "avatar": "assets/images/sellers/2.png",
+        "title": "What are you doing?",
+        "date": "5:34AM",
+        "to": "name@example.com",
+        "respect":"Hi Delower",
+        "content": "Good luck. You're gonna need it. General Madine. We have stolen a small Imperial shuttle. Disguised as a cargo ship, and using a secret Imperial code, a strike team will land on the moon and deactivate the shield generator. Sounds dangerous. I wonder who they found to pull that off. General Solo, is your strike team assembled? Uh, my team's ready. I don't have a command crew for the shuttle. Rawwwrr! Well, it's gonna be rough, pal. I didn't want to speak for you. That's one. Uh, General... count me in. I'm with you, too! What is it? Ask me again sometime. Luke. Hi, Han... Chewie. Exciting is hardly the word I would use.",
+        "checked" : false,
+        "attachShow":"block",
+        "inboxActive":"unread",
+        "star":"inactive",
+        "attachment": [
+            {
+                "file": "men.png",
+                "size": "256.5 KB",
+                "type": "image"
+            },
+            {
+                "file": "Attached.pdf",
+                "size": "256.5 KB",
+                "type": "pdf"
+            },
+            {
+                "file": "Attached.doc",
+                "size": "256.5 KB",
+                "type": "doc"
+            },
+            {
+                "file": "Attached.zip",
+                "size": "256.5 KB",
+                "type": "zip"
+            }
+        ]
+    },
+    {
+        "name": "Mohammad Atik",
+        "avatar": "assets/images/sellers/3.png",
+        "title": "Leave that to me",
+        "date": "Feb 6",
+        "to": "name@example.com",
+        "respect":"Hi Atik",
+        "content": "Run! Yes. A Jedi's strength flows from the Force. But beware of the dark side. Anger...fear...aggression. The dark side of the Force are they. Easily they flow, quick to join you in a fight. If once you start down the dark path, forever will it dominate your destiny, consume you it will, as it did Obi-Wan's apprentice. Vader. Is the dark side stronger? No...no...no. Quicker, easier, more seductive. But how am I to know the good side from the bad? You will know. When you are calm, at peace. Passive. A Jedi uses the Force for knowledge and defense, never for attack. But tell me why I can't... No, no, there is no why. Nothing more will I teach you today. Clear your mind of questions. Mmm. Mmmmmm.",
+        "checked" : false,
+        "attachShow":"hidden",
+        "inboxActive":"read",
+        "star":"active",
+        "attachment": []
+    },
+    {
+        "name": "Alice Freeman",
+        "avatar": "assets/images/sellers/4.png",
+        "title": "My Brother",
+        "date": "Feb 4",
+        "to": "name@example.com",
+        "respect":"Hi Alice",
+        "content": "Fredo, you're my older brother, and I love you. But don't ever take sides with anyone against the Family again. Ever. The hotel, the casino. The Corleone Family wants to buy you out. That's my family Kay, that's not me. I don't feel I have to wipe everybody out, Tom. Just my enemies.</p><p>Te salut, Don Corleone. I'm gonna make him an offer he can't refuse. Why did you go to the police? Why didn't you come to me first? I am sorry. What happened to your father was business. I have much respect for your father. But your father, his thinking is old-fashioned. You must understand why I had to do that. Now let's work through where we go from here. I don't trust a doctor who can hardly speak English.</p><p>If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. Leave the gun. Take the cannoli. It's a Sicilian message. It means Luca Brasi sleeps with the fishes. What's the matter with you? Is this what you've become, a Hollywood finocchio who cries like a woman? Oh, what do I do? What do I do? What is that nonsense? Ridiculous!</p><>I know it was you, Fredo. You broke my heart. You broke my heart! I don't like violence, Tom. I'm a businessman; blood is a big expense. You talk about vengeance. Is vengeance going to bring your son back to you? Or my boy to me? Don't ever give an order like that again. Not while I'm alive.",
+        "checked" : false,
+        "attachShow":"hidden",
+        "inboxActive":"read",
+        "star":"inactive",
+        "attachment": []
+    },
+    {
+        "name": "Hileri Makr",
+        "avatar": "assets/images/sellers/5.png",
+        "title": "Major Keys to Success",
+        "date": "Feb 3",
+        "to": "name@example.com",
+        "respect":"Hi Hileri",
+        "content": "Major key, don’t fall for the trap, stay focused. It’s the ones closest to you that want to see you fail. Let’s see what Chef Dee got that they don’t want us to eat. Find peace, life is like a water fall, you’ve gotta flow. The key to more success is to have a lot of pillows. Watch your back, but more importantly when you get out the shower, dry your back, it’s a cold world out there.",
+        "checked" : false,
+        "attachShow":"block",
+        "inboxActive":"read",
+        "star":"inactive",
+        "attachment": [
+            {
+                "file": "Prospectus.doc",
+                "size": "1MB",
+                "type": "doc"
+            },
+            {
+                "file": "Financial_Report.xls",
+                "size": "652KB",
+                "type": "xls"
+            }
+        ]
+    },
+    {
+        "name": "Vincent Porter",
+        "avatar": "assets/images/sellers/6.png",
+        "title": "Take my coffee",
+        "date": "Feb 2",
+        "to": "name@example.com",
+        "respect":"Hi Vincent",
+        "content": "Caramelization saucer robust aftertaste decaffeinated qui aged. Caramelization black white black wings, mocha americano white half and half variety latte. Aftertaste, grounds blue mountain grounds, half and half chicory black galão sugar. Seasonal, viennese crema et medium wings galão. Froth, medium, extraction, percolator café au lait crema single origin aged.",
+        "checked" : false,
+        "attachShow":"hidden",
+        "inboxActive":"read",
+        "star":"inactive",
+        "attachment": []
+    },
+    {
+        "name": "Sam Porter",
+        "avatar": "assets/images/sellers/7.png",
+        "title": "The cat was chasing the mouse scratch",
+        "date": "Jan 29",
+        "to": "name@example.com",
+        "respect":"Hi Sam",
+        "content": "Poop in the plant pot. Shove bum in owner's face like camera lens. Licks your face play time, or pooping rainbow while flying in a toasted bread costume in space so meowing non stop for food pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now or where is my slave? I'm getting hungry. Chirp at birds. Lick sellotape walk on car leaving trail of paw prints on hood and windshield a nice warm laptop for me to sit on cough hairball, eat toilet paper plays league of legends be superior mrow. Cat dog hate mouse eat string barf pillow no baths hate everything stand with legs in litter box, but poop outside or kitty kitty lick butt if it fits, i sits. Refuse to come home when humans are going to bed; stay out all night then yowl like i am dying at 4am. Stuff and things attack dog, run away and pretend to be victim, lick the plastic bag. Roll on the floor purring your whiskers off chew on cable weigh eight pounds but take up a full-size bed swat at dog no, you can't close the door, i haven't decided whether or not i wanna go out. Sleeps on my head cats secretly make all the worlds muffins",
+        "checked" : false,
+        "attachShow":"hidden",
+        "inboxActive":"read",
+        "star":"inactive",
+        "attachment": []
+    },
+    {
+        "name": "Jenisha Trivedi",
+        "avatar": "assets/images/sellers/8.png",
+        "title": "Put A Cheeseburger",
+        "date": "Jan 29",
+        "to": "name@example.com",
+        "respect":"Hi Trivedi",
+        "content": "Epic cheeseburgers come in all kinds of manifestations, but we want them in and around our mouth no matter what. Slide those smashed patties with the gently caramelized meat fat between a toasted brioche bun and pass it over. You fall in love with the cheeseburger itself but the journey ain’t half bad either.",
+        "checked" : false,
+        "attachShow":"hidden",
+        "inboxActive":"read",
+        "star":"active",
+        "attachment": []
+    },
+    {
+        "name": "Sarah Graves",
+        "avatar": "assets/images/sellers/9.png",
+        "title": "BLUTH ",
+        "date": "Jan 27",
+        "to": "name@example.com",
+        "respect":"Hi Sarah",
+        "content": "The Man Inside Me seems well reviewed. George Bush doesn't care about black puppets. No borders, no limits… go ahead, touch the Cornballer… you know best? Either I zip down, or he zips up, and that is a mighty long zipper on Mother's Cher jumpsuit. I run a pretty tight ship around here. With a pool table. It's a gaming ship. OH MY GOD, WE'RE HAVING A FIRE… sale. Oh, the burning! ♪♪ Amaaaaaaziiiing Graaaace ♪♪",
+        "checked" : false,
+        "attachShow":"hidden",
+        "inboxActive":"read",
+        "star":"inactive",
+        "attachment": []
+    },
+    {
+        "name": "Wyatt Wallace",
+        "avatar": "assets/images/sellers/10.png",
+        "title": "Pretty sweet, right?",
+        "date": "Jan 26",
+        "to": "name@example.com",
+        "respect":"Hi Sarah",
+        "content": "Cotton candy topping chupa chups pudding dessert cake muffin gummi bears jelly beans. Lemon drops jelly beans powder apple pie jelly-o macaroon cake. Biscuit macaroon cake gummi bears cookie. Caramels sugar plum jelly apple pie oat cake gingerbread marzipan. Dragée apple pie toffee cotton candy jelly-o tart lemon drops pastry. Jelly marzipan jelly-o chocolate. Pudding sweet cupcake tootsie roll muffin jelly sugar plum dessert cake.",
+        "checked" : false,
+        "attachShow":"hidden",
+        "inboxActive":"read",
+        "star":"inactive",
+        "attachment": []
+    },
+    {
+        "name": "Alice Matthews",
+        "avatar": "assets/images/sellers/11.png",
+        "title": "Believe it or not?",
+        "date": "Jan 25",
+        "to": "name@example.com",
+        "respect":"Hi Alice",
+        "content": "Believe it or not I'm walking on air. I never thought I could feel so free. Flying away on a wing and a prayer. Who could it be? Believe it or not its just me? we might as well say... Would you be mine? Could you be mine? Won't you be my neighbor? Fleeing from the Cylon tyranny the last Battlestar – Galactica - leads a rag-tag fugitive fleet on a lonely quest - a shining planet known as Earth? Doin' it our way. ",
+        "checked" : false,
+        "attachShow":"hidden",
+        "inboxActive":"read",
+        "star":"inactive",
+        "attachment": []
+    }
+]

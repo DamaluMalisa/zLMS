@@ -1,0 +1,26 @@
+<!-- skeleton -->
+<ng-template #loadingSkeleton>
+  <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true" [nzParagraph]="{ rows: 15 }"></nz-skeleton>
+</ng-template>
+  <!-- skeleton -->
+<div nz-row>
+  <div nz-col nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class="relative p-0 m-0 bg-white dark:bg-white/10 rounded-10">
+      <div class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+        <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Ant design icons</h4>
+      </div>
+      <div class="p-[25px]">
+        <div nz-row>
+          <div nz-col nzXs="24" nzXl="6" nzMd="12" *ngFor="let icon of antdIcons">
+            <div class="flex items-center mb-[15px]">
+              <i class="w-[18px] h-[18px] ltr:mr-[10px] rtl:ml-[10px] text-body dark:text-white/60"nz-icon nzType="{{ icon }}" nzTheme="outline"></i>
+              <span class="text-body dark:text-white/60 text-[16px]"> {{ icon }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </ng-container>
+  </div>
+</div>

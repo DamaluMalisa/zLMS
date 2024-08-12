@@ -1,0 +1,39 @@
+{
+  "messages": [
+    {
+      "sender": "Shane Watson",
+      "avatar": "1.png",
+      "content": "We are looking for a full-stack developer",
+      "timestamp": "9:30 AM",
+      "status":"primary"
+    },
+    {
+      "sender": "Chris Dohan",
+      "avatar": null,
+      "content": "Well done, great work",
+      "timestamp": "9:30 AM",
+      "status":"secondary"
+    },
+    {
+      "sender": "Robert Clinton",
+      "avatar": "2.png",
+      "content": "Tonight we are going to submit new...",
+      "timestamp": "9:30 AM",
+      "status":"info"
+    },
+    {
+      "sender": "Shane Watson",
+      "avatar": null,
+      "content": "We are looking for a full-stack developer",
+      "timestamp": "9:30 AM",
+      "status":"success"
+    },
+    {
+      "sender": "Chris Dohan",
+      "avatar":"3.png",
+      "content": "Well done, great work",
+      "timestamp": "9:30 AM",
+      "status":"danger"
+    }
+  ]
+}

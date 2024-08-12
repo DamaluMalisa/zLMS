@@ -1,0 +1,99 @@
+.common-layout {
+
+    .page-container {
+
+        @include screen-laptop-only {
+            padding-inline-start: 230px !important;
+        }
+
+        @include screen-tablet {
+            padding-inline-start: 0px !important;
+        }
+
+        .main-content {
+            padding: calc(72px + 25px) 25px 25px 25px;
+            min-height: calc(100vh - 65px);
+
+            @include screen-mobile {
+                padding: calc(72px + 25px) 15px 15px 15px;
+            }
+
+            .main-content-header {
+                @include screen-mobile-above {
+                    @apply flex items-center;
+                }
+
+                padding-inline-start: 5px;
+                margin-bottom: 15px;
+
+                .page-title {
+                    margin-bottom: 0px;
+                    margin-inline-end: 20px;
+                    font-size: 17px;
+                    line-height: 1;
+
+                    @include screen-mobile {
+                        margin-bottom: 20px;
+                        margin-inline-end: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .page-header {
+        margin-inline:25px;
+        margin-block: 25px;
+        padding: 25px 30px;
+
+        &.has-tab {
+            border-bottom: 0px;
+            margin-bottom: 0px;
+            padding-bottom: 1px;
+        }
+
+        @include screen-mobile {
+            margin-inline: 15px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .page-header-tab {
+        margin-inline: 25px;
+
+        @include screen-mobile {
+            margin-inline: 15px;
+        }
+
+        .ant-tabs-nav {
+            padding-inline: 25px;
+            margin-bottom: 25px;
+
+            @include screen-mobile {
+                padding-inline: 15px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .ant-tabs-content {
+
+            .ant-tabs-tabpane {
+                padding-inline: 25px;
+
+                @include screen-mobile {
+                    padding-inline: 15px;
+                }
+            }
+        }
+    }
+
+    &.is-folded {
+
+        @include screen-tablet-above {
+            .page-container:not(.left-space-zero) {
+                padding-inline-start: 80px !important;
+            }
+        }
+    }
+}

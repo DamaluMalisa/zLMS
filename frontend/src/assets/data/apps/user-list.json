@@ -1,0 +1,53 @@
+{
+  "UserList": [
+    {
+      "id": 1,
+      "sub": "Add Images To the gallery",
+      "duration": "09:20 AM",
+      "avatar": "assets/images/avatars/tm5.png",
+      "star": "active"
+    },
+    {
+      "id": 2,
+      "sub": "Support tickets list doesn't support commas",
+      "duration": "10:30 AM",
+      "avatar": "assets/images/avatars/tm2.png",
+      "star": "inactive"
+    },
+    {
+      "id": 3,
+      "sub": "Changing title text on single locations pages",
+      "duration": "11:45 AM",
+      "avatar": "assets/images/avatars/tm3.png",
+      "star": "active"
+    },
+    {
+      "id": 4,
+      "sub": "Registration Confirmation! Email is missing some information",
+      "duration": "02:15 PM",
+      "avatar": "assets/images/avatars/tm2.png",
+      "star": "inactive"
+    },
+    {
+      "id": 5,
+      "sub": "Login page not redirecting wrong",
+      "duration": "03:40 PM",
+      "avatar": "assets/images/avatars/tm1.png",
+      "star": "inactive"
+    },
+    {
+      "id": 6,
+      "sub": "Custom Field for Registration",
+      "duration": "yesterday",
+      "avatar": "assets/images/avatars/tm4.png",
+      "star": "active"
+    },
+    {
+      "id": 7,
+      "sub": "Add images to the product gallery",
+      "duration": "wednesday",
+      "avatar": "assets/images/avatars/tm5.png",
+      "star": "inactive"
+    }
+  ]
+}

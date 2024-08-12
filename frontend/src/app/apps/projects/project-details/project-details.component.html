@@ -1,0 +1,41 @@
+<!-- skeleton -->
+<ng-template #loadingSkeleton>
+  <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true" [nzParagraph]="{ rows: 7}"></nz-skeleton>
+</ng-template>
+  <!-- skeleton -->
+
+
+<div nz-row nzGutter="25">
+  <div nz-col nzXs="24" class="mb-[30px]">
+    <div class="mt-[8px]">
+      <!-- Header -->
+      <header-details></header-details>
+      <!-- /Header -->
+    </div>
+  </div>
+  <div nz-col nzXXl="6" nzXl="8" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <progress-details></progress-details>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="12" nzXl="16" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <about-project></about-project>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="6" nzLg="9" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <users-project></users-project>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="16" nzLg="15" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <task-activities></task-activities>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="8" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <file></file>
+    </ng-container>
+  </div>
+</div>

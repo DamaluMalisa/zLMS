@@ -1,0 +1,33 @@
+<div class="relative main-content py-[120px] bg-[url('/assets/images/shape/admin-bg-light.png')] dark:bg-[url('/assets/images/shape/admin-bg-dark.png')] dark:bg-[#010312] bg-cover bg-center bg-no-repeat pt-[210px]">
+  <div class="admin">
+    <div class="text-center">
+      <img class="inline dark:hidden" src="../../../assets/images/logo/logo-dark.png" alt="image" />
+      <img class="hidden dark:inline" src="../../../assets/images/logo/logo-white.png" alt="image" />
+    </div>
+    <div nz-row class="justify-center">
+      <div nz-col nzXs="24" nzSm="18" nzMd="12" nzXl="8" nzXXl="6">
+        <div class="rounded-6 mt-[25px] shadow_[0px_5px_20px_rgba(173,181,217, 0.03)] dark:shadow_[0px_5px_15px_rgba(0, 0, 0, .1)] bg-white dark:bg-[#1b1d2a]">
+          <div class="p-[25px] text-center border-b border-regular dark:border-white/10 top">
+            <h2 class="text-18 font-semibold leading-[1] mb-0 text-dark dark:text-white/[.87] title">Forgot Password?</h2>
+          </div>
+          <div class="py-[30px] px-[40px] content">
+            <form nz-form nzLayout="vertical" [formGroup]="myForm">
+              <nz-form-item class="block mb-[20px]">
+                <p class="font-normal text-[16px] leading-[24px] text-[#666d92] dark:text-white/60">Enter the email address you used when you joined, and we’ll send you instructions to reset your password.</p>
+              </nz-form-item>
+              <nz-form-item class="block mb-0">
+                <nz-form-label class="text-[14px] w-full leading-[1.4285714286] font-medium text-dark dark:text-white/[87] mb-[8px] capitalize inline-block" nzFor="userName">Email Address</nz-form-label>
+                <nz-form-control nzErrorTip="The input is not a valid E-mail!">
+                  <input class="flex items-center shadow-none py-[10px] px-[20px] h-[48px] border-1 border-regular dark:border-white/10 rounded-4 w-full text-[14px] font-normal leading-[1.5] placeholder:text-[#A0A0A0]" nz-input formControlName="userName" placeholder="simple@gmail.com" type="email" id="userName" />
+                </nz-form-control>
+              </nz-form-item>
+              <button nz-button class="mt-[20px] inline-flex items-center justify-center h-[52px] text-14 rounded-6 font-medium bg-primary border-primary text-white cursor-pointer hover:bg-primary-hbr transition duration-300 md:px-[50px] px-[30px] py-[15px]">
+                Send Reset Instructions
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

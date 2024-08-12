@@ -1,0 +1,94 @@
+:host ::ng-deep .svgMap-wrapper{
+    @apply h-full ;
+
+    .svgMap-container,
+    .svgMap-map-container,
+    .svgMap-map-wrapper,
+    .svgMap-map-image{
+        height: 100%;
+    }
+}
+
+:host ::ng-deep svg.svgMap-map-image{
+    @apply max-xl:w-full;
+    @media only screen and (max-width: 479px){
+        height: 180px;
+    }
+    @media only screen and (max-width: 440px){
+        width: 310px;
+    }
+    @media only screen and (max-width: 320px){
+        width: 280px;
+    }
+}
+:host ::ng-deep .svgMap-map-controls-wrapper{
+    position: absolute;
+    right: auto;
+    left: auto !important;
+    inset-inline-end: end;
+    bottom: 10px;
+    box-shadow: none !important;
+    .svgMap-map-controls-zoom{
+        @apply flex flex-col bg-white dark:bg-[#1b1c29];
+    }
+    button{
+      @apply bg-white dark:bg-[#32343f] text-light border-1 border-normal dark:border-[#32343f] dark:text-white/60 p-0 text-[20px] flex items-center justify-center w-[27px] h-[27px] m-0 cursor-pointer;
+        &.svgMap-zoom-in-button{
+            &:before{
+                width: 8px !important;
+                height: 1px !important;
+            }
+            &:after{
+                width: 1px !important;
+                height: 8px !important;
+            }
+        }
+        &.svgMap-zoom-out-button{
+            &:before{
+                width: 8px !important;
+                height: 1px !important;
+            }
+        }
+        &:first-child{
+            border-radius: 6px 6px 0 0;
+        }
+        &:last-child{
+            border-radius: 0 0 6px 6px;
+        }
+        &:focus{
+            outline: none;
+        }
+        svg{
+            width: 10px;
+        }
+    }
+    button + button{
+        border-top: 0 none;
+    }
+}
+:host ::ng-deep {
+  .svgMap-map-wrapper {
+    .svgMap-control-button{
+      &.svgMap-zoom-in-button{
+        @apply m-0;
+      }
+    }
+  }
+}
+
+/* Vector map hover fill color */
+:host ::ng-deep .svgMap-map-wrapper .svgMap-country.svgMap-active,
+:host ::ng-deep .svgMap-map-wrapper .svgMap-country:hover {
+  stroke: transparent !important;
+  fill: #8231D3;
+}
+
+:host ::ng-deep .svgMap-map-wrapper .svgMap-country{
+  @apply dark:stroke-[#32343f];
+}
+
+:host ::ng-deep {
+  .svgMap-map-wrapper{
+    @apply bg-white dark:bg-[#1b1c29];
+  }
+}

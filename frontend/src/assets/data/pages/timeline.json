@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "service": "Create a services site",
+      "date": "2015-09-01",
+      "duration_minutes": 20,
+      "status_color": "#F44336"
+    },
+    {
+      "service": "Solve initial network problems",
+      "date": "2015-09-01",
+      "duration_minutes": 15,
+      "status_color": "#FF9800"
+    },
+    {
+      "service": "Network problems being solved",
+      "date": "2015-09-01",
+      "duration_minutes": 25,
+      "status_color": "#E91E63"
+    },
+    {
+      "service": "Technical testing",
+      "date": "2015-09-01",
+      "duration_minutes": 30,
+      "status_color": "#9C27B0"
+    },
+    {
+      "service": "Network problems being solved",
+      "date": "2015-09-01",
+      "duration_minutes": 25,
+      "status_color": "#2196F3"
+    },
+    {
+      "service": "Solve initial network problems",
+      "date": "2015-09-01",
+      "duration_minutes": 71,
+      "status_color": "#4CAF50"
+    }
+  ]
+}

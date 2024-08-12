@@ -1,0 +1,180 @@
+<div nz-row nzGutter="25">
+  <!-- skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzAvatar]="true" [nzActive]="true"
+      [nzParagraph]="{ rows: 4 }"></nz-skeleton>
+  </ng-template>
+  <!-- skeleton -->
+
+  <div nz-col nzXXl="6" nzXl="12" nzLg="12" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <!-- 15 days -->
+      <div class="relative bg-white dark:bg-white/10 min-h-[270px] pt-10 px-[30px] pb-[49px] rounded-[10px]">
+        <h2 class="mb-3 text-dark dark:text-white/[.87] text-[30px] max-lg:text-[26px] max-sm:text-2xl font-semibold">15 Days Free Trail</h2>
+        <p class="mb-4 font-normal text-body dark:text-white/60 text-15">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+        <button nz-button class="inline-flex items-center px-5 bg-transparent text-primary border-primary h-9 rounded-4 text-[15px] font-medium capitalize">
+          Start
+        </button>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="6" nzXl="12" nzLg="12" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+    <!-- Upgrade Plan -->
+    <div class="relative bg-[#6859ec] min-h-[270px] pt-11 px-[30px] pb-[55px] rounded-10">
+      <div class="mb-0">
+        <img class="absolute bottom-2.5 ltr:right-6 rtl:left-6 max-3xl:max-w-[150px]" src="assets/images/banners/upgrade.png" alt="upgrade">
+        <figcaption>
+          <h2 class="mb-3 text-white  text-3xl max-lg:text-[26px] max-sm:text-2xl font-semibold">Upgrade your plan</h2>
+          <p class="mb-4 font-normal text-white opacity-70 text-15">Lorem ipsum dolor sit amet</p>
+          <button nz-button class="inline-flex items-center bg-white text-primary border-white h-11 rounded-4 mt-6 px-5 text-[15px] font-semibold capitalize">
+            upgrade
+          </button>
+        </figcaption>
+      </div>
+    </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="6" nzXl="12" nzLg="12" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <!-- Earn More Money -->
+      <div class="relative bg-[#6859ec] min-h-[270px] pt-11 px-[30px] pb-[55px] rounded-10">
+        <div class="mb-0">
+          <img class="absolute bottom-2.5 ltr:right-6 rtl:left-6 max-3xl:max-w-[150px]" src="assets/images/banners/earn-money.png" alt="earn money">
+          <figcaption>
+            <h2 class="mb-3 text-white text-3xl max-lg:text-[26px] max-sm:text-2xl font-semibold">Earn More Money</h2>
+            <button nz-button class="inline-flex items-center bg-white text-primary border-white h-11 rounded-4 mt-6 px-5 text-[15px] font-semibold capitalize">
+              Learn More
+            </button>
+          </figcaption>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="6" nzXl="12" nzLg="12" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+       <!-- Win your Bonus -->
+       <div class="relative bg-[#282a40] min-h-[270px] pt-11 px-[30px] pb-[55px] rounded-10">
+        <div class="mb-0">
+          <img class="absolute bottom-2.5 ltr:right-6 rtl:left-6 max-3xl:max-w-[150px]" src="assets/images/banners/win-bonus.png" alt="win bonus">
+          <figcaption>
+            <h2 class="mb-3 text-white text-3xl max-lg:text-[26px] max-sm:text-2xl font-semibold">Win Your Bonus</h2>
+            <p class="mb-4 font-normal text-white opacity-70 text-15">Weekly performance bonus</p>
+            <button nz-button class="inline-flex items-center bg-white text-primary border-white h-11 rounded-4 mt-6 px-5 text-[15px] font-semibold capitalize">
+              Learn More
+            </button>
+          </figcaption>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="8" nzXl="12" nzLg="12" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <!-- congratulations -->
+      <div class="relative bg-[#6859ec] min-h-[270px] pt-10 px-[30px] pb-[70px] rounded-10">
+        <div class="mb-0">
+          <img class="absolute ltr:right-0 rtl:left-0 bottom-5 max-3xl:max-w-[150px]" src="assets/images/banners/congrats.png" alt="upgrade">
+          <figcaption>
+            <h2 class="mb-3 text-white  text-3xl max-lg:text-[26px] max-sm:text-2xl font-semibold">Congratulations Jhon!</h2>
+            <p class="mb-4 font-normal text-white opacity-70 text-15">Best Seller on the last month.</p>
+            <button nz-button class="inline-flex items-center bg-white text-primary border-white h-11 rounded-4 mt-6 px-5 text-[15px] font-semibold capitalize">
+              Learn more
+            </button>
+          </figcaption>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="8" nzXl="12" nzLg="12" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <!-- discount -->
+      <div class="rounded-10px min-h-[270px] flex items-center px-[50px] py-[26px] bg-center bg-no-repeat bg-cover rounded-10 bg-[url('assets/images/banners/discount.png')]">
+        <div class="w-full">
+          <h2 class="mb-3 text-white text-3xl max-lg:text-[26px] max-sm:text-2xl font-semibold">Up to 50 OFF</h2>
+          <button nz-button class="inline-flex items-center px-5 bg-transparent text-danger border-danger h-9 rounded-4 text-[15px] font-medium capitalize">
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="8" nzXl="12" nzLg="12" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <!-- Newsletter -->
+      <div class="relative bg-white min-h-[270px] pt-10 px-[30px] pb-[49px] rounded-[10px] flex items-center gap-[15px] max-sm:flex-wrap">
+        <img src="assets/images/banners/subscribe.png" alt="subscribe">
+        <div>
+          <h2 class="mb-3 text-dark text-[24px] leading-[31px] max-lg:text-[26px] max-sm:text-2xl font-semibold">Subscribe to our newsletter</h2>
+          <p class="mb-4 font-normal text-body text-15">Lorem ipsum dolor sit amet, consetetur</p>
+          <button nz-button class="inline-flex items-center px-5 bg-transparent text-secondary border-secondary h-11 rounded-4 text-[15px] font-medium capitalize">
+            Subscribe Now
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="4" nzXl="12" nzLg="24" nzXs="24" class="mb-[25px]">
+    <!-- Slider -->
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <swiper-banner></swiper-banner>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="4" nzXl="12" nzLg="24" nzXs="24" class="mb-[25px]">
+    <!-- up to date -->
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class="px-5 py-8 text-center bg-white rounded-10">
+        <h2 class="font-semibold mb-7 text-dark text-22">Up To Date </h2>
+        <img class="mx-auto xxl:w-[85%]" src="assets/images/banners/up-to-date.png" alt="up to date">
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="8" nzMd="12" nzXs="24" class="mb-[25px]">
+    <!-- Need more space -->
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class="pt-9 px-10 pb-10 rounded-[10px] h-[450px] bg-[#ff8f2f]  bg-center bg-no-repeat bg-[url('assets/images/banners/need-more-space.png')]">
+        <h2 class="mb-5 text-white text-3xl max-lg:text-[26px] max-sm:text-2xl font-semibold">Need More Space?</h2>
+        <button nz-button class="inline-flex items-center bg-white text-primary border-white h-11 rounded-4 px-5 text-[15px] font-semibold capitalize">
+          Buy storage
+        </button>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="8" nzMd="12" nzXs="24" class="mb-[25px]">
+    <!-- Need more space -->
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class="pt-9 px-10 pb-10 rounded-[10px] h-[450px] bg-[#ff5354]  bg-center bg-no-repeat bg-[url('assets/images/banners/sale-report.png')]">
+        <h2 class="mb-5 text-white text-3xl max-lg:text-[26px] max-sm:text-2xl font-semibold">Create Sale Report</h2>
+        <p class="mb-4 font-normal text-white opacity-70 text-15">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
+        <button nz-button class="inline-flex items-center bg-white text-primary border-white h-11 rounded-4 px-5 text-[15px] font-semibold capitalize">
+          Learn More
+        </button>
+      </div>
+    </ng-container>
+  </div>
+
+  <div nz-col nzXs="24" nzMd="12" class="mb-[25px]">
+    <!-- Need more space -->
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class=" px-10 relative rounded-[10px] h-[223px] justify-center flex flex-col items-end after:bg-center after:bg-no-repeat after:bg-[url('assets/images/banners/dedicate-support.png')] after:start-0 after:top-0 z-0 after:z-[-1] after:absolute after:content-[''] after:w-full after:h-full rtl:after:-scale-x-100 after:rounded-10">
+        <h2 class="mb-5 text-dark text-3xl max-lg:text-[26px] max-sm:text-2xl font-semibold">Dedicated Support</h2>
+        <button nz-button class="inline-flex items-center bg-primary text-white border-primary hover:bg-primary-hbr h-11 rounded-4 px-5 text-[15px] font-semibold capitalize">
+          Learn More
+        </button>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24" nzMd="12" class="mb-[25px]">
+    <!-- Need more space -->
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class="pt-9 px-10 pb-10 rounded-[10px] h-[223px] bg-[#1b93fa] relative w-full after:bg-center after:bg-no-repeat after:bg-[url('assets/images/banners/back-garry.png')] after:start-0 after:top-0 z-0 after:z-[-1] after:absolute after:content-[''] after:w-full after:h-full rtl:after:-scale-x-100 after:rounded-10">
+        <div>
+          <h2 class=" text-dark text-3xl max-lg:text-[26px] max-sm:text-2xl font-semibold">Welcome Back Garry Sobars!</h2>
+          <p class="text-white/70 text-16 mt-[15px] mb-[20px]">Lorem ipsum dolor amet, consetetur sadipscing elitr sed diam</p>
+          <button nz-button class="inline-flex items-center bg-white text-primary border-white h-11 rounded-4 px-5 text-[15px] font-semibold capitalize">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

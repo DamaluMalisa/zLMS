@@ -1,0 +1,65 @@
+<div class="bg-white dark:bg-white/10 pt-[90px] pb-20 px-[15px] max-sm:py-10 text-center rounded-10 mb-[30px]">
+  <div class="mb-[50px] max-xl:mb-[30px] max-md:mb-[25px] text-center">
+    <img class="inline-block dark:hidden w-[250px]" src="assets/images/logo/logo-dark.png" alt="logo">
+    <img class="hidden dark:inline-block w-[250px]" src="assets/images/logo/logo-white.png" alt="logo">
+  </div>
+  <h1 class="text-dark dark:text-white/[.87] mb-10 max-2xl:mb-5 sm:mb-4 text-[58px] max-2xl:text-5xl max-lg:text-4xl max-sm:text-3xl max-ssm:text-2xl max-xs:text-xl font-semibold"> We are coming soon</h1>
+  <p class="max-w-[58px]0 mx-auto text-body dark:text-white/60 mb-6 text-[17px] max-md:text-base max-sm:text-[15px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry`s standard dummy text ever since the 1500s,</p>
+  <div class="flex justify-center gap-[25px] sm:mb-[30px]">
+    <div>
+      <span class="font-semibold text-42 max-xl:text-3xl max-sm:text-2xl max-xs:text-xl text-dark dark:text-white/[.87]">
+        {{ days }}
+      </span>
+      <span class="block text-base sm:text-[15px] text-light dark:text-white/60">Days</span>
+    </div>
+    <div>
+      <span class="font-semibold text-42 max-xl:text-3xl max-sm:text-2xl max-xs:text-xl text-dark dark:text-white/[.87]">
+        {{ hours }}
+      </span>
+      <span class="block text-base max-sm:text-[15px] text-light dark:text-white/60">Hours</span>
+    </div>
+    <div>
+      <span class="font-semibold text-42 max-xl:text-3xl max-sm:text-2xl max-xs:text-xl text-dark dark:text-white/[.87]">
+        {{ minutes }}
+      </span>
+      <span class="block text-base max-sm:text-[15px] text-light dark:text-white/60">Minutes</span>
+    </div>
+    <div>
+      <span class="font-semibold text-42 max-xl:text-3xl max-sm:text-2xl max-xs:text-xl text-dark dark:text-white/[.87]">
+        {{ seconds }}
+      </span>
+      <span class="block text-base max-sm:text-[15px] text-light dark:text-white/60">Seconds</span>
+    </div>
+  </div>
+  <div class="inline-flex justify-center mt-[30px] mb-[50px] gap-[30px] max-sm:flex-wrap">
+    <input class="rounded-4 border-normal xs:min-w-[310px] border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60" type="text" nz-input placeholder="name@example.com" />
+    <button class="h-[48px] inline-flex items-center text-[14px] font-semibold rounded-4 px-[25px] py-[14px] uppercase bg-primary border-primary text-white outline-none" nz-button nzSize="large" nzSearch>subscribe</button>
+  </div>
+  <ul class="flex justify-center mb-7 gap-[20px]">
+    <li>
+      <a class="flex items-center justify-center rounded-full bg-facebook w-11 h-11" href="#">
+        <svg-icon class="[&>svg]:w-[16px] [&>svg]:h-[16px] text-white"
+          src="assets/images/svg/unicons-line/facebook.svg"></svg-icon>
+      </a>
+    </li>
+    <li>
+      <a class="flex items-center justify-center rounded-full bg-twitter w-11 h-11" href="#">
+        <svg-icon class="[&>svg]:w-[16px] [&>svg]:h-[16px] text-white "
+          src="assets/images/svg/unicons-line/twitter.svg"></svg-icon>
+      </a>
+    </li>
+    <li>
+      <a class="flex items-center justify-center rounded-full bg-instagram w-11 h-11" href="#">
+        <svg-icon class="[&>svg]:w-[16px] [&>svg]:h-[16px] text-white "
+          src="assets/images/svg/unicons-line/instagram.svg"></svg-icon>
+      </a>
+    </li>
+    <li>
+      <a class="flex items-center justify-center rounded-full bg-github w-11 h-11" href="#">
+        <svg-icon class="[&>svg]:w-[16px] [&>svg]:h-[16px] text-white"
+          src="assets/images/svg/unicons-line/github.svg"></svg-icon>
+      </a>
+    </li>
+  </ul>
+  <p class="mb-0 text-body dark:text-white/60">{{ currentYear }} © Sovware</p>
+</div>

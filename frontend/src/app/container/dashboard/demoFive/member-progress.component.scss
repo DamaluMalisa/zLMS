@@ -1,0 +1,39 @@
+:host ::ng-deep .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path{
+  @apply stroke-primary;
+}
+
+:host ::ng-deep nz-progress{
+  &.text-success{
+    .ant-progress-bg{
+      @apply bg-success;
+    }
+  }
+  &.text-warning{
+    .ant-progress-bg{
+      @apply bg-warning;
+    }
+  }
+  &.text-danger{
+    .ant-progress-bg{
+      @apply bg-danger;
+    }
+  }
+  &.text-primary{
+    .ant-progress-bg{
+      @apply bg-primary;
+    }
+  }
+  &.text-info{
+    .ant-progress-bg{
+      @apply bg-info;
+    }
+  }
+  &.text-secondary{
+    .ant-progress-bg{
+      @apply bg-secondary;
+    }
+  }
+  .ant-progress-text{
+    @apply text-[14px] font-normal text-theme-gray dark:text-white/[.60]
+  }
+}

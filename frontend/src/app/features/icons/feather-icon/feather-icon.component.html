@@ -1,0 +1,28 @@
+<!-- skeleton -->
+<ng-template #loadingSkeleton>
+  <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true" [nzParagraph]="{ rows: 15 }"></nz-skeleton>
+</ng-template>
+  <!-- skeleton -->
+  <div nz-row>
+    <div nz-col nzXs="24" class="mb-[25px]">
+      <ng-container *ngIf="showContent; else loadingSkeleton">
+        <div class="relative p-0 m-0 bg-white dark:bg-white/10 rounded-10">
+          <div class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+            <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Feather Icons</h4>
+          </div>
+          <div class="p-[25px]">
+            <div nz-row>
+              <div nz-col nzXs="24" nzXl="6" nzMd="12" *ngFor="let iconName  of iconNames">
+                <div class="flex items-center mb-[15px] gap-[6px]">
+                  <svg-icon class="[&>svg]:w-[18px] [&>svg]:h-[18px] text-body dark:text-white/60"
+                    src="assets/images/svg/feather/{{ iconName }}.svg"></svg-icon>
+                  <span class="text-body dark:text-white/60 text-[16px]"> {{ iconName }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+

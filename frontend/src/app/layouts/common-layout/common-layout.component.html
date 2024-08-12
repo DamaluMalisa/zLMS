@@ -1,0 +1,31 @@
+<div class="common-layout"
+    [ngClass]="{
+        'is-folded': isFolded,
+        'is-expand' : isExpand
+    }">
+    <app-header></app-header>
+    <app-sidenav></app-sidenav>
+    <div class="page-container bg-[#f4f5f7] dark:bg-[#010312] min-h-[100vh] ps-[280px] transition-all duration-200 ease-out [&.left-space-zero]:ps-0">
+        <div class="sm:pt-[calc(70px+30px)] max-sm:pt-[calc(70px+25px)] mx-[30px] min-h-[calc(100vh-65px)]">
+            <div class="flex flex-wrap items-center justify-between leading-[1.8571428571] mb-[23px] gap-y-[15px] gap-x-[30px] max-sm:flex-col" *ngIf="contentHeaderDisplay !== 'none'">
+                <h4 class="text-dark dark:text-white/[.87] text-[20px] font-semibold capitalize" *ngIf="breadcrumbs$ | async; let breadcrumbs">{{(breadcrumbs[breadcrumbs.length - 1].label)}}</h4>
+                <nz-breadcrumb class="flex items-center modify-breadcrumb" [nzSeparator]="iconTemplate">
+                    <i class="me-[5px]" nz-icon nzType="home"></i>
+                    <nz-breadcrumb-item *ngFor="let breadcrumb of breadcrumbs$ | async">
+                        <a class=" text-[14px] font-normal capitalize" [routerLink]="breadcrumb.url">
+                            {{ breadcrumb.label }}
+                        </a>
+                    </nz-breadcrumb-item>
+                    <ng-template #iconTemplate><span class="inline-flex bg-light-extra relative -top-0.5 w-1 h-1 rounded-full"></span></ng-template>
+                </nz-breadcrumb>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <div id="loaderOverlay" class="fixed w-full h-full z-[9999] bg-white dark:bg-dark top-0 left-0 max-h-[100vh]">
+      <!-- preloader content here -->
+      <div class="absolute inline-block loader-overlay z-[99999] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+        <nz-spin nzSimple></nz-spin>
+      </div>
+    </div>
+</div>

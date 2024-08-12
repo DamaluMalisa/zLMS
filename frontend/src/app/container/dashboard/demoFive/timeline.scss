@@ -1,0 +1,28 @@
+:host ::ng-deep {
+  nz-timeline {
+    .ant-timeline-item-tail{
+      @apply border-s-1 border-regular dark:border-white/10;
+    }
+    .ant-timeline-item-head{
+      @apply bg-transparent border-5;
+    }
+    .ant-timeline{
+      .ant-timeline-item{
+        @apply pb-[25px] last:pb-0;
+        .ant-timeline-item-tail{
+          @apply left-auto start-[4px];
+        }
+      }
+    }
+    .ant-timeline-item-last {
+      > .ant-timeline-item-content{
+        @apply min-h-[25px];
+      }
+    }
+    .ant-timeline-item-content{
+      @apply ml-auto ms-[26px];
+    }
+  }
+
+}
+

@@ -1,0 +1,39 @@
+{
+  "overviewListVertical": [{
+      "total": "$70K",
+      "label": "Revenue",
+      "status": "25.36%",
+      "type": "primary",
+      "statusColor": "success",
+      "trend": "arrow-up",
+      "icon":"money-bill"
+    },
+    {
+      "total": "28.50%",
+      "label": "Growth",
+      "status": "28.50%",
+      "type": "info",
+      "statusColor": "success",
+      "trend": "arrow-up",
+      "icon":"arrow-growth"
+    },
+    {
+      "total": "8750",
+      "label": "Orders",
+      "status": "25.36%",
+      "type": "success",
+      "statusColor": "success",
+      "trend": "arrow-up",
+      "icon":"shopping-cart-alt"
+    },
+    {
+      "total": "42K",
+      "label": "Users",
+      "status": "15.72%",
+      "type": "warning",
+      "statusColor": "danger",
+      "trend": "arrow-down",
+      "icon":"usd-circle"
+    }
+  ]
+}

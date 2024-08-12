@@ -1,0 +1,60 @@
+[{
+    "id": 1,
+    "authorArea": {
+      "slug":"Requested By:",
+      "avatar": "assets/images/avatars/tm1.png",
+      "name": "Kellie Marquot"
+    },
+    "priority": "Priority:",
+    "label": "Select a priority",
+    "priorityOptions": [
+      {
+        "value": "low",
+        "label": "Low"
+      },
+      {
+        "value": "high",
+        "label": "High"
+      },
+      {
+        "value": "medium",
+        "label": "Medium"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "authorArea": {
+      "slug":"Created Date",
+      "avatar": "",
+      "name": "January 20, 2020"
+    },
+    "priority": "Status:",
+    "label": "Select a status:",
+    "priorityOptions": [
+      {
+        "value": "close",
+        "label": "Close"
+      },
+      {
+        "value": "open",
+        "label": "Open"
+      },
+      {
+        "value": "pending",
+        "label": "Pending"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "authorArea": {
+      "slug":"Updated Date",
+      "avatar": "",
+      "name": "February 02, 2020"
+    },
+    "priority": "",
+    "label": "Select a status",
+    "priorityOptions": []
+  }
+]

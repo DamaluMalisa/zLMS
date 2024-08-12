@@ -1,0 +1,36 @@
+ <!-- skeleton -->
+ <ng-template #loadingSkeleton>
+  <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true"
+    [nzParagraph]="{ rows: 20 }"></nz-skeleton>
+</ng-template>
+<!-- skeleton -->
+
+<div class="mb-[75px]" nz-row nzGutter="30" nzJustify="center">
+    <div nz-col nzXXl="7" nzLg="10" nzMd="10" class="mb-[30px]" >
+      <ng-container *ngIf="showContent; else loadingSkeleton">
+        <chat-aside
+            [chatList]="chatList"
+            [chatId]="chatId"
+            [chatType]="chatType"
+            [formatBody]="formatBody"
+            (onSelectChat)="selectChat($event)"
+            (onSelectChatGroup)="selectChatType($event)"
+        >
+        </chat-aside>
+      </ng-container>
+    </div>
+    <div nz-col nzXXl="17" nzLg="14" nzMd="14" class="mb-[30px]">
+      <ng-container *ngIf="showContent; else loadingSkeleton">
+        <chat-content
+            [chatList]="chatList"
+            [isContentOpen]="isContentOpen"
+            [msg]="msg"
+            [sendMsg]="sendMsg"
+            [closeChatContent]="closeChatContent"
+            [chatId]="chatId"
+            [chatType]="chatType"
+        >
+        </chat-content>
+      </ng-container>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+
+.ant-progress-default{
+  &.completed{
+    .ant-progress-bg{
+      background-color: #00ba34 !important;
+    }
+  }
+  &.progress{
+    .ant-progress-bg{
+      background-color: #ff8f2f !important;
+    }
+  }
+  &.late{
+    .ant-progress-bg{
+      background-color: #ff2423 !important;
+    }
+  }
+  &.early{
+    .ant-progress-bg{
+      background-color: #8e1dce !important;
+    }
+  }
+}
+
+/*--- Pagination ---*/
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link{
+  @apply flex items-center justify-center;
+}

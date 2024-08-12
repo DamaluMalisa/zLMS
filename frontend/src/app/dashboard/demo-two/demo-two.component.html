@@ -1,0 +1,48 @@
+<div nz-row [nzGutter]="25">
+  <!-- skeleton -->
+<ng-template #loadingSkeleton>
+  <nz-skeleton [nzAvatar]="true" class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true" [nzParagraph]="{ rows: 4 }"></nz-skeleton>
+</ng-template>
+  <!-- skeleton -->
+
+<!-- overview List -->
+<div nz-col nzXs="24" nzXXl="24" class="w-full [&>.ant-skeleton]:mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-overview-list></nz-overview-list>
+  </ng-container>
+</div>
+<!-- end: overview List -->
+
+<!-- sales revenue -->
+<div nz-col nzXs="24" nzXXl="12" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-saleRevenue></nz-saleRevenue>
+  </ng-container>
+</div>
+<!-- end: sales revenue -->
+
+<!-- source revenue -->
+<div nz-col nzXs="24" nzXXl="12" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-sourceRevenueGenerated></nz-sourceRevenueGenerated>
+  </ng-container>
+</div>
+<!-- end: source revenue -->
+
+<!-- new product -->
+<div nz-col nzXs="24" nzXXl="8" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-newProduct></nz-newProduct>
+  </ng-container>
+</div>
+<!-- end: new product -->
+
+<!-- Best Seller -->
+<div nz-col nzXs="24" nzXXl="16" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-bestSeller></nz-bestSeller>
+  </ng-container>
+</div>
+<!-- end: Best Seller -->
+
+</div>

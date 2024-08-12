@@ -1,0 +1,386 @@
+<div nz-row nzGutter="25">
+  <!-- skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true"
+      [nzParagraph]="{ rows: 6 }"></nz-skeleton>
+  </ng-template>
+  <!-- skeleton -->
+
+  <div nz-col nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div
+        class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative h-full">
+        <div
+          class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+          <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Form group and grid</h4>
+        </div>
+        <div class="p-[25px]">
+          <form nz-form>
+            <nz-form-item nzGutter="25" class="mb-0">
+              <nz-form-control nxMd="8" nzXs="24" class="mb-[25px]">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="name" type="text" placeholder="One of Three Columns">
+              </nz-form-control>
+              <nz-form-control nxMd="8" nzXs="24" class="mb-[25px]">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="text" type="email" placeholder="One of Three Columns">
+              </nz-form-control>
+              <nz-form-control nxMd="8" nzXs="24" class="mb-[25px]">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="text" type="email" placeholder="One of Three Columns">
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item nzGutter="25" class="mb-0">
+              <nz-form-control nxMd="6" nzXs="24" class="mb-[25px]">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="name" type="text" placeholder="One of Three Columns">
+              </nz-form-control>
+              <nz-form-control nxMd="6" nzXs="24" class="mb-[25px]">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="text" type="email" placeholder="One of Three Columns">
+              </nz-form-control>
+              <nz-form-control nxMd="6" nzXs="24" class="mb-[25px]">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="text" type="email" placeholder="One of Three Columns">
+              </nz-form-control>
+              <nz-form-control nxMd="6" nzXs="24" class="mb-[25px]">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="text" type="email" placeholder="One of Three Columns">
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item nzGutter="25" class="mb-0">
+              <nz-form-control nxMd="12" nzXs="24" class="mb-[25px]">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="text" type="email" placeholder="One of Three Columns">
+              </nz-form-control>
+              <nz-form-control nxMd="12" nzXs="24" class="mb-[25px]">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="text" type="email" placeholder="One of Three Columns">
+              </nz-form-control>
+            </nz-form-item>
+          </form>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div
+        class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative h-full">
+        <div
+          class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+          <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Sizes</h4>
+        </div>
+        <div class="p-[25px]">
+          <form nz-form>
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium dark:text-white/60" nzLg="6" nzMd="9" nzXs="24"
+                nzFor="text1">Large Input
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="text1" type="text" id="text1" placeholder="size='large'">
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label class="flex items-center font-medium dark:text-white/60" nzLg="6" nzMd="9" nzXs="24"
+                nzFor="text2">Default Input
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] h-[46px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="text2" type="text" id="text2" placeholder="size='Default'">
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label class="flex items-center font-medium dark:text-white/60" nzLg="6" nzMd="9" nzXs="24"
+                nzFor="text3">Small Input
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] h-[30px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="text3" type="text" id="text3" placeholder="size='Small'">
+              </nz-form-control>
+            </nz-form-item>
+          </form>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div
+        class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative h-full">
+        <div
+          class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+          <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Text input</h4>
+        </div>
+        <div class="p-[25px]">
+          <form nz-form>
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium dark:text-white/60 mb-[10px]" nzXs="24"
+                nzFor="textarea1">Basic Textarea
+              </nz-form-label>
+              <nz-form-control nzXs="24">
+                <textarea
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input id="textarea1"></textarea>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label class="flex items-center font-medium dark:text-white/60 mb-[10px]" nzXs="24"
+                nzFor="textarea2">Unresizable Textarea
+              </nz-form-label>
+              <nz-form-control nzXs="24">
+                <textarea
+                  class="w-full resize-none rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60 "
+                  id="textarea2" nz-input></textarea>
+              </nz-form-control>
+            </nz-form-item>
+          </form>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div
+        class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative h-full">
+        <div
+          class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+          <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Basic Cards</h4>
+        </div>
+        <div class="p-[25px]">
+          <form nz-form [formGroup]="myGroup">
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium dark:text-white/60" nzLg="6" nzMd="9" nzXs="24"
+                nzFor="bc1">Text
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="bc1" type="text" id="bc1" placeholder="Duran Clayton">
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium dark:text-white/60" nzLg="6" nzMd="9" nzXs="24"
+                nzFor="bc2">Email Address
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="bc2" type="email" id="bc2" placeholder="username@email.com">
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium dark:text-white/60" nzLg="6" nzMd="9" nzXs="24"
+                nzFor="bc3">URL
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="bc3" type="url" id="bc3"
+                  placeholder="https://demo.dashboardmarket.com/hexadash-angular/">
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium capitalize dark:text-white/60" nzLg="6" nzMd="9"
+                nzXs="24" nzFor="bc4">phone
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <input
+                  class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nz-input name="bc4" type="url" id="bc4" placeholder="017123456789">
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium capitalize dark:text-white/60" nzLg="6" nzMd="9"
+                nzXs="24" nzFor="bc5">password
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <nz-input-group
+                  class="flex items-center shadow-none py-[10px] px-[20px] h-[50px] border-1 border-normal dark:border-white/10 w-full text-[14px] font-normal leading-[1.5] dark:bg-white/10 rounded-4"
+                  [nzSuffix]="suffixTemplate">
+                  <input id="bc5"
+                    class="w-full text-[15px] placeholder:text-[#A0A0A0] dark:bg-transparent bg-transparent dark:text-white/60 outline-none autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,0,0)]  text-theme-gray"
+                    [type]="passwordVisible ? 'text' : 'password'" nz-input placeholder="Input password" />
+                  <ng-template #suffixTemplate>
+                    <span class="cursor-pointer text-light-extra dark:text-white/60 w-[15px] h-[15px]" nz-icon
+                      [nzType]="passwordVisible ? 'eye' : 'eye-invisible'"
+                      (click)="passwordVisible = !passwordVisible"></span>
+                  </ng-template>
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium capitalize dark:text-white/60" nzLg="6" nzMd="9"
+                nzXs="24" nzFor="bc6">Number
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <nz-input-number id="bc6"
+                  class="flex items-center w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[9px] py-[12px] h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  [nzMin]="1" [nzMax]="10" [nzStep]="1"></nz-input-number>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium capitalize dark:text-white/60" nzLg="6" nzMd="9"
+                nzXs="24" nzFor="datePicker">Date
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <nz-date-picker
+                  class="flex items-center w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  formControlName="datePicker" id="bc7"></nz-date-picker>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium capitalize dark:text-white/60" nzLg="6" nzMd="9"
+                nzXs="24" nzFor="monthPicker">Month
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <nz-date-picker
+                  class="flex items-center w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  nzMode="month" formControlName="monthPicker" id="bc8"></nz-date-picker>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium capitalize dark:text-white/60" nzLg="6" nzMd="9"
+                nzXs="24" nzFor="timePicker">Time
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <nz-time-picker
+                  class="flex items-center w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                  formControlName="timePicker" id="bc9"></nz-time-picker>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium capitalize dark:text-white/60" nzLg="6" nzMd="9"
+                nzXs="24" nzFor="bc9">Color
+              </nz-form-label>
+              <nz-form-control nzLg="18" nzMd="15" nzXs="24">
+                <input
+                  class=" flex items-center w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60 bg-transparent"
+                  type="color" [(ngModel)]="selectedColor" (change)="colorChanged()"
+                  [ngModelOptions]="{standalone: true}" />
+                <div class="color-preview" [style.background]="selectedColor"></div>
+              </nz-form-control>
+            </nz-form-item>
+          </form>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div
+        class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative mb-[25px]">
+        <div
+          class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+          <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Select</h4>
+        </div>
+        <div class="p-[25px]">
+          <form nz-form>
+            <nz-form-item class="mb-[25px]">
+              <nz-form-label class="flex items-center font-medium dark:text-white/60 mb-[10px]" nzXs="24"
+                nzFor="textarea1">Basic Select
+              </nz-form-label>
+              <nz-form-control nzXs="24">
+                <nz-select class="basic-select" name="basicSelect" ngModel="jack">
+                  <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                  <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label class="flex items-center font-medium dark:text-white/60 mb-[10px]" nzXs="24"
+                nzFor="textarea2">Multiple Select
+              </nz-form-label>
+              <nz-form-control nzXs="24">
+                <nz-select class="basic-select" name="multipleSelect" ngModel="lucy" nzDisabled>
+                  <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label class="flex items-center font-medium dark:text-white/60 mb-[10px]" nzXs="24"
+                nzFor="textarea2">Disabled Basic Select
+              </nz-form-label>
+              <nz-form-control nzXs="24">
+                <nz-select class="basic-select" name="basic-tag-mode" nzMode="tags" nzPlaceHolder="Tag Mode"
+                  [(ngModel)]="listOfTagOptions">
+                  <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label" [nzValue]="option.value">
+                  </nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label class="flex items-center font-medium dark:text-white/60 mb-[10px]" nzXs="24"
+                nzFor="textarea2">Disabled Basic Select
+              </nz-form-label>
+              <nz-form-control nzXs="24">
+                <nz-select class="basic-select" name="disable-tag-mode" nzMode="tags" nzPlaceHolder="Tag Mode"
+                  [(ngModel)]="listOfTagOptions" nzDisabled>
+                  <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label" [nzValue]="option.value">
+                  </nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+          </form>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div
+        class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative mb-[25px]">
+        <div
+          class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+          <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">File Browser</h4>
+        </div>
+        <div class="p-[25px]">
+          <nz-upload
+          class="w-full"
+          nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+          [nzHeaders]="{ authorization: 'authorization-text' }"
+          (nzChange)="handleChange($event)"
+        >
+          <button nz-button class="text-theme-gray dark:text-white/60 flex capitalize items-center justify-between h-[50px] border-normal border-1 dark:border-white/10 rounded-4 px-[20px] py-5px w-full">
+            <span>select file</span>
+            <span class="flex items-center h-full ltr:border-l-1 rtl:border-r-1 border-normal dark:border-white/10 ps-[25px]">Browse</span>
+          </button>
+        </nz-upload>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div
+        class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative mb-[25px]">
+        <div
+          class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+          <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Checkbox And Radios</h4>
+        </div>
+        <div class="p-[25px]">
+          <nz-checkbox-wrapper class="flex flex-col w-full capitalize basic-checkbox text-theme-gray dark:text-white/60 gap-[5px] mb-[15px]" (nzOnChange)="log($event)">
+            <label class=" m-0 text-dark dark:text-white/[.87]" nz-checkbox nzValue="A">Checkbox</label>
+            <label class=" m-0 text-dark dark:text-white/[.87]" nz-checkbox nzValue="B" [ngModel]="true">
+              Checked</label>
+              <label class=" m-0 text-dark dark:text-white/[.87] dark:[&>.ant-checkbox-disabled+span]:text-white/[.87]" nz-checkbox nzValue="C" [ngModel]="true" nzDisabled>Disabled Checked</label>
+              <label class=" m-0 text-dark dark:text-white/[.87] dark:[&>.ant-checkbox-disabled+span]:text-white/[.87]" nz-checkbox nzValue="D" nzDisabled>Disabled Checked</label>
+          </nz-checkbox-wrapper>
+          <nz-radio-group class="flex flex-col w-full capitalize basic-checkbox text-theme-gray dark:text-white/60 gap-[5px]" [(ngModel)]="radioValue">
+            <label class=" m-0 dark:[&>.ant-radio>.ant-radio-inner]:bg-white/10 dark:[&>.ant-radio>.ant-radio-inner]:border-white/10 text-dark dark:text-white/[.87]" nz-radio nzValue="A">Checked</label>
+            <label class=" m-0 dark:[&>.ant-radio>.ant-radio-inner]:bg-white/10 dark:[&>.ant-radio>.ant-radio-inner]:border-white/10 text-dark dark:text-white/[.87]" nz-radio nzValue="B">Unchecked</label>
+            <label class=" m-0 dark:[&>.ant-radio>.ant-radio-inner]:bg-white/10 dark:[&>.ant-radio>.ant-radio-inner]:border-white/10 text-dark dark:text-white/[.87] dark:[&>.ant-radio-disabled+span]:text-white/[.87]" nz-radio nzValue="C" [nzDisabled]="disabled">Disable</label>
+          </nz-radio-group>
+        </div>
+      </div>
+    </ng-container>
+  </div>

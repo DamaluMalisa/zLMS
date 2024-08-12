@@ -1,0 +1,34 @@
+<div nz-row nzGutter="25">
+  <!-- skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true"
+      [nzParagraph]="{ rows: 5 }"></nz-skeleton>
+  </ng-template>
+  <!-- skeleton -->
+
+  <div nz-col nzXs="24" class="w-full [&>.ant-skeleton]:mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <basic-table></basic-table>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-bestSeller></nz-bestSeller>
+    </ng-container>
+  </div>
+  <div nz-col nzMd="12" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-topSelling></nz-topSelling>
+    </ng-container>
+  </div>
+  <div nz-col nzMd="12" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-browserStates></nz-browserStates>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24" nzXXl="16" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-saleLocation></nz-saleLocation>
+    </ng-container>
+  </div>
+</div>

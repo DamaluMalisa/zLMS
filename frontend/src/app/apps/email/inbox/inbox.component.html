@@ -1,0 +1,514 @@
+<div class="mail-wrapper" nz-row nzGutter="25">
+  <!-- skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true"
+      [nzParagraph]="{ rows: 18}"></nz-skeleton>
+  </ng-template>
+  <!-- skeleton -->
+
+  <div nz-col nzXXl="5" nzXl="7" nzLg="8" nzXs="24" class="mb-[30px]">
+    <app-inbox-sidebar></app-inbox-sidebar>
+  </div>
+  <div nz-col nzXXl="19" nzXl="17" nzLg="16" nzXs="24" class="mb-[30px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class="bg-white dark:bg-[#1b1c29] rounded-[10px]">
+        <div class="mail-content" *ngIf="isMailListOpen">
+          <div
+            class="flex items-center justify-between px-[30px] py-[12px] border-b border-regular dark:border-white/10">
+            <table class="w-full overflow-x-auto">
+              <thead>
+                <tr
+                  class="max-3xl:flex max-3xl:items-center max-3xl:flex-col max-3xl:justify-center max-3xl:gap-[15px]">
+                  <th>
+                    <div class="flex items-center [&>a]:flex [&>a]:items-center gap-[8px]">
+                      <label nz-checkbox [(ngModel)]="allChecked" (ngModelChange)="updateAllChecked()"
+                        [nzIndeterminate]="indeterminate"></label>
+                      <a nz-dropdown [nzDropdownMenu]="menu">
+                        <span class="[&>svg]:text-light-extra" nz-icon nzType="down"></span>
+                      </a>
+                      <nz-dropdown-menu #menu="nzDropdownMenu">
+                        <ul
+                          class="block bg-white dark:bg-[#1b1e2b] shadow-regular dark:shadow-[0_5px_30px_rgba(1,4,19,.60)] rounded-4 capitalize"
+                          nz-menu nzSelectable>
+                          <li
+                            class="flex items-center text-theme-gray dark:text-white/60 hover:bg-primary/10 hover:text-primary dark:hover:bg-white/10 px-3 py-1.5 text-sm dark:hover:text-white/[.87]"
+                            nz-menu-item>All</li>
+                          <li
+                            class="flex items-center text-theme-gray dark:text-white/60 hover:bg-primary/10 hover:text-primary dark:hover:bg-white/10 px-3 py-1.5 text-sm dark:hover:text-white/[.87]"
+                            nz-menu-item>Read</li>
+                          <li
+                            class="flex items-center text-theme-gray dark:text-white/60 hover:bg-primary/10 hover:text-primary dark:hover:bg-white/10 px-3 py-1.5 text-sm dark:hover:text-white/[.87]"
+                            nz-menu-item>Unread</li>
+                          <li
+                            class="flex items-center text-theme-gray dark:text-white/60 hover:bg-primary/10 hover:text-primary dark:hover:bg-white/10 px-3 py-1.5 text-sm dark:hover:text-white/[.87]"
+                            nz-menu-item nzDanger>Stared</li>
+                          <li
+                            class="flex items-center text-theme-gray dark:text-white/60 hover:bg-primary/10 hover:text-primary dark:hover:bg-white/10 px-3 py-1.5 text-sm dark:hover:text-white/[.87]"
+                            nz-menu-item nzDanger>Unstared</li>
+                        </ul>
+                      </nz-dropdown-menu>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="flex items-center max-xs:justify-center max-xs:flex-wrap">
+                      <a aria-current="page"
+                        class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary active"
+                        href="/" nzTooltipTitle="Refresh" nzTooltipPlacement="bottomRight" nz-tooltip>
+                        <span nz-icon nzType="reload" nzTheme="outline"></span>
+                      </a>
+                      <a aria-current="page"
+                        class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary active"
+                        href="/" nzTooltipTitle="Archive" nzTooltipPlacement="bottomRight" nz-tooltip>
+                        <svg-icon class="[&>svg]:w-[16px] [&>svg]:h-[16px]"
+                          src="assets/images/svg/feather/archive.svg"></svg-icon>
+                      </a>
+                      <a aria-current="page"
+                        class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary active"
+                        href="/" nzTooltipTitle="Info" nzTooltipPlacement="bottomRight" nz-tooltip>
+                        <span nz-icon nzType="exclamation-circle" nzTheme="outline"></span>
+                      </a>
+                      <a aria-current="page"
+                        class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary active"
+                        href="/" nzTooltipTitle="Delete" nzTooltipPlacement="bottomRight" nz-tooltip>
+                        <span nz-icon nzType="delete" nzTheme="outline"></span>
+                      </a>
+                      <a aria-current="page"
+                        class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary active"
+                        href="/" nzTooltipTitle="Read" nzTooltipPlacement="bottomRight" nz-tooltip>
+                        <span nz-icon nzType="read" nzTheme="outline"></span>
+                      </a>
+                      <a aria-current="page"
+                        class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary active"
+                        href="/" nzTooltipTitle="Folder" nzTooltipPlacement="bottomRight" nz-tooltip>
+                        <span nz-icon nzType="folder" nzTheme="outline"></span>
+                      </a>
+                    </div>
+                  </th>
+                  <th>
+                    <div>
+                      <nz-input-group [nzSuffix]="suffixIconSearch"
+                        class="w-full rounded-[23px] h-[44px] border-none text-[15px] flex items-center py-[0.5rem] px-[20px] bg-normalBG dark:bg-white/10">
+                        <input class="font-medium bg-transparent" type="text" nz-input placeholder="Search mail" />
+                      </nz-input-group>
+                      <ng-template #suffixIconSearch>
+                        <span class="[&>svg]:text-theme-gray dark:[&>svg]:text-white/60 " nz-icon
+                          nzType="search"></span>
+                      </ng-template>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="flex items-center xs:justify-end max-xs:flex-wrap max-xs:gap-[10px] justify-center">
+                      <span class="inline-block text-sm font-normal text-light dark:text-white/60 whitespace-nowrap">1 -
+                        50 of 235</span>
+                      <div class="flex items-center mx-5">
+                        <a class="inline-flex items-center justify-center bg-transparent text-light dark:text-primary w-[30px] h-[30px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary"
+                          href="/">
+                          <span class="[&>svg]:w-[12px] [&>svg]:h-[12px]" nz-icon nzType="left"
+                            nzTheme="outline"></span>
+                        </a>
+                        <a class="inline-flex items-center justify-center bg-transparent text-light dark:text-white/60 w-[30px] h-[30px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary"
+                          href="/">
+                          <span class="[&>svg]:w-[12px] [&>svg]:h-[12px]" nz-icon nzType="right"
+                            nzTheme="outline"></span>
+                        </a>
+                      </div>
+                      <div class="flex items-center gap-[25px] [&>a]:flex [&>a]:items-center">
+                        <a href="/" class="text-light dark:text-white/60 hover:text-primary group">
+                          <span class="[&>svg]:w-[14px] [&>svg]:h-[14px] group-hover:text-primary" nz-icon
+                            nzType="control" nzTheme="outline"></span>
+                        </a>
+                        <a class="text-light dark:text-white/60 hover:text-primary group" nz-dropdown
+                          [nzDropdownMenu]="more">
+                          <span class="[&>svg]:w-[14px] [&>svg]:h-[14px] group-hover:text-primary" nz-icon nzType="more"
+                            nzTheme="outline"></span>
+                        </a>
+                        <nz-dropdown-menu #more="nzDropdownMenu">
+                          <ul
+                            class="block bg-white dark:bg-[#1b1e2b] shadow-regular dark:shadow-[0_5px_30px_rgba(1,4,19,.60)] rounded-4 capitalize"
+                            nz-menu nzSelectable>
+                            <li
+                              class="flex items-center text-theme-gray dark:text-white/60 hover:bg-primary/10 hover:text-primary dark:hover:bg-white/10 px-3 py-1.5 text-sm dark:hover:text-white/[.87]"
+                              nz-menu-item>Newest</li>
+                            <li
+                              class="flex items-center text-theme-gray dark:text-white/60 hover:bg-primary/10 hover:text-primary dark:hover:bg-white/10 px-3 py-1.5 text-sm dark:hover:text-white/[.87]"
+                              nz-menu-item>Oldest</li>
+                            <li
+                              class="flex items-center text-theme-gray dark:text-white/60 hover:bg-primary/10 hover:text-primary dark:hover:bg-white/10 px-3 py-1.5 text-sm dark:hover:text-white/[.87]"
+                              nz-menu-item>Unread</li>
+                          </ul>
+                        </nz-dropdown-menu>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="overflow-x-auto">
+            <div
+              class="flex items-center px-[30px] py-[15px] border-b border-regular dark:border-white/10 last:border-none "
+              *ngFor="let item of mails">
+              <label class="me-[15px]" nz-checkbox [(ngModel)]="item.checked"
+                (ngModelChange)="updateSingleChecked()"></label>
+              <nz-table class="w-full list-info" (click)="openMail(item.name)">
+                <tr
+                  class="3xl:[&>td:first-child]:w-[30%] max-3xl:[&>td:first-child]:max-w-[200px] max-3xl:[&>td:first-child]:min-w-[200px] max-lg:contents max-xl:gap-[10px] flex items-center">
+                  <td class="list-sender px-[15px]">
+                    <div class="flex items-center gap-[10px]">
+                      <span
+                        class="text-light-extra dark:text-white/60 [&>svg]:w-[16px] [&>svg]:h-[16px] [&.active>svg]:text-warning {{item.star}}"
+                        nz-icon nzType="star" nzTheme="outline"></span>
+                      <nz-avatar class="inline-block min-w-[30px] min-h-[30px] rounded-full" nzIcon="user"
+                        [nzSrc]="item.avatar" nzSize="small"></nz-avatar>
+                      <h6
+                        class="mb-0 text-body dark:text-white/60 text-[15px] font-medium">
+                        {{item.name}}</h6>
+                    </div>
+                  </td>
+                  <td class="list-content px-[15px] w-full">
+                    <div class="list-msg text-start">
+                      <h1 class="text-[15px] font-medium inline-flex items-center gap-[10px]">
+                        <div class="text-body dark:text-white/60">
+                          {{item.title}}
+                        </div>
+                        <span
+                          class="inline-flex items-center h-[22px] px-1.5 text-xs font-normal capitalize rounded-[3px] bg-deepBG dark:bg-white/10 text-body dark:text-white/60 [&.unread]:text-primary [&.unread]:bg-primary/10 {{item.inboxActive}}">inbox</span>
+                      </h1>
+                      <p class="m-0 list-text text-body dark:text-white/60 max-lg:mt-[15px] max-lg:mb-[10px]">
+                        {{formatBody(item.content | truncate:8 )}}</p>
+                      <div class="flex items-center gap-[15px] {{item.attachShow}}">
+                        <a class="inline-flex items-center bg-deepBG dark:bg-white/10 h-[30px] mt-[15px] px-5 text-light dark:text-white/60 text-[13px] rounded-[15px] gap-[6px]"
+                          download="" href="#">
+                          <span nz-icon nzType="link" nzTheme="outline"></span>
+                          1.png
+                        </a>
+                        <a class="inline-flex items-center bg-deepBG dark:bg-white/10 h-[30px] mt-[15px] px-5 text-light dark:text-white/60 text-[13px] rounded-[15px] gap-[6px]"
+                          download="" href="#">
+                          <span nz-icon nzType="link" nzTheme="outline"></span>
+                          2.png</a></div>
+                    </div>
+                  </td>
+                  <td class="list-date px-[15px] xl:text-end max-lg:text-end whitespace-nowrap">
+                    <span class="text-body dark:text-white/60 text-[13px] font-normal">{{item.date}}</span>
+                  </td>
+                </tr>
+              </nz-table>
+            </div>
+          </div>
+        </div>
+        <ng-container *ngFor="let item of mails">
+          <div class="mail-content bg-white dark:bg-[#1b1c29] rounded-[10px]" *ngIf="selectedMail == item.name">
+            <div
+              class="flex items-center justify-between max-3xl:justify-center px-[30px] py-[12px] border-b border-regular dark:border-white/10">
+              <table class="w-full overflow-x-auto">
+                <thead>
+                  <tr
+                    class="max-3xl:flex max-3xl:items-center max-3xl:flex-col max-3xl:justify-center max-3xl:gap-[15px]">
+                    <th class="text-start sm:w-[4%]">
+                      <a class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary"
+                        (click)="closeMail()">
+                        <span class="[&>svg]:w-[12px] [&>svg]:h-[12px]" nz-icon nzType="arrow-left"
+                          nzTheme="outline"></span>
+                      </a>
+                    </th>
+                    <th>
+                      <div class="flex items-center">
+                        <a aria-current="page"
+                          class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary active"
+                          href="/" nzTooltipTitle="Refresh" nzTooltipPlacement="bottomRight" nz-tooltip>
+                          <span nz-icon nzType="reload" nzTheme="outline"></span>
+                        </a>
+                        <a aria-current="page"
+                          class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary active"
+                          href="/" nzTooltipTitle="Archive" nzTooltipPlacement="bottomRight" nz-tooltip>
+                          <svg-icon class="[&>svg]:w-[16px] [&>svg]:h-[16px]"
+                            src="assets/images/svg/feather/archive.svg"></svg-icon>
+                        </a>
+                        <a aria-current="page"
+                          class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary active"
+                          href="/" nzTooltipTitle="Info" nzTooltipPlacement="bottomRight" nz-tooltip>
+                          <span nz-icon nzType="exclamation-circle" nzTheme="outline"></span>
+                        </a>
+                        <a aria-current="page"
+                          class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary active"
+                          href="/" nzTooltipTitle="Delete" nzTooltipPlacement="bottomRight" nz-tooltip>
+                          <span nz-icon nzType="delete" nzTheme="outline"></span>
+                        </a>
+                        <a aria-current="page"
+                          class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary active"
+                          href="/" nzTooltipTitle="Read" nzTooltipPlacement="bottomRight" nz-tooltip>
+                          <span nz-icon nzType="read" nzTheme="outline"></span>
+                        </a>
+                        <a aria-current="page"
+                          class="inline-flex items-center justify-center bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary dark:hover:text-primary active"
+                          href="/" nzTooltipTitle="Folder" nzTooltipPlacement="bottomRight" nz-tooltip>
+                          <span nz-icon nzType="folder" nzTheme="outline"></span>
+                        </a>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="flex items-center justify-end text-end">
+                        <span class="inline-block text-sm font-normal text-light dark:text-white/60 whitespace-nowrap">1
+                          - 50 of 235</span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="xs:px-[25px]">
+              <div class=" py-[30px] px-[25px]  border-b border-regular dark:border-white/10">
+                <div class="flex items-center justify-between flex-wrap sm:gap-[15px] sm:y-[1px] max-sm:gap-[5px]">
+                  <h6 class="text-dark dark:text-white/[.87] text-[24px] font-semibold leading-[30px] mb-[5px]">
+                    {{item.title}}
+                    <span
+                      class="inline-flex items-center h-[22px] px-1.5 text-xs font-normal capitalize rounded-[3px] bg-deepBG dark:bg-white/10 text-body dark:text-white/60 [&.unread]:text-primary [&.unread]:bg-primary/10 {{item.inboxActive}}">inbox</span>
+                  </h6>
+                  <div class="flex items-center gap-[8px]">
+                    <button nz-button
+                      class="inline-flex items-center justify-center flex-col bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary border-none shadow-none">
+                      <span class="m-0 [&>svg]:w-[10px] [&>svg]:h-[10px]" nz-icon nzType="up" nzTheme="outline"></span>
+                      <span class="m-0 [&>svg]:w-[10px] [&>svg]:h-[10px]" nz-icon nzType="down"
+                        nzTheme="outline"></span>
+                    </button>
+                    <button nz-button
+                      class="inline-flex items-center justify-center flex-col bg-transparent text-light-extra dark:text-white/60 w-[38px] h-[38px] rounded-full hover:bg-primary/10 hover:text-primary border-none shadow-none">
+                      <span nz-icon nzType="printer" nzTheme="outline"></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex-wrap items-center justify-between md:mb-[20px] md:mt-5 flex max-md:mb-[30px] gap-y-[20px]">
+                  <div class="flex items-center media  gap-5">
+                    <nz-avatar class="2xl:w-[60px] 2xl:h-[60px] min-w-[50px] h-[50px] rounded-full" nzIcon="user"
+                      [nzSrc]="item.avatar"></nz-avatar>
+                    <div class="ms-[10]">
+                      <h6 class="mb-1 text-base font-medium text-dark dark:text-white/[.87]">{{item.name}}</h6>
+                      <a class="flex items-center gap-[5px] text-light dark:text-white/60" nz-dropdown
+                        [nzDropdownMenu]="menu">
+                        To me
+                        <span nz-icon nzType="down"></span>
+                      </a>
+                      <nz-dropdown-menu #menu="nzDropdownMenu">
+                        <div
+                          class="bg-white dark:bg-[#010413] py-1 shadow-[0_5px_30px_#9299b820] dark:dark:shadow-[0_0_30px_#9299B810] rounded-[5px]">
+                          <ul class=" px-[25px] py-[10px] m-0 gap-y-3 border-none">
+                            <li class="flex gap-x-[50px]"><span
+                                class="min-w-[40px] text-[#9299b8] dark:text-white/60">From:</span> <span
+                                class="text-body dark:text-white/60">{{item.to}}</span> </li>
+                            <li class="flex gap-x-[50px]"><span
+                                class="min-w-[40px] text-[#9299b8] dark:text-white/60">To:</span><span
+                                class="text-body dark:text-white/60">me</span> </li>
+                            <li class="flex gap-x-[50px]"><span
+                                class="min-w-[40px] text-[#9299b8] dark:text-white/60">CC:</span><span
+                                class="text-body dark:text-white/60">example@gamil.com</span> </li>
+                            <li class="flex gap-x-[50px]"><span
+                                class="min-w-[40px] text-[#9299b8] dark:text-white/60">Date:</span><span
+                                class="text-body dark:text-white/60">March 25, {{item.date}} 12:34 PM</span></li>
+                          </ul>
+                        </div>
+                      </nz-dropdown-menu>
+                    </div>
+                  </div>
+                  <div class="flex items-center max-xs:flex-wrap gap-[20px]">
+                    <a class="flex items-center text-light hover:text-primary dark:text-white/60">
+                      <span nz-icon nzType="link" nzTheme="outline"></span>
+                    </a>
+                    <div class="flex items-center text-light dark:text-white/60">
+                      March 25, {{item.date}},2023
+                    </div>
+                    <a class="flex items-center text-light hover:text-primary dark:text-white/60" href="#">
+                      <span nz-icon nzType="star" nzTheme="outline"></span>
+                    </a>
+                    <a class="flex items-center text-light hover:text-primary dark:text-white/60" href="#">
+                      <span nz-icon nzType="rollback" nzTheme="outline"></span>
+                    </a>
+                    <a class="flex items-center text-light hover:text-primary dark:text-white/60" href="#">
+                      <span nz-icon nzType="more" nzTheme="outline"></span>
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div class="px-[80px] max-sm:px-0">
+                    <div class="xs:mb-[17px] text-[15px] leading-[24px] max-xs:mb-[30px]">
+                      <p class="inline-block mb-[15px] text-body dark:text-white/[.87]">{{item.respect}}</p>
+                      <p class="inline-block mb-[15px] text-body dark:text-white/60">{{item.content}}</p>
+                    </div>
+                    <h1 class="text-dark dark:text-white/[.87] text-[15px] font-normal leading-[30px]">Best Regards <br>
+                      {{item.name}}</h1>
+                  </div>
+                  <div class="flex flex-wrap mt-11 max-xs:mt-[15px] -mx-[5px] sm:px-[82px]"
+                    *ngIf="item.attachment.length > 0">
+                    <a class="file" *ngFor="let item of item.attachment" style="min-width: 200px">
+                      <figure
+                        class="group relative p-2.5 mb-[30px] mx-[5px] border dark:border-white/10 rounded-[10px]">
+                        <div class="text-[30px]">
+                          <div
+                            class="min-h-[120px] rounded-[14px] relative before:absolute ltr:before:left-0 rtl:before:right-0 before:top-0 before:w-full before:h-0 before:bg-dark/10 dark:before:bg-white/10 before:rounded-[10px] before:transition-all group-hover:before:h-full bg-[#eff0f3] dark:bg-white/10 flex items-center justify-center text-[50px] text-[#adb3d0]"
+                            *ngIf="item.type == 'pdf'">
+                            <i nz-icon nzType="file-pdf"></i>
+                          </div>
+                          <div
+                            class="min-h-[120px] rounded-[14px] relative before:absolute ltr:before:left-0 rtl:before:right-0 before:top-0 before:w-full before:h-0 before:bg-dark/10 dark:before:bg-white/10 before:rounded-[10px] before:transition-all group-hover:before:h-full bg-[#eff0f3] dark:bg-white/10 flex items-center justify-center text-[50px] text-[#adb3d0]"
+                            *ngIf="item.type == 'doc'">
+                            <i nz-icon nzType="file-word"></i>
+                          </div>
+                          <div
+                            class="min-h-[120px] rounded-[14px] relative before:absolute ltr:before:left-0 rtl:before:right-0 before:top-0 before:w-full before:h-0 before:bg-dark/10 dark:before:bg-white/10 before:rounded-[10px] before:transition-all group-hover:before:h-full bg-[#eff0f3] dark:bg-white/10 flex items-center justify-center text-[50px] text-[#adb3d0]"
+                            *ngIf="item.type == 'xls'">
+                            <i nz-icon nzType="file-excel"></i>
+                          </div>
+                          <div
+                            class="min-h-[120px] rounded-[14px] relative before:absolute ltr:before:left-0 rtl:before:right-0 before:top-0 before:w-full before:h-0 before:bg-dark/10 dark:before:bg-white/10 before:rounded-[10px] before:transition-all group-hover:before:h-full bg-[#eff0f3] dark:bg-white/10 flex items-center justify-center text-[50px] text-[#adb3d0]"
+                            *ngIf="item.type == 'ppt'">
+                            <i nz-icon nzType="file-ppt"></i>
+                          </div>
+                          <div
+                            class="min-h-[120px] rounded-[14px] relative before:absolute ltr:before:left-0 rtl:before:right-0 before:top-0 before:w-full before:h-0 before:bg-dark/10 dark:before:bg-white/10 before:rounded-[10px] before:transition-all group-hover:before:h-full bg-[#eff0f3] dark:bg-white/10 flex items-center justify-center text-[50px] text-[#adb3d0]"
+                            *ngIf="item.type == 'zip'">
+                            <i nz-icon nzType="file-zip"></i>
+                          </div>
+                          <div
+                            class="min-h-[120px] rounded-[14px] relative before:absolute ltr:before:left-0 rtl:before:right-0 before:top-0 before:w-full before:h-0 before:bg-dark/10 dark:before:bg-white/10 before:rounded-[10px] before:transition-all group-hover:before:h-full bg-[#eff0f3] dark:bg-white/10 flex items-center justify-center text-[50px] text-[#adb3d0]"
+                            *ngIf="item.type == 'image'">
+                            <img src="assets/images/inbox/{{item.file}}" alt="{{item.file}}">
+                          </div>
+                        </div>
+                        <div
+                          class="absolute top-[80px] ltr:left-1/2 rtl:right-1/2 -translate-x-1/2 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible rounded-[14px] gap-[10px] flex items-center">
+                          <a class="relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/20 group"
+                            href="#">
+                            <span class="text-white group-hover:text-white" nz-icon nzType="download"
+                              nzTheme="outline"></span>
+                          </a>
+                          <a class="relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/20 group"
+                            href="#">
+                            <span class="text-white group-hover:text-white" nz-icon nzType="share-alt"
+                              nzTheme="outline"></span>
+                          </a>
+                        </div>
+                        <figcaption class="mt-[10px]">
+                          <h6
+                            class="mb-0 text-dark dark:text-white/[.87] text-[15px] font-semibold [&::first-letter]:capitalize">
+                            {{item.file}}</h6>
+                          <p class="mb-0 text-xs text-body dark:text-white/60">{{item.size}}</p>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex items-start justify-between flex-wrap mb-[50px] p-[30px] shadow-[0_15px_40px_rgba(116,116,116,0.06)] gap-y-[10px]">
+              <figure class="flex justify-between flex-wrap gap-[20px]">
+                <img class="w-[50px] h-[50px] rounded-full" src="assets/images/avatars/thumbs.png" alt="">
+                <figcaption>
+                  <h1 class="mb-3 font-medium text-dark dark:text-white/[.87]">Shamim Ahmed</h1>
+                  <p class="mb-0 text-body dark:text-white/60">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    sed diam nonumy eirmod tempor dolor...</p>
+                </figcaption>
+              </figure>
+              <div class="flex items-center max-xs:flex-wrap gap-[20px]">
+                <div class="flex items-center text-light dark:text-white/60">
+                  March 25, {{item.date}}, 2023
+                </div>
+                <a class="flex items-center text-light hover:text-primary dark:text-white/60" href="#">
+                  <span nz-icon nzType="star" nzTheme="outline"></span>
+                </a>
+                <a class="flex items-center text-light hover:text-primary dark:text-white/60" href="#">
+                  <span nz-icon nzType="rollback" nzTheme="outline"></span>
+                </a>
+                <a class="flex items-center text-light hover:text-primary dark:text-white/60" href="#">
+                  <span nz-icon nzType="more" nzTheme="outline"></span>
+                </a>
+              </div>
+            </div>
+            <nav class="xs:ps-[100px] pb-[30px]">
+              <ul class="flex items-center flex-wrap max-xs:justify-center gap-2.5 mb-0">
+                <li>
+                  <button nz-button (click)="toggleDiv()"
+                    class="inline-flex items-center h-10 px-[20px] gap-x-1 text-body border dark:text-white/60 dark:hover:text-white dark:border-white/10 rounded hover:bg-primary hover:text-white group transition duration-150 dark:bg-transparent"
+                    href="#">
+                    <svg-icon class="[&>svg]:w-[16px] [&>svg]:h-[16px] group-hover:text-white"
+                      src="assets/images/svg/feather/corner-up-left.svg"></svg-icon>
+                    Reply
+                  </button>
+                </li>
+                <li>
+                  <button nz-button (click)="hideDiv()"
+                    class="inline-flex items-center h-10 px-[20px] gap-x-1 text-body border dark:text-white/60 dark:hover:text-white dark:border-white/10 rounded hover:bg-primary hover:text-white group transition duration-150 dark:bg-transparent"
+                    href="#">
+                    <svg-icon class="[&>svg]:w-[16px] [&>svg]:h-[16px] group-hover:text-white"
+                      src="assets/images/svg/feather/corner-up-right.svg"></svg-icon>
+                    Forward
+                  </button>
+                </li>
+              </ul>
+            </nav>
+            <div class="py-[30px] px-[30px]" *ngIf="showDiv">
+              <div class="flex gap-5 max-xs:flex-wrap">
+                <img class="w-[50px] h-[50px] rounded-full" src="assets/images/avatars/thumbs.png"
+                  alt="thumbs">
+                <div
+                  class="static bg-white dark:bg-[#212e3d] rounded-10 shadow-[0_10px_50px_rgba(146,153,184,.19)] dark:shadow-none z-998 sm:min-w-[400px]">
+                  <div class="relative px-[30px] max-ssm:px-[15px] editor-style1">
+                    <div
+                      class="relative flex items-center justify-between w-full border-b border-regular dark:border-white/10">
+                      <div class="relative flex items-center gap-2.5 min-h-[50px]">
+                        <input
+                          class="text-dark dark:text-white/[.87] border-none bg-white dark:bg-[#212e3d] shadow-none placeholder:text-theme-gray dark:placeholder:text-white/60"
+                          nz-input placeholder="Reply to" />
+                      </div>
+                      <span
+                        class="absolute ltr:right-[30px] rtl:left-[30px] top-1/2 -translate-y-1/2 text-light dark:text-white/[.87]">Cc</span>
+                    </div>
+                    <div *nzIf=""></div>
+
+                    <div *ngIf="isValid && isDarkMode(); then thenTemplateName else elseTemplateName"></div>
+
+                    <ng-template #thenTemplateName>
+                      <editor [init]="{
+                          plugins: 'lists link image table code help wordcount',
+                          toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent | numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen preview save print | insertfile image media template link anchor codesample | ltr rtl',
+                          skin: 'oxide-dark',
+                          content_css: 'dark'
+                        }"></editor>
+                    </ng-template>
+
+                    <ng-template #elseTemplateName>
+                      <editor [init]="{
+                          plugins: 'lists link image table code help wordcount',
+                          toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent | numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen preview save print | insertfile image media template link anchor codesample | ltr rtl'
+                        }"></editor>
+                    </ng-template>
+
+                  </div>
+                  <div
+                    class="flex items-center justify-between mx-[30px] pt-[20px] pb-[30px] border-t border-regular dark:border-white/10">
+                    <div class="flex items-center gap-[15px]">
+                      <button nz-button class="h-[44px] px-[20px] rounded-4 bg-primary text-white border-primary">
+                        <span>Send</span>
+                      </button>
+                      <a href="#" class="text-[13px] text-theme-gray dark:text-white/60 hover:text-primary"><span
+                          nz-icon nzType="link" nzTheme="outline"></span></a>
+                      <a href="#" class="text-[13px] text-theme-gray dark:text-white/60 hover:text-primary">
+                        <span nz-icon nzType="question-circle" nzTheme="outline"></span>
+                      </a>
+                    </div>
+                    <div class="flex items-center">
+                      <a href="#" class="
+                      text-[15px] text-theme-gray dark:text-white/60 hover:text-primary">
+                        <span nz-icon nzType="delete" nzTheme="outline"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</div>
+

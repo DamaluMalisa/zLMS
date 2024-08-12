@@ -1,0 +1,23 @@
+<div nz-row [nzGutter]="25">
+  <!-- skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton [nzAvatar]="true" class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle"
+      [nzActive]="true" [nzParagraph]="{ rows: 5 }"></nz-skeleton>
+  </ng-template>
+  <!-- skeleton -->
+
+  <div nz-col nzXs="24" class="w-full [&>.ant-skeleton]:mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <dashboard-ui></dashboard-ui>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24" class="w-full [&>.ant-skeleton]:mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <feature-contact></feature-contact>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24" nzMd="8" nzXXL="6" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <file></file>
+    </ng-container>
+</div>

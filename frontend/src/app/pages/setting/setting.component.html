@@ -1,0 +1,122 @@
+<!-- skeleton -->
+<ng-template #loadingSkeleton>
+  <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzAvatar]="true" [nzShape]="circle" [nzActive]="true"
+    [nzParagraph]="{ rows: 5 }"></nz-skeleton>
+</ng-template>
+<!-- skeleton -->
+
+<div nz-row nzGutter="25">
+  <div nz-col nzXXl="6" nzLg="8" nzMd="10" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+        <!-- Profile Avatar -->
+        <div class="bg-white dark:bg-white/10 border border-gray-300 dark:border-gray-700">
+          <div class="px-5 pt-[25px] pb-5 text-center border-b border-regular dark:border-white/10">
+            <figure class="relative max-w-[120px] mx-auto mb-6">
+              <nz-avatar  [nzSize]="120" nzIcon="user" [nzSrc]="avatarUrl"></nz-avatar>
+              <span class="absolute right-0 flex items-center justify-center w-10 h-10 bg-white -bottom-2 dark:bg-white/10">
+                <nz-upload
+                    nzName="avatar"
+                    [nzShowUploadList]="false"
+                    (nzChange)="handleChange($event)">
+                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-[14px] text-white" nz-icon nzType="camera" nzTheme="outline">
+                    </span>
+                </nz-upload>
+              </span>
+            </figure>
+            <figcaption>
+              <h1 class="mb-0 text-lg font-semibold text-dark dark:text-white/[.87]">{{ student[0]?.firstName }} {{ student[0]?.lastName }}</h1>
+              <p class="mb-0 text-light dark:text-white/60 text-15">{{ student[0]?.studyProgram.name }}</p>
+            </figcaption>
+          </div>
+          <nav class="px-[25px] pt-8 pb-5">
+            <ul class="nz-tabset">
+              <li class="{{ listItemClass }}" nz-tab nzTitle="Edit Profile" (click)="selectTab('editProfile', 'Edit Profile','Set Up Your Personal Information')" [class.active]="selectedTab === 'editProfile'">
+                <span nz-icon nzType="user" nzTheme="outline"></span>
+                <span>Edit Profile</span>
+              </li>
+              <li class="{{ listItemClass }}" nz-tab nzTitle="Account Settings" (click)="selectTab('accountSettings', 'Account Settings','Update your username and manage your account')" [class.active]="selectedTab === 'accountSettings'">
+                <span nz-icon nzType="setting" nzTheme="outline"></span>
+                <span>Account Settings</span>
+              </li>
+              <li class="{{ listItemClass }}" nz-tab nzTitle="Account Settings" (click)="selectTab('changePassword', 'Password Settings','Change your account password')" [class.active]="selectedTab === 'changePassword'">
+                <span nz-icon nzType="key" nzTheme="outline"></span>
+                <span>Password Settings</span>
+              </li>
+              <li class="{{ listItemClass }}" nz-tab nzTitle="Account Settings" (click)="selectTab('socialProfiles','Social Profiles','Add elsewhere links to your profile')" [class.active]="selectedTab === 'socialProfiles'">
+                <span nz-icon nzType="usergroup-add" nzTheme="outline"></span>
+                <span>Social Profiles</span>
+              </li>
+              <li class="{{ listItemClass }}" nz-tab nzTitle="Account Settings" (click)="selectTab('notifications','Notifications','Choose What Notification you will Receive')" [class.active]="selectedTab === 'notifications'">
+                <span nz-icon nzType="bell" nzTheme="outline"></span>
+                <span>Notifications</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXXl="18" nzLg="16" nzMd="14" nzXs="24" class="mb-[25px] [&>.ant-skeleton]:mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+        <!-- Profile Cover -->
+      <div class="mb-[35px] max-md:mt-[25px]">
+        <div class="relative rounded-10 border border-gray-300 dark:border-gray-700">
+          <nz-avatar class="w-full min-h-[240px] object-cover rounded-10 bg-normalBG dark:bg-white/10" nzIcon="user" [nzSrc]="avatarCoverUrl"></nz-avatar>
+          <nz-upload
+                class="absolute border rounded-md px-[15px] py-[8px] border-white/80 top-5 right-5 inline-flex items-center justify-center gap-[10px] cursor-pointer font-medium text-white h-[40px] [&>div>.ant-upload]:inline-flex [&>div>.ant-upload]:items-center [&>div>.ant-upload]:text-white [&>div>.ant-upload]:gap-[10px] [&>div>.ant-upload]:cursor-pointer"
+                nzName="avatar"
+                [nzShowUploadList]="false"
+                (nzChange)="handleCoverChange($event)">
+                <span nz-icon nzType="camera" nzTheme="outline">
+                </span>
+                <span>Change Cover</span>
+            </nz-upload>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <!-- Profile Content -->
+      <div class="tab-content">
+        <div class="bg-white dark:bg-white/10 m-0 p-0 mb-[25px] rounded-10 relative border border-gray-300 dark:border-gray-700">
+          <div class="py-[18px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+            <h1 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">{{ tabTitle }}</h1>
+            <span class="mb-0.5 text-light dark:text-white/60 text-13 font-normal">{{subTitle}}</span>
+          </div>
+          <div class="px-[25px] pb-[50px] pt-[40px]">
+            <div *ngIf="selectedTab === 'editProfile'">
+              <!-- Add your content for the Edit Profile tab -->
+              <div nz-row nzGutter="25" nzJustify="center">
+                <div nz-col nzXXl="12" nzLg="16" nzXs="24">
+                  <edit-profiles></edit-profiles>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="selectedTab === 'accountSettings'">
+              <!-- Add your content for the Account Settings tab -->
+              <account-settings></account-settings>
+            </div>
+            <div *ngIf="selectedTab === 'changePassword'">
+              <!-- Add your content for the Change Password tab -->
+              <div nz-row nzGutter="25" nzJustify="center">
+                <div nz-col nzXXl="12" nzLg="16" nzXs="24">
+                  <password-settings></password-settings>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="selectedTab === 'socialProfiles'">
+              <!-- Add your content for the Social Profiles tab -->
+              <div nz-row nzGutter="25" nzJustify="center">
+                <div nz-col nz-col nzXXl="12" nzLg="16" nzXs="24">
+                  <social-profiles></social-profiles>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="selectedTab === 'notifications'">
+              <!-- Add your content for the Notifications tab -->
+              <notifications></notifications>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

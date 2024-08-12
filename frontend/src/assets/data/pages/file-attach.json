@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "id": 1,
+      "icon": "assets/images/file/pdf.png",
+      "name": "Product-guidelines.pdf",
+      "size": "7.05 MB",
+      "type": "pdf",
+      "typeStatus": "download"
+    },
+    {
+      "id": 2,
+      "icon": "assets/images/file/zip.png",
+      "name": "Main-admin-design.zip",
+      "size": "522 KB",
+      "type": "zip",
+      "typeStatus": "download"
+    },
+    {
+      "id": 3,
+      "icon": "assets/images/file/psd.png",
+      "name": "Admin-wireframe.psd",
+      "size": "5 MB",
+      "type": "psd",
+      "typeStatus": "download"
+    }
+  ]
+}

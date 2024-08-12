@@ -1,0 +1,44 @@
+{
+  "appSettings": [
+    {
+      "source": "audio",
+      "label": "Diagram Maker",
+      "des": "Plan user flows & test scenarios"
+    },
+    {
+      "source": "payment",
+      "label": "payments",
+      "des": "We handle billions of dollars"
+    },
+    {
+      "source": "feature",
+      "label": "All Features",
+      "des": "Introducing Increment subscriptions"
+    },
+    {
+      "source": "theme",
+      "label": "Themes",
+      "des": "Third party themes that are compatible"
+    },
+    {
+      "source": "payment",
+      "label": "payments",
+      "des": "We handle billions of dollars"
+    },
+    {
+      "source": "design",
+      "label": "Design Mockups",
+      "des": "Share planning visuals with clients"
+    },
+    {
+      "source": "file",
+      "label": "Content Planner",
+      "des": "Centralize content gathering and editing"
+    },
+    {
+      "source": "audio",
+      "label": "Diagram Maker",
+      "des": "Plan user flows & test scenarios"
+    }
+  ]
+}

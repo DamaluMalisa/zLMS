@@ -1,0 +1,147 @@
+{
+  "usingApplications": {
+    "bordered": false,
+    "defaultActiveKey": ["1"],
+    "icon": "double-right",
+    "Panel": [{
+        "header": "How long does it take to download updates?",
+        "key": "1",
+        "content": "Many support queries and technical questions will already be answered in supporting documentation such as FAQ&rsquo;s and comments from previous buyers. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."
+      },
+      {
+        "header": "How to use SCSS variables to build custom color?",
+        "key": "2",
+        "content": "Many support queries and technical questions will already be answered in supporting documentation such as FAQ&rsquo;s and comments from previous buyers. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."
+      },
+      {
+        "header": "How long does it take to download updates?",
+        "key": "3",
+        "content": "Many support queries and technical questions will already be answered in supporting documentation such as FAQ&rsquo;s and comments from previous buyers. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."
+      },
+      {
+        "header": "What is the flex layout?",
+        "key": "4",
+        "content": "Many support queries and technical questions will already be answered in supporting documentation such as FAQ&rsquo;s and comments from previous buyers. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."
+      },
+      {
+        "header": "How long does it take to download updates?",
+        "key": "5",
+        "content": "Many support queries and technical questions will already be answered in supporting documentation such as FAQ&rsquo;s and comments from previous buyers. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."
+      },
+      {
+        "header": "Where to buy this UI dashboard?",
+        "key": "6",
+        "content": "Many support queries and technical questions will already be answered in supporting documentation such as FAQ&rsquo;s and comments from previous buyers. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."
+      },
+      {
+        "header": "How long does it take to download updates?",
+        "key": "7",
+        "content": "Many support queries and technical questions will already be answered in supporting documentation such as FAQ&rsquo;s and comments from previous buyers. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et."
+      }
+    ]
+  },
+  "uiElements": {
+    "bordered": false,
+    "defaultActiveKey": ["1"],
+    "icon": "double-right",
+    "Panel": [{
+        "header": "Frequently Asked Questions",
+        "key": "1",
+        "content": "Find answers to common questions and technical inquiries in our FAQ section."
+      },
+      {
+        "header": "Customizing Colors with SCSS Variables",
+        "key": "2",
+        "content": "Learn how to use SCSS variables to create custom color schemes for your UI components."
+      },
+      {
+        "header": "Download Update Time",
+        "key": "3",
+        "content": "Discover how long it takes to download updates for our UI elements."
+      },
+      {
+        "header": "Understanding Flex Layout",
+        "key": "4",
+        "content": "Get insights into the flex layout system and how it works in our UI framework."
+      },
+      {
+        "header": "Purchasing Our UI Dashboard",
+        "key": "5",
+        "content": "Learn where and how to buy our comprehensive UI dashboard package."
+      },
+      {
+        "header": "Customer Support",
+        "key": "6",
+        "content": "Find information about our customer support services and how we assist our users."
+      },
+      {
+        "header": "Update Download Duration",
+        "key": "7",
+        "content": "Learn about the time it usually takes to complete update downloads for our UI components."
+      }
+    ]
+  },
+  "components": {
+    "bordered": true,
+    "defaultActiveKey": ["1"],
+    "icon": "double-right",
+    "Panel": [{
+        "header": "Button Component",
+        "key": "1",
+        "content": "The Button component provides a customizable button element that can be used for various purposes in your UI."
+      },
+      {
+        "header": "Card Component",
+        "key": "2",
+        "content": "The Card component represents a card-like container that can be used to display various types of content."
+      },
+      {
+        "header": "Input Component",
+        "key": "3",
+        "content": "The Input component allows users to input text or data and is commonly used in forms and user interactions."
+      }
+    ]
+  },
+  "buildProcess": {
+    "bordered": false,
+    "defaultActiveKey": ["1"],
+    "icon": "hammer",
+    "Panel": [{
+        "header": "Setting Up Development Environment",
+        "key": "1",
+        "content": "To start the development process, make sure you have Node.js and npm installed. You can clone the repository and run 'npm install' to install dependencies."
+      },
+      {
+        "header": "Running the Development Server",
+        "key": "2",
+        "content": "To preview the UI components, use the 'npm start' command. This will launch a development server and open the app in your default browser."
+      },
+      {
+        "header": "Building for Production",
+        "key": "3",
+        "content": "When ready for production, use 'npm run build' to create optimized and minified production-ready assets in the 'build' folder."
+      }
+    ]
+  },
+  "supportPolicy": {
+    "bordered": true,
+    "defaultActiveKey": ["1"],
+    "icon": "double-right",
+    "Panel": [{
+        "header": "Support Channels",
+        "key": "1",
+        "content": "We provide support through our online community forum, email, and dedicated customer support during business hours."
+      },
+      {
+        "header": "Response Time",
+        "key": "2",
+        "content": "We aim to respond to support queries within 24 hours on business days. Complex issues might take longer to resolve."
+      },
+      {
+        "header": "Software Updates",
+        "key": "3",
+        "content": "We regularly release updates with bug fixes and new features. Users with active licenses are eligible for free updates."
+      }
+    ]
+  }
+}

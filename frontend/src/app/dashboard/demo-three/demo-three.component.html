@@ -1,0 +1,67 @@
+<div nz-row [nzGutter]="25">
+  <!-- Skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton [nzAvatar]="true" class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true" [nzParagraph]="{ rows: 4 }"></nz-skeleton>
+  </ng-template>
+  <!-- End: Skeleton -->
+
+  <!-- money earning -->
+  <div nz-col nzXs="24" nzXXl="14" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-moneyEarning></nz-moneyEarning>
+    </ng-container>
+  </div>
+  <!-- End: money earning -->
+
+  <!-- profit growth -->
+  <div nz-col nzXs="24" nzXXl="10" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-profitGrowth></nz-profitGrowth>
+    </ng-container>
+  </div>
+  <!-- End: profit growth -->
+
+  <!-- overview list -->
+  <div nz-col nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-OverviewListVertical
+      [textColor]="textColor"
+      [rounded]="rounded"
+      [bgColor]="bgColor">
+      </nz-OverviewListVertical>
+    </ng-container>
+  </div>
+  <!-- End: overview list -->
+
+  <!-- Sales Overview -->
+  <div nz-col nzXs="24" nzXXl="8" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-salesOverview [componentId]="'component1'"></nz-salesOverview>
+    </ng-container>
+  </div>
+  <!-- End: Sales Overview -->
+
+  <!-- Top Product -->
+  <div nz-col nzXs="24" nzXXl="8" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-topProduct></nz-topProduct>
+    </ng-container>
+  </div>
+  <!-- End: Top Product -->
+
+  <!-- Recent Deals -->
+  <div nz-col nzXs="24" nzXXl="8" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-recentDeals></nz-recentDeals>
+    </ng-container>
+  </div>
+  <!-- End: Recent Deals -->
+
+   <!-- Active User -->
+   <div nz-col nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-activeUser></nz-activeUser>
+    </ng-container>
+  </div>
+  <!-- End: Active User -->
+</div>

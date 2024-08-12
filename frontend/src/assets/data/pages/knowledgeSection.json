@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "sections": [
+      {
+        "title": "Introduction to Plugin",
+        "items": [
+          {
+            "text": "Log in and out of plugins view your success and other stats.",
+            "link": "/pages/knowledge-base/single-article"
+          },
+          {
+            "text": "Log in and out of Plugins",
+            "link": "/pages/knowledge-base/single-article"
+          },
+          {
+            "text": "Switch between accounts",
+            "link": "/pages/knowledge-base/single-article"
+          }
+        ]
+      },
+      {
+        "panels": [
+          {
+            "name": "Switch between accounts",
+            "active": false,
+            "items": [
+              {
+                "text": "Log in and out of Plugins",
+                "link": "/pages/knowledge-base/single-article"
+              },
+              {
+                "text": "Change your email",
+                "link": "/pages/knowledge-base/single-article"
+              },
+              {
+                "text": "Reactivate your account",
+                "link": "/pages/knowledge-base/single-article"
+              },
+              {
+                "text": "Change your email",
+                "link": "/pages/knowledge-base/single-article"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "text": "Log in and out of plugins",
+            "link": "/pages/knowledge-base/single-article"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "sections": [
+      {
+        "title": "Productivity tools for your Plugin admin",
+        "items": [
+          {
+            "text": "Log in and out of plugins view your success and other stats.",
+            "link": "/pages/knowledge-base/single-article"
+          },
+          {
+            "text": "Log in and out of Plugins",
+            "link": "/pages/knowledge-base/single-article"
+          },
+          {
+            "text": "Switch between accounts",
+            "link": "/pages/knowledge-base/single-article"
+          }
+        ]
+      },
+      {
+        "panels": [
+          {
+            "name": "Switch between accounts",
+            "active": false,
+            "items": [
+              {
+                "text": "Log in and out of Plugins",
+                "link": "/pages/knowledge-base/single-article"
+              },
+              {
+                "text": "Change your email",
+                "link": "/pages/knowledge-base/single-article"
+              },
+              {
+                "text": "Reactivate your account",
+                "link": "/pages/knowledge-base/single-article"
+              },
+              {
+                "text": "Change your email",
+                "link": "/pages/knowledge-base/single-article"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "text": "Log in and out of plugins",
+            "link": "/pages/knowledge-base/single-article"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "sections": [
+      {
+        "title": "Manage your account",
+        "items": [
+          {
+            "text": "Log in and out of plugins view your success and other stats.",
+            "link": "/pages/knowledge-base/single-article"
+          },
+          {
+            "text": "Log in and out of Plugins",
+            "link": "/pages/knowledge-base/single-article"
+          },
+          {
+            "text": "Switch between accounts",
+            "link": "/pages/knowledge-base/single-article"
+          }
+        ]
+      },
+      {
+        "panels": [
+          {
+            "name": "Switch between accounts",
+            "active": false,
+            "items": [
+              {
+                "text": "Log in and out of Plugins",
+                "link": "/pages/knowledge-base/single-article"
+              },
+              {
+                "text": "Change your email",
+                "link": "/pages/knowledge-base/single-article"
+              },
+              {
+                "text": "Reactivate your account",
+                "link": "/pages/knowledge-base/single-article"
+              },
+              {
+                "text": "Change your email",
+                "link": "/pages/knowledge-base/single-article"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "text": "Log in and out of plugins",
+            "link": "/pages/knowledge-base/single-article"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "ticketUsers": [
+    {
+      "name": "Kellie Marquot",
+      "avatar": "assets/images/avatars/tm1.png",
+      "messagePreview": "There are have a many variations of passages.",
+      "timestamp": "1 hour ago",
+      "isUnread": true
+    },
+    {
+      "name": "Daniel Pink",
+      "avatar": "assets/images/avatars/tm2.png",
+      "messagePreview": "There are have a many.",
+      "timestamp": "7 hours ago",
+      "isUnread": true
+    },
+    {
+      "name": "Kellie Marquot",
+      "avatar": "assets/images/avatars/tm3.png",
+      "messagePreview": "All the Lorem Ipsum generators on the Internet tend There are have a many variations of passages.",
+      "timestamp": "1 hour ago",
+      "isUnread": true
+    },
+    {
+      "name": "Meyri Carles",
+      "avatar": "assets/images/avatars/tm4.png",
+      "messagePreview": "Lorem ipsum dolor us was they amet...",
+      "timestamp": "1 hour ago",
+      "isUnread": true
+    }
+  ]
+}

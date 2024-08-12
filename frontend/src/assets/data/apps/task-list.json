@@ -1,0 +1,85 @@
+{
+  "TaskList": {
+    "today": [
+      {
+        "id": 1,
+        "sub": "Planning for new dashboard wireframe and prototype design",
+        "checked":true
+      },
+      {
+        "id": 2,
+        "sub": "Standup meeting with team",
+        "checked":true
+      },
+      {
+        "id": 3,
+        "sub": "Create eye garbing images for WordPress blog post",
+        "checked":true
+      },
+      {
+        "id": 4,
+        "sub": "Write an article about upcoming theme",
+        "checked":false
+      },
+      {
+        "id": 5,
+        "sub": "Dashboard new feature dark mode design discussion",
+        "checked":false
+      }
+    ],
+    "week": [
+      {
+        "id": 6,
+        "sub": "Create eye-grabbing images for WordPress blog post",
+        "checked":false
+      },
+      {
+        "id": 7,
+        "sub": "Standup meeting with team",
+        "checked":false
+      },
+      {
+        "id": 8,
+        "sub": "Create eye garbing images for WordPress blog post",
+        "checked":true
+      },
+      {
+        "id": 9,
+        "sub": "Write an article about the upcoming theme",
+        "checked":true
+      },
+      {
+        "id": 10,
+        "sub": "Planning for new dashboard wireframe and prototype design",
+        "checked":false
+      }
+    ],
+    "month": [
+      {
+        "id": 11,
+        "sub": "Standup meeting with team",
+        "checked":true
+      },
+      {
+        "id": 12,
+        "sub": "Planning for new dashboard wireframe and prototype design",
+        "checked":true
+      },
+      {
+        "id": 13,
+        "sub": "Create eye garbing images for WordPress blog post",
+        "checked":false
+      },
+      {
+        "id": 14,
+        "sub": "Write an article about upcoming theme",
+        "checked":false
+      },
+      {
+        "id": 15,
+        "sub": "Dashboard new feature dark mode design discussion",
+        "checked":false
+      }
+    ]
+  }
+}

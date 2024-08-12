@@ -1,0 +1,22 @@
+<!-- skeleton -->
+<ng-template #loadingSkeleton>
+  <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzAvatar]="true"
+    [nzActive]="true" [nzParagraph]="{ rows: 5 }"></nz-skeleton>
+</ng-template>
+
+<div class="w-full [&>.ant-skeleton]:mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton" class="mb-[30px]">
+     <app-knowledgeHeader></app-knowledgeHeader>
+  </ng-container>
+</div>
+
+<ng-container *ngIf="showContent; else loadingSkeleton">
+  <div
+    class="bg-white dark:bg-white/10 mt-[50px] px-[50px] max-sm:px-[30px] max-ssm:px-5 pb-[50px] rounded-10 mb-[30px]">
+    <div nz-row nzGutter="25" class="justify-center">
+      <div nz-col nzXs="24" nzXl="18" class="mb-[30px]">
+        <app-knowledgeTab></app-knowledgeTab>
+      </div>
+    </div>
+  </div>
+</ng-container>

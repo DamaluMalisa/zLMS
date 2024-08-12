@@ -1,0 +1,54 @@
+<div nz-row [nzGutter]="25">
+    <!-- skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true" [nzParagraph]="{ rows: 4 }"></nz-skeleton>
+  </ng-template>
+    <!-- skeleton -->
+
+  <!-- overview -->
+  <div nz-col nzXs="24" nzXXl="12" class="w-full [&>.ant-skeleton]:mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-overview></nz-overview>
+    </ng-container>
+  </div>
+  <!-- end: overview -->
+
+  <!-- sales report -->
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-saleReport></nz-saleReport>
+    </ng-container>
+  </div>
+  <!-- end: sales report -->
+
+  <!-- sales Growth -->
+   <div nz-col nzXs="24" nzXXl="8" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-saleGrowth [componentId]="'component1'"></nz-saleGrowth>
+    </ng-container>
+  </div>
+  <!-- end: sales Growth -->
+
+  <!-- sales Growth -->
+  <div nz-col nzXs="24" nzXXl="16" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-saleLocation [componentId]="'component2'"></nz-saleLocation>
+    </ng-container>
+  </div>
+  <!-- end: sales Growth -->
+
+  <!-- Top Selling -->
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-topSelling [componentId]="'component3'"></nz-topSelling>
+    </ng-container>
+  </div>
+
+  <!-- Top Selling -->
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-browserStates></nz-browserStates>
+    </ng-container>
+  </div>
+
+</div>

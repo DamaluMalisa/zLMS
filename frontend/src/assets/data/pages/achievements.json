@@ -1,0 +1,17 @@
+[
+  {
+    "imageSrc": "../../../assets/images/banners/slider-one.png",
+    "title": "Achievements 1",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr."
+  },
+  {
+    "imageSrc": "../../../assets/images/banners/slider-one.png",
+    "title": "Achievements 2",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr."
+  },
+  {
+    "imageSrc": "../../../assets/images/banners/slider-one.png",
+    "title": "Achievements 3",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr."
+  }
+]

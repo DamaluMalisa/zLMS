@@ -1,0 +1,92 @@
+{
+  "UserActivities": [
+    {
+      "name": "Meyri Carles",
+      "work": "add new task",
+      "obj":"Dashboard Project",
+      "avatar":"assets/images/avatars/tm5.png",
+      "status":"primary",
+      "icon":"plus",
+      "day":"22",
+      "month":"december",
+      "time":"3:30 PM"
+    },
+    {
+      "name": "Tuhin Molla",
+      "work": "pushed commit",
+      "obj":"#652364",
+      "avatar":"assets/images/avatars/tm1.png",
+      "status":"info",
+      "icon":"code",
+      "day":"22",
+      "month":"december",
+      "time":"3:30 PM"
+    },
+    {
+      "name": "Billal Hossain",
+      "work": "completed task",
+      "obj":"Invoice template",
+      "avatar":"assets/images/avatars/tm2.png",
+      "status":"success",
+      "icon":"check-circle",
+      "day":"22",
+      "month":"december",
+      "time":"3:30 PM"
+    },
+    {
+      "name": "Khalid Hasan",
+      "work": "add new task",
+      "obj":"Dashboard Project",
+      "avatar":"assets/images/avatars/tm3.png",
+      "status":"primary",
+      "icon":"plus",
+      "day":"22",
+      "month":"january",
+      "time":"3:30 PM"
+    },
+    {
+      "name": "Meyri Carles",
+      "work": "pushed commit",
+      "obj":"#652364",
+      "avatar":"assets/images/avatars/tm4.png",
+      "status":"secondary",
+      "icon":"code",
+      "day":"22",
+      "month":"january",
+      "time":"3:30 PM"
+    },
+    {
+      "name": "Tomlinson ",
+      "work": "completed task",
+      "obj":"template",
+      "avatar":"assets/images/avatars/tm2.png",
+      "status":"success",
+      "icon":"check-circle",
+      "day":"22",
+      "month":"january",
+      "time":"3:30 PM"
+    },
+    {
+      "name": "Tomlinson ",
+      "work": "completed task",
+      "obj":"template",
+      "avatar":"assets/images/avatars/tm2.png",
+      "status":"success",
+      "icon":"check-circle",
+      "day":"23",
+      "month":"january",
+      "time":"3:30 PM"
+    },
+    {
+      "name": "Meyri Carles",
+      "work": "pushed commit",
+      "obj":"#652364",
+      "avatar":"assets/images/avatars/tm4.png",
+      "status":"secondary",
+      "icon":"code",
+      "day":"21",
+      "month":"january",
+      "time":"3:30 PM"
+    }
+  ]
+}

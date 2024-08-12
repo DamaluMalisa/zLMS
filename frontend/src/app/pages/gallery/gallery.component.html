@@ -1,0 +1,46 @@
+<div nz-row nzGutter="25">
+  <!-- skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true"
+      [nzParagraph]="{ rows: 5 }"></nz-skeleton>
+  </ng-template>
+  <ng-template #loadingHeader>
+    <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true"
+      [nzParagraph]="{ rows: 2 }"></nz-skeleton>
+  </ng-template>
+  <!-- skeleton -->
+
+  <div nz-col nzXs="24" class="mb-[25px] [&>.ant-skeleton]:mb-[20px]">
+    <ng-container *ngIf="showContent; else loadingHeader">
+      <div class="px-4 mb-5 bg-white dark:bg-white/10 rounded-10">
+        <ul class="flex flex-wrap items-center">
+          <li class="{{listItemClass}}" (click)="filterGallery('all')" [ngClass]="{ 'active': activeFilter === 'all' }">
+            All</li>
+          <li class="{{listItemClass}}" (click)="filterGallery('web-design')"
+            [ngClass]="{ 'active': activeFilter === 'web-design' }">Web Design</li>
+          <li class="{{listItemClass}}" (click)="filterGallery('ui-design')"
+            [ngClass]="{ 'active': activeFilter === 'ui-design' }">UI Design</li>
+          <li class="{{listItemClass}}" (click)="filterGallery('wireframe')"
+            [ngClass]="{ 'active': activeFilter === 'wireframe' }">Wireframe</li>
+          <li class="{{listItemClass}}" (click)="filterGallery('presentation')"
+            [ngClass]="{ 'active': activeFilter === 'presentation' }">Presentation</li>
+        </ul>
+      </div>
+    </ng-container>
+    <div nz-row nzGutter="25">
+      <div class="duration-300" nz-col nzXXl="6" nzLg="8" nzSm="12" nzXs="24" class="mb-[25px]" *ngFor="let image of filteredGallery">
+        <ng-container *ngIf="showContentGallery; else loadingSkeleton">
+          <figure class="bg-white dark:bg-white/10 rounded-10">
+            <img class="w-full h-[276px] rounded-10" [src]="image.url" [alt]="image.caption">
+            <figcaption>
+              <div class="px-6 py-5">
+                <h1 class="text-15 font-medium mb-0.5 text-dark dark:text-white/[.87]">{{image.title}}</h1>
+                <p class="mb-0 text-light dark:text-white/60 text-13">{{image.description}}</p>
+              </div>
+            </figcaption>
+          </figure>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

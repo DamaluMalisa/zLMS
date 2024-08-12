@@ -1,0 +1,83 @@
+<!-- skeleton -->
+<ng-template #loadingSkeleton>
+  <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true"
+    [nzParagraph]="{ rows: 7}"></nz-skeleton>
+</ng-template>
+<!-- skeleton -->
+
+<nz-row>
+  <div nz-col nzXs="24" nzMd="16" nzXXl="12">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class="bg-white dark:bg-white/10 rounded-[10px] mb-[25px] todo">
+        <div
+          class="px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] flex flex-wrap items-center justify-between max-sm:flex-col max-sm:h-auto max-sm:mb-[15px] border-b border-regular dark:border-white/10">
+          <h1
+            class="mb-0 inline-flex items-center py-[16px] max-sm:pb-[5px] overflow-hidden whitespace-nowrap text-ellipsis text-[18px] font-semibold text-dark dark:text-white/[.87]">
+            Todo</h1>
+        </div>
+        <div class="w-full pt-[10px] p-[25px] overflow-x-auto">
+          <!-- Content for Tab 1 -->
+          <nz-table [nzData]="['']" [nzFrontPagination]="false" [nzShowPagination]="false">
+            <tbody cdkDropList (cdkDropListDropped)="drop($event)">
+              <tr class="group" *ngFor="let item of UserList; let i = index" cdkDrag>
+                <td class="border-none py-[12px] ltr:pl-0 rtl:pr-0 group-hover:bg-transparent w-full whitespace-nowrap text-start">
+                  <label class="text-[14px] font-normal leading-[17px] text-theme-gray dark:text-white/60 capitalize"
+                    nz-checkbox nzValue="{{item.id}}">{{item.sub}}</label>
+                </td>
+                <td class="border-none py-[12px] ltr:pr-0 rtl:pl-0 group-hover:bg-transparent w-full">
+                  <ul class="flex items-center justify-end gap-[20px]">
+                    <li>
+                      <div class="flex items-center leading-none text-light-extra dark:text-white/60 hover:text-primary">
+                        <span class="[&>svg]:w-[18px] [&>svg]:h-[18px] cursor-pointer " nz-icon nzType="drag"
+                          nzTheme="outline"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="flex items-center">
+                        <span
+                          class=" cursor-pointer text-light-extra dark:text-white/60 [&>svg]:w-[16px] [&>svg]:h-[16px] hover:text-primary [&.active>svg]:text-warning"
+                          [class.active]="item.star === 'active'"
+                          (click)="toggleActive(item)"
+                          nz-icon nzType="star" nzTheme="outline">
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="flex items-center">
+                        <span
+                          class="cursor-pointer text-light-extra dark:text-white/60 [&>svg]:w-[16px] [&>svg]:h-[16px] hover:text-primary"
+                          nz-icon nzType="delete" nzTheme="outline" (click)="deleteTask(i)"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </nz-table>
+          <div class="mt-[30px] mb-[22px]">
+            <button nz-button (click)="createTplModal(tplTitle, tplContent, tplFooter)"
+              class="inline-flex items-center bg-primary/10 text-primary h-[50px] text-xs font-semibold border-none rounded-[6px] px-[25px]">
+              <span nz-icon nzType="plus" nzTheme="outline"></span>
+              <span> Add New Task</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</nz-row>
+
+<ng-template (nzOnCancel)="handleCancel()" #tplTitle>
+  <span class="dark:text-white/[.87] capitalize">Add new Todo</span>
+</ng-template>
+<ng-template #tplContent>
+  <input
+    class="min-h-[3.125rem] px-[1rem] py-[0.5rem] rounded-[0.3rem] text-dark dark:text-white/[.87] font-normal border-normal placeholder:text-light-extra dark:placeholder:text-white/60 capitalize bg-white/10 dark:border-white/10"
+    nz-input placeholder="write your task" [(ngModel)]="newTaskDescription" />
+</ng-template>
+<ng-template #tplFooter let-ref="modalRef">
+  <button class="font-semibold text-14 h-[50px] flex items-center" nz-button nzType="primary"
+   [nzLoading]="tplModalButtonLoading" (click)="createTask(ref)">
+    Add task
+  </button>
+</ng-template>

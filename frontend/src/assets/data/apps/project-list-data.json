@@ -1,0 +1,240 @@
+[
+  {
+      "id": 1,
+      "project": "Machine Learning Fundamentals",
+      "avatar": "1.png",
+      "status": "completed",
+      "tasks": "31",
+      "desc": "Welcome to the Machine learning course hope your exited to start this amaizing jeorney",
+      "progress": 100,
+      "startDate": "26 Dec 2020",
+      "endDate": "18 Mar 2023",
+      "tagLine": "web design",
+      "member": [
+          {
+              "avatar": "assets/images/sellers/1.png",
+              "name": "shamim ahmed"
+          },
+          {
+              "avatar": "assets/images/sellers/2.png",
+              "name": "masud rana"
+          }
+      ]
+  },
+  {
+      "id": 2,
+      "project": "Automation and Control",
+      "avatar": "2.png",
+      "status": "completed",
+      "tasks": "56",
+      "desc": "Welcome to the Automation and control course hope your exited to start this amaizing jeorney.",
+      "progress": 100,
+      "startDate": "26 Dec 2022",
+      "endDate": "18 Mar 2023",
+      "tagLine": "web development",
+      "member": [
+          {
+              "avatar": "assets/images/sellers/4.png",
+              "name": "shamim ahmed"
+          },
+          {
+              "avatar": "assets/images/sellers/1.png",
+              "name": "masud rana"
+          },
+          {
+              "avatar": "assets/images/sellers/5.png",
+              "name": "rafiqul islam"
+          },
+          {
+              "avatar": "assets/images/sellers/5.png",
+              "name": "armanul islam"
+          }
+      ]
+  },
+  {
+      "id": 3,
+      "project": "Web Development and Hosting",
+      "avatar": "3.png",
+      "status": "progress",
+      "tasks": "21",
+      "desc": "Welcome to the Web Development and Hosting course hope your exited to start this amaizing jeorney.",
+      "progress": 50,
+      "startDate": "26 Dec 2022",
+      "endDate": "18 Mar 2023",
+      "tagLine": "graphic design",
+      "member": [
+          {
+              "avatar": "assets/images/sellers/10.png",
+              "name": "shamim ahmed"
+          },
+          {
+              "avatar": "assets/images/sellers/11.png",
+              "name": "masud rana"
+          },
+          {
+              "avatar": "assets/images/sellers/12.png",
+              "name": "rafiqul islam"
+          },
+          {
+              "avatar": "assets/images/sellers/11.png",
+              "name": "armanul islam"
+          },
+          {
+              "avatar": "assets/images/sellers/12.png",
+              "name": "shamim ahmed"
+          }
+      ]
+  },
+  {
+      "id": 4,
+      "project": "Software Engineering",
+      "avatar": "4.png",
+      "status": "early",
+      "tasks": "38",
+      "desc": "Welcome to the Software Enginnering course hope your exited to start this amaizing jeorney.",
+      "progress": 85,
+      "startDate": "26 Dec 2022",
+      "endDate": "18 Mar 2023",
+      "tagLine": "web design",
+      "member": [
+          {
+              "avatar": "assets/images/sellers/3.png",
+              "name": "masud rana"
+          },
+          {
+              "avatar": "assets/images/sellers/7.png",
+              "name": "rafiqul islam"
+          }
+      ]
+  },
+  {
+      "id": 5,
+      "project": "Database Management",
+      "avatar": "5.png",
+      "status": "progress",
+      "tasks": "38",
+      "desc": "Welcome to the Database Management course hope your exited to start this amaizing jeorney.",
+      "progress": 50,
+      "startDate": "26 Dec 2022",
+      "endDate": "18 Mar 2023",
+      "tagLine": "app development",
+      "member": [
+          {
+              "avatar": "assets/images/sellers/3.png",
+              "name": "armanul islam"
+          },
+          {
+              "avatar": "assets/images/sellers/7.png",
+              "name": "Pamela Wanda"
+          }
+      ]
+  },
+  {
+      "id": 6,
+      "project": "Cyber Security and Privacy",
+      "avatar": "6.png",
+      "status": "progress",
+      "tasks": "68",
+      "desc": "Welcome to the Cyber Security and Privacy course hope your exited to start this amaizing jeorney.",
+      "progress": 50,
+      "startDate": "26 Dec 2022",
+      "endDate": "18 Mar 2023",
+      "tagLine": "full stack development",
+      "member": [
+          {
+              "avatar": "assets/images/sellers/1.png",
+              "name": "Riaz Ahmed"
+          },
+          {
+              "avatar": "assets/images/sellers/10.png",
+              "name": "Ahshikur Rahman"
+          }
+      ]
+  },
+  {
+      "id": 7,
+      "project": "Project Realisation.",
+      "avatar": "7.png",
+      "status": "progress",
+      "tasks": "68",
+      "desc": "Welcome to the Project Realisation Practical course hope your exited to start this amaizing jeorney.",
+      "progress": 50,
+      "startDate": "26 Dec 2022",
+      "endDate": "18 Mar 2023",
+      "tagLine": "support & maintenance",
+      "member": [
+          {
+              "avatar": "assets/images/sellers/4.png",
+              "name": "Riaz Ahmed"
+          },
+          {
+              "avatar": "assets/images/sellers/2.png",
+              "name": " Ahshikur Rahman"
+          },
+          {
+              "avatar": "assets/images/sellers/1.png",
+              "name": " Tanjim Rahman"
+          },
+          {
+              "avatar": "assets/images/sellers/5.png",
+              "name": " Sadikur Rahman"
+          }
+      ]
+  },
+  {
+      "id": 8,
+      "project": "System Analysis and Design.",
+      "avatar": "8.png",
+      "status": "progress",
+      "tasks": "90",
+      "desc": "Welcome to the System Analysis and Design course hope your exited to start this amaizing jeorney.",
+      "progress": 50,
+      "startDate": "26 Dec 2020",
+      "endDate": "18 Mar 2023",
+      "tagLine": "content writing",
+      "member": [
+          {
+              "avatar": "assets/images/sellers/8.png",
+              "name": "Litium Stone"
+          },
+          {
+              "avatar": "assets/images/sellers/9.png",
+              "name": "Jon henry"
+          }
+      ]
+  },
+  {
+      "id": 9,
+      "project": "Artificial Intelligence",
+      "avatar": "9.png",
+      "status": "late",
+      "tasks": "165",
+      "desc": "Welcome to the AI course hope your exited to start this amaizing jeorney.",
+      "progress": 28,
+      "startDate": "26 Dec 2020",
+      "endDate": "18 Mar 2023",
+      "tagLine": "web design",
+      "member": [
+          {
+              "avatar": "assets/images/sellers/8.png",
+              "name": "Lilian STone"
+          },
+          {
+              "avatar": "assets/images/sellers/2.png",
+              "name": "Darryl Day"
+          },
+          {
+              "avatar": "assets/images/sellers/7.png",
+              "name": "Pamela Wanda"
+          },
+          {
+              "avatar": "assets/images/sellers/2.png",
+              "name": "Darryl Day"
+          },
+          {
+              "avatar": "assets/images/sellers/7.png",
+              "name": "Pamela Wanda"
+          }
+      ]
+  }
+]

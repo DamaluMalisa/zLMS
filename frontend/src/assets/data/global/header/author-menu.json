@@ -1,0 +1,29 @@
+{
+  "appAuthorMenu": [
+    {
+      "label": "Profile",
+      "icon": "user",
+      "url": "javascript:void(0);"
+    },
+    {
+      "label": "Settings",
+      "icon": "settings",
+      "url": "javascript:void(0);"
+    },
+    {
+      "label": "Billing",
+      "icon": "key",
+      "url": "javascript:void(0);"
+    },
+    {
+      "label": "Activity",
+      "icon": "users",
+      "url": "javascript:void(0);"
+    },
+    {
+      "label": "Help",
+      "icon": "bell",
+      "url": "javascript:void(0);"
+    }
+  ]
+}

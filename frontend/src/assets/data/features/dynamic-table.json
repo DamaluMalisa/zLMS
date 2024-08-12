@@ -1,0 +1,83 @@
+[
+  {
+    "id": "01",
+    "name": "Kellie Marquot",
+    "shipment": "Shipment Marquot",
+    "department": "Business Development",
+    "employeeCode": 397,
+    "joinDate": "January 20, 2020",
+    "status": "active"
+  },
+  {
+    "id": "02",
+    "name": "Robert Clinton",
+    "shipment": "Shipment Marquot",
+    "department": "Vehicle Master",
+    "employeeCode": 397,
+    "joinDate": "January 20, 2020",
+    "status": "active"
+  },
+  {
+    "id": "03",
+    "name": "Chris Joe",
+    "shipment": "Shipment Marquot",
+    "department": "Smart Collection",
+    "employeeCode": 397,
+    "joinDate": "January 20, 2020",
+    "status": "active"
+  },
+  {
+    "id": "04",
+    "name": "Jack Kalis",
+    "shipment": "Shipment Marquot",
+    "department": "Business Development",
+    "employeeCode": 397,
+    "joinDate": "January 20, 2020",
+    "status": "blocked"
+  },
+  {
+    "id": "05",
+    "name": "Black Smith",
+    "shipment": "Shipment Marquot",
+    "department": "Print Media",
+    "employeeCode": 397,
+    "joinDate": "January 20, 2020",
+    "status": "active"
+  },
+  {
+    "id": "06",
+    "name": "Aftab Ahmed",
+    "shipment": "Shipment Marquot",
+    "department": "Online Super Shop",
+    "employeeCode": 397,
+    "joinDate": "January 20, 2020",
+    "status": "deactivated"
+  },
+  {
+    "id": "07",
+    "name": "Daniel White",
+    "shipment": "Shipment Marquot",
+    "department": "Business Development",
+    "employeeCode": 397,
+    "joinDate": "January 20, 2020",
+    "status": "active"
+  },
+  {
+    "id": "08",
+    "name": "Chris John",
+    "shipment": "Shipment Marquot",
+    "department": "Boss IT Farm",
+    "employeeCode": 397,
+    "joinDate": "January 20, 2020",
+    "status": "blocked"
+  },
+  {
+    "id": "09",
+    "name": "David Manal",
+    "shipment": "Shipment Marquot",
+    "department": "Business Development",
+    "employeeCode": 397,
+    "joinDate": "January 20, 2020",
+    "status": "deactivated"
+  }
+]

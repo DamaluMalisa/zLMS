@@ -1,0 +1,96 @@
+<div class="relative main-content py-[120px] bg-top bg-no-repeat bg-[url('/assets/images/shape/admin-bg-light.png')] dark:bg-[url('/assets/images/shape/admin-bg-dark.png')] dark:bg-[#010312] bg-contain">
+  <div class="admin">
+    <div class="text-center">
+      <img class="inline dark:hidden" src="../../../assets/images/logo/logo-dark.png" alt="image" />
+      <img class="hidden dark:inline" src="../../../assets/images/logo/logo-white.png" alt="image" />
+    </div>
+    <div nz-row class="justify-center">
+      <div nz-col nzXs="24" nzSm="18" nzMd="12" nzXl="8" nzXXl="6">
+        <div class="rounded-6 mt-[25px] shadow_[0px_5px_20px_rgba(173,181,217, 0.03)] dark:shadow_[0px_5px_15px_rgba(0, 0, 0, .1)] bg-white dark:bg-[#1b1d2a]">
+          <div class="p-[25px] text-center border-b border-regular dark:border-white/10 top">
+            <h2 class="text-18 font-semibold leading-[1] mb-0 text-dark dark:text-white/[.87] title">Sign Up HexaDash</h2>
+          </div>
+          <div class="py-[30px] px-[40px] content">
+            <form nz-form [formGroup]="signUpForm" class="login-form" nzLayout="vertical" (ngSubmit)="submitForm()">
+              <nz-form-item class="block">
+                <nz-form-label nzFor="Name"
+                  class="text-[14px] w-full leading-[1.4285714286] font-medium [&>label]:text-dark [&>label]:dark:text-white/[.87] mb-[8px] capitalize inline-block">
+                  Name</nz-form-label>
+                <nz-form-control nzErrorTip="Please input your Name!">
+                  <input type="text" nz-input formControlName="name" placeholder="Name" id="Name"
+                    class="flex items-center shadow-none py-[10px] px-[20px] h-[48px] border-1 border-regular dark:border-white/10 rounded-4 w-full text-[14px] font-normal leading-[1.5] placeholder:text-[#A0A0A0] dark:bg-white/10 dark:text-white/60">
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-label nzRequired nzFor="userName"
+                  class=" text-[14px] leading-[1.4285714286] font-medium [&>label]:text-dark [&>label]:dark:text-white/[.87] capitalize inline-block">
+                  Username</nz-form-label>
+                <nz-form-control nzErrorTip="Please input your username!">
+                  <input type="text" nz-input formControlName="userName" placeholder="Username" id="userName"
+                    class="flex items-center shadow-none py-[10px] px-[20px] h-[48px] border-1 border-regular dark:border-white/10 rounded-4 w-full text-[14px] font-normal leading-[1.5] placeholder:text-[#A0A0A0] dark:bg-white/10 dark:text-white/60">
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-label nzRequired nzFor="email"
+                  class=" text-[14px] leading-[1.4285714286] font-medium [&>label]:text-dark [&>label]:dark:text-white/[.87] capitalize inline-block">
+                  Email</nz-form-label>
+                <nz-form-control nzErrorTip="The input is not valid E-mail!">
+                  <input type="text" nz-input formControlName="email" placeholder="Username" id="email"
+                    class="flex items-center shadow-none py-[10px] px-[20px] h-[48px] border-1 border-regular dark:border-white/10 rounded-4 w-full text-[14px] font-normal leading-[1.5] placeholder:text-[#A0A0A0] dark:bg-white/10 dark:text-white/60">
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-label nzRequired nzFor="password"
+                  class=" text-[14px] leading-[1.4285714286] font-medium [&>label]:text-dark [&>label]:dark:text-white/[.87] capitalize inline-block">
+                  Password</nz-form-label>
+                <nz-form-control nzErrorTip="Please input your Password!">
+                  <input type="password" nz-input formControlName="password" placeholder="Password" id="password"
+                    class="flex items-center shadow-none py-[10px] px-[20px] h-[48px] border-1 border-regular dark:border-white/10 rounded-4 w-full text-[14px] font-normal leading-[1.5] placeholder:text-[#A0A0A0] dark:bg-white/10 dark:text-white/60">
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-control>
+                  <label nz-checkbox formControlName="agree" class="flex font-normal text-13 leading-[22px] text-light dark:text-white/60 capitalize ">
+                    <span>Creating An Account Means You’re Okay With Our <a class="text-primary" href="#">Terms Of
+                        Service</a> And <a class="text-primary" href="#">Privacy Policy</a> My Preference</span>
+                  </label>
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-control>
+                  <div>
+                    <button nz-button class="login-form-button login-form-margin inline-flex items-center justify-center w-full h-[48px] text-14 rounded-6 font-medium bg-primary text-white cursor-pointer hover:bg-primary-hbr transition duration-300" [nzType]="'primary'">Sign Up</button>
+                  </div>
+                </nz-form-control>
+              </nz-form-item>
+            </form>
+            <div
+              class="relative mt-[25px] text-center text-13 text-regular dark:text-white/[87] before:content-[''] before:absolute before:w-full ltr:before:left-0 rtl:before:right-0 before:top-[50%] before:translate-y-[-50%] before:z-[1] before:h-[1px] before:bg-normal before:dark:bg-white/10">
+              <span
+                class="font-medium px-[15px] inline-block relative z-[2] bg-white dark:bg-[#1b1c29] text-theme-gray dark:text-white/60 capitalize">or</span>
+            </div>
+            <div class="mt-[30px] d-flex align-items-center justify-content-center">
+              <ul class="flex flex-wrap justify-center gap-x-[20px] gap-y-[10px]">
+                <li *ngFor="let button of socialMediaButtons">
+                  <button class="w-[48px] h-[48px] cursor-pointer rounded-6 transition duration-300 flex justify-center items-center text-{{
+                    button.type
+                  }} bg-{{ button.type }}/10 dark:bg-{{ button.type }}  hover:bg-{{ button.type }}/20">
+                  <svg-icon class="w-[22px] h-[22px] [&>svg]:w-[22px] [&>svg]:h-[22px] dark:text-white text-{{ button.type }}" src="../../../assets/images/svg/unicons-line/{{ button.icon }}.svg"></svg-icon>
+                </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-center p-[25px] rounded-b-6 bg-deepBG dark:bg-[#282a37]">
+            <p
+              class="text-[14px] font-medium text-theme-gray dark:text-white/60 inline-flex items-center gap-[6px] mb-0">
+              Don`t have an account?<a
+                class="transition duration-300 text-primary hover:text-dark dark:hover:text-white/[.87]"
+                routerLink="/authentication/login-1">Sign In</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

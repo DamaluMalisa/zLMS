@@ -1,0 +1,823 @@
+/*
+ * Global application theme.
+ * Customization goes here.
+ */
+
+/*---- Global ------*/
+
+
+/*----- Menu ------*/
+.ant-menu {
+  @apply text-[14px] leading-[1.5] font-medium text-[#a0a0a0] dark:text-white/[.87];
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  @apply bg-primary/10;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected a {
+  @apply text-primary;
+}
+.ant-menu-submenu-title .anticon{
+  @apply text-[#a0a0a0] dark:text-white/[.87] w-[16px] h-[16px];
+}
+.ant-menu-submenu-title .anticon svg{
+  @apply w-[16px] h-[16px];
+}
+.ant-menu:not(.ant-menu-dark) a {
+  @apply  text-[14px] font-medium transition-none;
+}
+.ant-menu:not(.ant-menu-dark) a:hover .anticon{
+  @apply text-primary;
+}
+.ant-menu:not(.ant-menu-dark) a:hover,
+.ant-menu:not(.ant-menu-dark) a:focus {
+  @apply no-underline;
+}
+
+.ant-menu:not(.ant-menu-dark) a:hover {
+  @apply text-primary;
+}
+
+.ant-menu-sub {
+  @apply font-normal;
+}
+
+.ant-menu-sub.ant-menu-inline {
+  @apply bg-white dark:bg-[#1b1c29];
+}
+
+.ant-menu-horizontal {
+  @apply leading-[2.8125rem] border-b-[1px] border-[#edf2f9] dark:border-white/10;
+}
+
+.ant-menu-horizontal>.ant-menu-item-active,
+.ant-menu-horizontal>.ant-menu-item-open,
+.ant-menu-horizontal>.ant-menu-item-selected,
+.ant-menu-horizontal>.ant-menu-submenu-active,
+.ant-menu-horizontal>.ant-menu-submenu-open,
+.ant-menu-horizontal>.ant-menu-submenu-selected {
+  @apply border-b-0 text-primary;
+}
+
+.ant-menu-horizontal>.ant-menu-item,
+.ant-menu-horizontal>.ant-menu-submenu {
+  @apply border-b-0;
+}
+
+.ant-menu-horizontal>.ant-menu-item:hover,
+.ant-menu-horizontal>.ant-menu-submenu:hover {
+  @apply border-b-0 text-primary;
+}
+
+.ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left {
+  @apply border-r-transparent;
+}
+
+.ant-menu-inline>.ant-menu-item,
+.ant-menu-inline>.ant-menu-submenu>.ant-menu-submenu-title,
+.ant-menu-vertical-left>.ant-menu-item,
+.ant-menu-vertical-left>.ant-menu-submenu>.ant-menu-submenu-title,
+.ant-menu-vertical-right>.ant-menu-item,
+.ant-menu-vertical-right>.ant-menu-submenu>.ant-menu-submenu-title,
+.ant-menu-vertical>.ant-menu-item,
+.ant-menu-vertical>.ant-menu-submenu>.ant-menu-submenu-title {
+  @apply leading-[45px] h-[45px] duration-0;
+}
+
+.ant-menu-vertical .ant-menu-item,
+.ant-menu-vertical-left .ant-menu-item,
+.ant-menu-vertical-right .ant-menu-item,
+.ant-menu-inline .ant-menu-item,
+.ant-menu-vertical .ant-menu-submenu-title,
+.ant-menu-vertical-left .ant-menu-submenu-title,
+.ant-menu-vertical-right .ant-menu-submenu-title,
+.ant-menu-inline .ant-menu-submenu-title {
+  @apply leading-[45px] h-[45px] duration-0;
+}
+.ant-menu.ant-menu-inline-collapsed > .ant-menu-item a i,
+.ant-menu.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title i {
+  @apply flex items-center;
+}
+
+.ant-menu-inline .ant-menu-item a i{
+  @apply text-[#a0a0a0] dark:text-white/[.87] w-[16px] h-[17px];
+}
+
+.ant-menu-inline .ant-menu-item a i svg{
+  @apply w-[16px] h-[16px];
+}
+
+.ant-menu-item>a {
+  @apply text-dark dark:text-white/[.87];
+}
+
+.ant-menu-item-group-title {
+  @apply leading-[1.5] font-light text-[14px] text-dark dark:text-white/[.87] px-[1.125rem] py-[0.75rem] mt-[0.9375rem] text-start;
+}
+
+.ant-menu-item:active,
+.ant-menu-submenu-title:active {
+  @apply bg-primary/10 text-primary;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected.ant-menu-item a i{
+@apply text-primary;
+}
+
+.ant-menu-submenu-inline>.ant-menu-submenu-title .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical-left>.ant-menu-submenu-title .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical-right>.ant-menu-submenu-title .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical>.ant-menu-submenu-title .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-inline>.ant-menu-submenu-title .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical-left>.ant-menu-submenu-title .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical-right>.ant-menu-submenu-title .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical>.ant-menu-submenu-title .ant-menu-submenu-arrow:before {
+  @apply content-[''] bg-transparent absolute bg-gradient-to-r from-[#a0a0a0] to-[#a0a0a0] rounded-[2px];
+}
+
+.ant-menu-submenu-inline>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical-left>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical-right>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-inline>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical-left>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical-right>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow:before {
+  @apply bg-gradient-to-r from-primary to-primary;
+}
+
+.ant-menu-submenu-inline>.ant-menu-submenu-title.ant-menu-submenu-open .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical-left>.ant-menu-submenu-title.ant-menu-submenu-open .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical-right>.ant-menu-submenu-title.ant-menu-submenu-open .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-vertical>.ant-menu-submenu-title.ant-menu-submenu-open .ant-menu-submenu-arrow:after,
+.ant-menu-submenu-inline>.ant-menu-submenu-title.ant-menu-submenu-open .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical-left>.ant-menu-submenu-title.ant-menu-submenu-open .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical-right>.ant-menu-submenu-title.ant-menu-submenu-open .ant-menu-submenu-arrow:before,
+.ant-menu-submenu-vertical>.ant-menu-submenu-title.ant-menu-submenu-open .ant-menu-submenu-arrow:before {
+  @apply bg-gradient-to-r from-primary to-primary;
+}
+
+.ant-menu-dark {
+  @apply bg-dark dark:bg-white/10 text-light dark:text-white/60;
+}
+
+.ant-menu-dark .ant-menu-item:hover,
+.ant-menu-dark .ant-menu-item-active,
+.ant-menu-dark .ant-menu-submenu-active,
+.ant-menu-dark .ant-menu-submenu-open,
+.ant-menu-dark .ant-menu-submenu-selected,
+.ant-menu-dark .ant-menu-submenu-title:hover {
+  @apply text-white dark:text-dark/[.87] bg-transparent;
+}
+
+.ant-menu-dark a {
+  @apply text-light dark:text-white/60;
+}
+
+.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  @apply bg-transparent;
+}
+
+.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected>a {
+  @apply text-white dark:text-dark/[.87];
+}
+
+.ant-menu-dark .ant-menu-item,
+.ant-menu-dark .ant-menu-item-group-title {
+  @apply text-light dark:text-white/60;
+}
+
+.ant-menu-dark .ant-menu-item>a,
+.ant-menu-dark .ant-menu-item-group-title>a {
+  @apply text-light dark:text-white/60;
+}
+
+.ant-menu-dark .ant-menu-sub {
+  @apply text-light dark:text-white/60 bg-dark dark:bg-white/10;
+}
+
+.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow:after,
+.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow:before {
+  @apply bg-white dark:bg-white/10;
+}
+
+.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow:after,
+.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow:before {
+  @apply bg-white dark:bg-white/10;
+}
+
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+  @apply bg-dark dark:bg-white/10 shadow-none;
+}
+
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  @apply text-white dark:text-dark/[.87] bg-transparent;
+}
+
+.ant-menu-item-active,
+.ant-menu-item:hover,
+.ant-menu-submenu-active,
+.ant-menu-submenu-title:hover,
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open {
+  @apply text-primary;
+}
+
+.ant-menu-light .ant-menu-submenu-open>a {
+  @apply text-primary;
+}
+
+.ant-menu-light .ant-menu-submenu-open>a .ant-menu-submenu-arrow:after,
+.ant-menu-light .ant-menu-submenu-open>a .ant-menu-submenu-arrow:before {
+  @apply bg-gradient-to-r from-primary to-primary;
+}
+
+.ant-menu-item-selected {
+  @apply text-primary;
+}
+
+.ant-menu-submenu-selected {
+  @apply text-primary;
+}
+
+.ant-menu-inline .ant-menu-item-selected::after{
+  @apply border-none;
+}
+
+.ant-menu-submenu-popup > .ant-menu {
+  @apply dark:bg-[#1b1c29];
+}
+.ant-menu-item-disabled,
+.ant-menu-submenu-disabled,
+.ant-menu-item-disabled > .ant-menu-submenu-title,
+.ant-menu-submenu-disabled > .ant-menu-submenu-title{
+  @apply opacity-[.8] dark:text-white/[.87] #{!important};
+}
+
+.ant-menu-horizontal > .ant-menu-item:hover a{
+  @apply text-primary;
+}
+
+/*----- Breadcrumb ------*/
+.modify-breadcrumb i{
+  @apply text-light dark:text-white/60;
+}
+
+.modify-breadcrumb nz-breadcrumb-item .ant-breadcrumb-link a{
+  @apply text-light hover:text-primary dark:text-[#a4a5aa] dark:hover:text-white/[.87] text-sm;
+}
+
+.modify-breadcrumb nz-breadcrumb-item:last-child .ant-breadcrumb-link a{
+  @apply text-breadcrumbs dark:text-white/30 text-15;
+}
+
+/*----- Layout ------*/
+.common-layout .page-container .main-content .main-content-header .page-title {
+  @apply text-[#2a2a2a];
+}
+
+.common-layout .page-header {
+  @apply bg-white dark:bg-black border-b-[1px] border-[#edf2f9] dark:border-white/10;
+}
+
+.common-layout .page-header-tab .ant-tabs-nav {
+  @apply bg-white dark:bg-black;
+}
+
+/*----- Side Nav -----*/
+.side-nav .side-nav-menu.ant-menu-inline-collapsed .ant-menu-sub {
+  @apply shadow-regular dark:shadow-[0_5px_30px_rgba(1,4,19,.60)];
+}
+
+.ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left {
+  @apply border-r-[1px] border-[#f0f0f0] dark:border-white/10;
+}
+
+.is-side-nav-dark .side-nav {
+  @apply bg-[#223143];
+}
+
+/*--------- Table -----------*/
+.ant-table-content{
+  @apply dark:bg-[#1b1c29];
+}
+
+/*--------- Apex Chart -----------*/
+.apexcharts-tooltip.apexcharts-theme-light{
+  @apply bg-white dark:bg-[#32343f] border-[#e4e4e4] dark:border-white/10;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title{
+  @apply bg-transparent border-none mb-0 #{!important};
+}
+
+.apexcharts-tooltip-marker {
+  @apply w-[8px] h-[8px] ltr:mr-[5px] rtl:ml-[5px] #{!important};
+}
+
+.apexcharts-xaxistooltip, .apexcharts-yaxistooltip{
+  @apply dark:bg-[#32343f] dark:border-[#32343f] dark:text-white/60;
+}
+.apexcharts-xaxistooltip-bottom:after,
+.apexcharts-xaxistooltip-bottom:before{
+  @apply border-b-[#32343f] #{!important};
+}
+
+/*--------- Collapse -----------*/
+.ant-collapse > .ant-collapse-item > .ant-collapse-header{
+  @apply text-dark dark:text-white/[.87] text-[14px] font-medium flex items-center py-[15px];
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header>div{
+  @apply flex items-center justify-center;
+}
+.ant-collapse-content{
+  @apply dark:bg-[#32333f] dark:border-white/10;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow{
+  @apply ltr:mr-[12px] rtl:ml-[12px] rtl:rotate-[178deg];
+}
+
+.ant-collapse-content{
+  @apply dark:bg-[#32333f] border-regular dark:border-white/10;
+}
+
+/*--------- Checkbox -----------*/
+.ant-checkbox-inner{
+  @apply rounded-4 dark:bg-[#32353f] dark:border-[#484848];
+}
+.ant-checkbox-checked .ant-checkbox-inner{
+  @apply bg-primary border-primary;
+}
+.ant-checkbox-indeterminate .ant-checkbox-inner{
+  @apply dark:border-[#484848];
+}
+.ant-checkbox-checked .ant-checkbox-inner::after{
+  @apply dark:border-white/[1];
+}
+.ant-checkbox-checked::after{
+  @apply rounded-4;
+}
+
+.ant-checkbox-disabled .ant-checkbox-inner{
+  @apply bg-white border-normalBG dark:bg-white/10 dark:border-white/10 #{!important};
+}
+
+/* ------  Editor  ------- */
+.editor-style1 .tox-tinymce{
+  @apply border-none;
+}
+.editor-style1 .tox:not(.tox-tinymce-inline) .tox-editor-header{
+  @apply border-none shadow-none dark:bg-[#212e3d] #{!important};
+}
+
+.tox-statusbar__branding{
+ @apply hidden;
+}
+
+.tox-tinymce{
+  @apply dark:border-[#212e3d];
+}
+.tox .tox-tbtn--disabled svg,
+.tox .tox-tbtn--disabled:hover svg,
+.tox .tox-tbtn:disabled svg,
+.tox .tox-tbtn:disabled:hover svg,
+.tox .tox-tbtn svg{
+  @apply dark:fill-white/60;
+}
+
+.tox .tox-statusbar a,
+.tox .tox-statusbar__path-item,
+.tox .tox-statusbar__wordcount,
+.tox .tox-tbtn,
+.tox .tox-mbtn{
+  @apply dark:text-white/60;
+}
+.tox .tox-tbtn--bespoke{
+  @apply dark:border-white/30 dark:border-1 dark:bg-[#212e3d];
+}
+.tox .tox-statusbar{
+  @apply dark:border-[#212e3d];
+}
+.tox .tox-edit-area{
+  @apply dark:border-1 dark:border-[#212e3d];
+}
+.tox .tox-statusbar,
+.tox .tox-edit-area__iframe,
+.tox .tox-tbtn--bespoke,
+.tox .tox-toolbar, .tox .tox-toolbar__overflow,
+.tox .tox-toolbar__primary,
+.tox-editor-header,
+.tox .tox-toolbar-overlord,
+.tox .tox-menubar{
+  @apply dark:bg-[#212e3d];
+}
+.tox .tox-sidebar-wrap{
+  @apply border-t border-solid border-regular dark:border-white/10;
+}
+
+.tox-notifications-container{
+  @apply hidden;
+}
+
+
+/* ---- Dropdown ----- */
+.ant-dropdown-menu{
+  @apply dark:bg-[#212e3d] dark:border-[#212e3d] dark:text-white/60;
+}
+
+/* ---- Drawer ----- */
+.ant-drawer-header{
+  @apply dark:bg-[#1b1c29] dark:border-white/10 dark:text-white/60;
+}
+.ant-drawer-content{
+  @apply dark:bg-[#1b1c29];
+}
+.ant-drawer-title{
+  @apply text-[18px] font-medium dark:text-white/[.87];
+}
+
+.ant-drawer-close{
+  @apply text-[18px] text-dark dark:text-white/[.87];
+}
+
+.ant-input-group-addon{
+  @apply dark:text-white/60 dark:bg-white/10 dark:border-white/10;
+}
+
+.ant-picker-separator{
+  @apply text-dark dark:text-white/[.87];
+}
+
+.ant-drawer-right {
+  @apply rtl:right-auto rtl:start-0;
+}
+.ant-drawer-footer{
+  @apply dark:border-white/10;
+}
+.ant-drawer-right .ant-drawer-content-wrapper{
+  @apply rtl:right-auto rtl:start-[-4000px] rtl:translate-x-0 #{!important};
+}
+
+.ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper{
+@apply rtl:start-0 #{!important};
+}
+
+.ant-drawer .ant-descriptions-title{
+@apply text-dark dark:text-white/[.87];
+}
+.ant-drawer .ant-divider{
+@apply border-regular dark:border-white/10 text-dark dark:text-white/[.87];
+}
+.ant-drawer .ant-descriptions-item-content,
+.ant-drawer .ant-descriptions-item-label{
+@apply text-light dark:text-white/60;
+}
+[dir="rtl"] .ant-drawer-wrapper-body{
+ direction: rtl !important;
+}
+.ant-drawer-close {
+  @apply mr-auto me-[15px];
+}
+
+
+/*---- Progress Bar -----*/
+.ant-progress-inner{
+  @apply bg-deepBG dark:bg-white/10;
+}
+.ant-progress-text{
+  @apply text-theme-gray dark:text-white/[.60] text-[12px] font-medium;
+}
+.ant-progress-text{
+  @apply ml-auto ms-[8px];
+}
+
+/* ------ Tooltip ------- */
+.ant-tooltip-inner{
+  @apply bg-white dark:bg-[#32343f] border-[#e4e4e4] dark:border-white/10 text-theme-gray dark:text-white/[.60] text-[12px] font-medium capitalize;
+}
+.dark .ant-tooltip-arrow-content{
+  --antd-arrow-background-color:#32343f;
+}
+
+
+/*---- Select -----*/
+.ant-select-dropdown{
+  @apply dark:bg-[#32343f] capitalize text-[#32343f];
+}
+.ant-select-item-option{
+  @apply text-[13px] font-normal capitalize text-body dark:text-white/60 duration-150 ease-in-out;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled){
+  @apply text-primary bg-primary/10 font-semibold dark:text-white/[.87] dark:bg-white/10;
+}
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled){
+  @apply text-primary bg-primary/10 font-semibold dark:text-white/[.87] dark:bg-white/10 ltr:pl-[20px] rtl:pr-[20px];
+}
+// Multiple select
+.ant-select-multiple .ant-select-selection-item{
+  @apply dark:bg-white/10 dark:border-white/10
+}
+.ant-select-multiple .ant-select-selection-item-remove > .anticon{
+  @apply dark:text-white/[.87];
+}
+
+/* ----- Pagination ------ */
+.ant-pagination-disabled .ant-pagination-item-link{
+  @apply text-[13px] font-normal capitalize text-body dark:text-dark duration-150 ease-in-out rounded-[4px] border-1 border-normal dark:border-white/10 border-solid pointer-events-none;
+}
+.ant-pagination-disabled:hover .ant-pagination-item-link{
+  @apply text-[13px] font-normal capitalize text-body duration-150 ease-in-out rounded-[4px] border-none;
+}
+.ant-pagination-prev, .ant-pagination-next, .ant-pagination-jump-prev, .ant-pagination-jump-next{
+  @apply text-[13px] font-normal capitalize text-body dark:text-white/60 duration-150 ease-in-out rounded-[4px] border-none;
+}
+.ant-pagination-item{
+  @apply text-[13px] font-normal capitalize text-body dark:bg-white/10 dark:text-white/60 dark:border-white/10 duration-150 ease-in-out rounded-[4px];
+}
+.ant-pagination-item a{
+  @apply text-[13px] font-normal capitalize text-body dark:text-white/60 duration-150 ease-in-out;
+}
+
+.ant-pagination ul {
+  @apply gap-[8px] flex items-center flex-wrap;
+}
+.ant-pagination ul li{
+  @apply m-0;
+}
+
+.ant-pagination-item-active{
+  @apply text-white bg-primary font-semibold;
+}
+
+.ant-pagination-item-active a{
+  @apply text-white hover:text-white;
+}
+
+/* ------ ant-modal ------ */
+
+.ant-modal{
+  @apply rounded-[6px];
+}
+.ant-modal-content{
+  @apply dark:bg-[#1b1c29] dark:border-[#1b1c29] dark:text-white/60 rounded-[6px];
+}
+.ant-modal-header{
+  @apply dark:bg-[#1b1c29] dark:border-white/10 dark:text-white/60 rounded-t-[6px] py-[18px];
+}
+.ant-modal-title{
+  @apply text-dark dark:text-white/[.87] text-[17px] font-medium;
+}
+.ant-form-item-label > label{
+  @apply dark:text-current;
+}
+.ant-modal-footer{
+  @apply dark:border-white/10 px-[25px] py-[15px] flex items-center;
+}
+.ant-modal-footer .ant-btn-primary{
+  @apply rounded-[6px] px-[25px] h-[44px] flex items-center justify-center text-[14px] font-medium;
+}
+
+.ant-modal-close-x{
+  @apply w-[34px] h-[34px] bg-normalBG text-dark border-1 border-regular rounded-full flex items-center justify-center mt-[12px] ltr:mr-[25px] rtl:ml-[25px] hover:bg-primary hover:text-white hover:border-primary duration-200 ease-in-out text-[15px] dark:bg-white/10 dark:text-white/[.87] dark:border-white/10 dark:hover:bg-primary dark:hover:text-white dark:hover:border-primary;
+}
+
+/*------ Select -------*/
+.ant-select-multiple .ant-select-selection-placeholder{
+  @apply ltr:left-[20px] rtl:right-[20px];
+}
+.ant-picker-header button{
+  @apply text-light dark:text-white/[.87] text-[14px] font-medium;
+}
+.ant-picker-header-view button{
+  @apply text-dark dark:text-white/[.87] text-[14px] font-medium;
+}
+.ant-picker-header{
+  @apply dark:text-white/[.87] dark:border-white/10;
+}
+.ant-picker-datetime-panel .ant-picker-time-panel{
+  @apply dark:border-white/10;
+}
+.ant-picker-panel{
+  @apply dark:border-white/10;
+}
+
+.ant-picker-time-panel-column > li.ant-picker-time-panel-cell .ant-picker-time-panel-cell-inner{
+  @apply dark:text-white/[.87] hover:bg-primary;
+}
+.ant-picker-panel .ant-picker-footer{
+  @apply dark:border-white/10;
+}
+.ant-picker-content th{
+  @apply dark:text-white/[.87];
+}
+.ant-picker-time-panel-column:not(:first-child){
+  @apply dark:border-white/10;
+}
+.ant-picker-ranges .ant-picker-ok button{
+  @apply text-white bg-primary border-primary hover:bg-primary hover:text-white hover:border-primary;
+}
+.ant-picker-cell-in-view{
+  @apply dark:text-white/[.87];
+}
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before{
+  @apply bg-primary z-[-1];
+}
+.ant-picker-cell .ant-picker-cell-inner{
+  @apply min-w-[34px] h-[34px] flex items-center justify-center text-[14px] font-medium rounded-4 hover:text-dark;
+}
+.ant-picker-cell.ant-picker-cell-today.ant-picker-cell-in-view{
+  @apply text-white hover:text-white;
+}
+
+.ant-picker-cell.ant-picker-cell-in-view{
+@apply dark:text-white/[.87] text-dark;
+}
+
+.ant-picker-cell{
+  @apply px-[1px] py-[1px] text-light-extra dark:text-white/40;
+}
+
+/*----------- Form ----------*/
+.ant-input-group-addon{
+  @apply rounded-4;
+}
+/*------ Calendar Input -------*/
+.ant-picker-suffix{
+  @apply text-light dark:text-white/60;
+}
+.ant-picker-input > input{
+  @apply dark:text-white/[.87] text-[14px] font-medium;
+}
+
+/*------ Calendar Dropdown -------*/
+.ant-picker-panel-container{
+  @apply dark:bg-[#1b1c29] dark:border-[#1b1c29] dark:text-white/60;
+}
+.ant-picker-footer-extra:not(:last-child){
+  @apply border-regular dark:border-white/10;
+}
+
+.ant-picker-footer-extra{
+  @apply text-dark dark:text-white/[.87] capitalize;
+}
+.ant-picker-range-arrow::before{
+  @apply dark:bg-[#9b9792]
+}
+
+.ant-picker-range-arrow{
+  @apply dark:bg-none;
+}
+
+
+/*------ Wizard confirmation modal -------*/
+.confirm-modal.ant-modal-confirm .ant-modal-confirm-btns button{
+  @apply px-[15px] py-[10px] rounded-4 text-sm font-medium inline-flex items-center justify-center;
+}
+
+.confirm-modal.ant-modal-confirm .ant-modal-confirm-btns button:not(.ant-btn-primary ){
+  @apply border-normal border-1 dark:border-white/10 bg-white/10 dark:text-white/[.87];
+}
+
+/*------ Cascader -------*/
+.ant-cascader-menu-item{
+  @apply dark:text-white/[.87] dark:hover:bg-white/10;
+}
+
+.ant-cascader-menu-item-expand .ant-cascader-menu-item-expand-icon, .ant-cascader-menu-item-loading-icon{
+  @apply dark:text-white/[.87];
+}
+
+.ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled), .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover{
+  @apply dark:bg-white/10;
+}
+
+/*------ Skeleton -------*/
+.ant-skeleton-header{
+  @apply ltr:pr-[15px] rtl:pl-[15px];
+}
+
+.ant-btn > .anticon + span, .ant-btn > span + .anticon{
+  @apply ml-auto ms-[8px];
+}
+
+/*------ Badge -------*/
+.ant-badge-status-text{
+  @apply ml-auto ms-[8px];
+}
+
+
+/*------ Rate -------*/
+.ant-rate-star-first{
+  @apply left-auto start-0;
+}
+
+.ant-rate-star:not(:last-child) {
+  @apply mr-auto me-[8px];
+}
+.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+  @apply mr-auto me-[4px];
+}
+
+
+/*------ Message -------*/
+.ant-message{
+  @apply dark:text-white/[.87];
+  .ant-message-notice {
+    .ant-message-notice-content {
+      @apply dark:bg-[#1b1b28] dark:shadow-[0_5px_30px_rgba(1,4,19,.60)] rounded-6;
+    }
+    .ant-message-custom-content{
+      @apply flex items-center;
+    }
+  }
+}
+
+/*------ Notification -------*/
+.ant-notification-notice{
+  @apply dark:bg-[#1b1b28] dark:shadow-[0_5px_30px_rgba(1,4,19,.60)] rounded-6;
+}
+.ant-notification-notice-message{
+  @apply dark:text-white/[.87] font-medium;
+}
+.ant-notification-notice-description{
+  @apply text-theme-gray dark:text-white/60;
+}
+
+.ant-notification-close-icon{
+  @apply text-danger;
+}
+
+/*------ Vector Map Tooltip -------*/
+/* vector map */
+.svgMap-tooltip {
+  background: #272B41 !important;
+  border-radius: 3px !important;
+  box-shadow: 0 10px 15px #272B4115 !important;
+  border-bottom: 0 none !important;
+  text-align: center;
+  color: #fff;
+}
+
+.svgMap-tooltip .svgMap-tooltip-content{
+  color: #fff !important;
+}
+.svgMap-tooltip .svgMap-tooltip-content table td span{
+  color: #8231D3 !important;
+}
+
+/*------ Scrollbar ------*/
+.mini-calendar .fc .fc-scroller-liquid-absolute,
+.scrollbar{
+  scrollbar-width: thin;
+  scrollbar-color: #e3e6ee white;
+
+  &::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: white;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background-color: #e3e6ee;
+    border: 3px solid white;
+  }
+}
+
+.dark{
+  .mini-calendar .fc .fc-scroller-liquid-absolute,
+  .scrollbar{
+    scrollbar-color: #484848 #1b1c29;
+    &::-webkit-scrollbar-track {
+      background-color: #1b1c29;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #484848;
+      border-color: #1b1c29;
+    }
+  }
+}
+
+/*------ Member Progress ------*/
+.member-progress .ant-progress-bg{
+  @apply h-[5px] #{!important};
+}
+
+/*------ revenue table ------*/
+.revenue-table .ant-progress-bg{
+  @apply h-[5px] #{!important};
+}
+
+

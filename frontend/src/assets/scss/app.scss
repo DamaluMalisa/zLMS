@@ -1,0 +1,15 @@
+
+// @import 'variables';
+@import 'mixins';
+@import 'template/theme.scss';
+@import 'template/layout.scss';
+@import 'template/header.scss';
+@import 'template/side-nav.scss';
+
+/*****************/
+/***** Apps *****/
+/***************/
+@import 'apps/project.scss';
+@import 'apps/full-calendar.scss';
+@import 'ui-element/calendar.scss';
+

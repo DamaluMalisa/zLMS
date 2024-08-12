@@ -1,0 +1,48 @@
+<div class="theme-config">
+  <!-- Theme color -->
+  <div class="mb-[30px]">
+    <div>
+      <h5 class="mb-0 text-dark dark:text-white/[.87] text-[20px]">Theme color</h5>
+      <p class="text-light dark:text-white/60 text-[15px]">Change theme Color</p>
+      <div class="mt-[10px]">
+        <nz-switch [(ngModel)]="isDarkMode" (ngModelChange)="toggleDarkMode()"></nz-switch>
+      </div>
+    </div>
+  </div>
+
+  <nz-divider class="dark:border-white/10"></nz-divider>
+
+  <!-- Direction switch -->
+  <div>
+    <h5 class="mb-0 text-dark dark:text-white/[87] text-[20px]"><span class="uppercase">{{ direction }}</span> Switch</h5>
+    <p class="text-light dark:text-white/60 text-[15px]">Change direction</p>
+    <div class="mt-[10px]">
+      <nz-switch [(ngModel)]="isRTL" (ngModelChange)="toggleDirection()"></nz-switch>
+    </div>
+  </div>
+
+  <nz-divider class="dark:border-white/10"></nz-divider>
+
+  <!-- Folded Menu -->
+  <div class="max-lg:hidden">
+    <h5 class="m-b-0 text-dark dark:text-white/[87] text-[20px]">Folded Menu</h5>
+    <p class="text-light dark:text-white/60 text-[15px]">Toggle Folded Menu</p>
+    <div class="mt-[10px]">
+      <nz-switch [(ngModel)]="isFolded" (ngModelChange)="toggleFold()"></nz-switch>
+    </div>
+  </div>
+
+  <nz-divider class="dark:border-white/10 max-lg:hidden"></nz-divider>
+
+  <!-- Top Menu -->
+  <div class="max-lg:hidden">
+    <h5 class="m-b-0 text-dark dark:text-white/[87] text-[20px]">Top Menu</h5>
+    <p class="text-light dark:text-white/60 text-[15px]">Toggle Top Menu</p>
+    <div class="mt-[10px]">
+      <nz-switch [(ngModel)]="isFoldedTop" (ngModelChange)="toggleTop()"></nz-switch>
+    </div>
+  </div>
+
+  <nz-divider class="dark:border-white/10 max-lg:hidden"></nz-divider>
+
+</div>

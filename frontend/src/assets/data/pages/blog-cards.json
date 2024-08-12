@@ -1,0 +1,94 @@
+{
+  "blogCards": [
+    {
+      "date": "20 January 2023",
+      "title": "New Year's Resolution Ideas",
+      "content": "Start the year right with these inspiring New Year's resolution ideas.",
+      "postDate": "15 March 2021",
+      "author": {
+        "name": "Sarah Johnson",
+        "profile_image": "tm1.png"
+      },
+      "reactions": {
+        "likes": "8 K",
+        "docs": "42"
+      },
+      "thumbnail": "1.png"
+    },
+    {
+      "date": "10 April 2023",
+      "title": "Exploring National Parks",
+      "content": "Embark on an adventure through breathtaking national parks around the world.",
+      "postDate": "15 March 2021",
+      "author": {
+        "name": "John Anderson",
+        "profile_image": "tm2.png"
+      },
+      "reactions": {
+        "likes": "12 K",
+        "docs": "98"
+      },
+      "thumbnail": "2.png"
+    },
+    {
+      "date": "5 July 2023",
+      "title": "Delicious Summer Recipes",
+      "content": "Beat the heat with these refreshing and mouthwatering summer recipes.",
+      "postDate": "15 March 2021",
+      "author": {
+        "name": "Emily Parker",
+        "profile_image": "tm3.png"
+      },
+      "reactions": {
+        "likes": "10 K",
+        "docs": "65"
+      },
+      "thumbnail": "3.png"
+    },
+    {
+      "date": "12 September 2023",
+      "title": "The Art of Photography",
+      "content": "Learn the principles and techniques behind capturing stunning photographs.",
+      "postDate": "15 March 2021",
+      "author": {
+        "name": "Michael Rogers",
+        "profile_image": "tm4.png"
+      },
+      "reactions": {
+        "likes": "15 K",
+        "docs": "112"
+      },
+      "thumbnail": "4.png"
+    },
+    {
+      "date": "30 October 2023",
+      "title": "Traveling on a Budget",
+      "content": "Explore the world without breaking the bank with these budget travel tips.",
+      "postDate": "15 March 2021",
+      "author": {
+        "name": "Laura Miller",
+        "profile_image": "tm1.png"
+      },
+      "reactions": {
+        "likes": "6 K",
+        "docs": "50"
+      },
+      "thumbnail": "5.png"
+    },
+    {
+      "date": "15 December 2023",
+      "title": "Festive DIY Decorations",
+      "content": "Get into the holiday spirit by creating your own festive DIY decorations.",
+      "postDate": "15 March 2021",
+      "author": {
+        "name": "David Turner",
+        "profile_image": "tm2.png"
+      },
+      "reactions": {
+        "likes": "9 K",
+        "docs": "78"
+      },
+      "thumbnail": "6.png"
+    }
+  ]
+}

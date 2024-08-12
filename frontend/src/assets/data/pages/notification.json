@@ -1,0 +1,24 @@
+{
+  "notification": [
+    {
+      "title": "Company News",
+      "description": "Get Company News, announcements, and product updates",
+      "switchStatus": false
+    },
+    {
+      "title": "Meetups Near you",
+      "description": "Get Company News, announcements, and product updates",
+      "switchStatus": false
+    },
+    {
+      "title": "Opportunities",
+      "description": "Get Company News, announcements, and product updates",
+      "switchStatus": true
+    },
+    {
+      "title": "Weekly News Letters",
+      "description": "Get Company News, announcements, and product updates",
+      "switchStatus": true
+    }
+  ]
+}

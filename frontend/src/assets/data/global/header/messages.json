@@ -1,0 +1,64 @@
+{
+  "appMessages": [
+    {
+      "link": "javascript:void(0);",
+      "source": "assets/images/messages/app-developer.png",
+      "title": "App developer",
+      "timestamp": "2.5 hrs ago",
+      "description": "Lorem ipsum dolor amet cosec...",
+      "notificationCount": 3,
+      "status":"light",
+      "isRead": true
+    },
+    {
+      "link": "javascript:void(0);",
+      "source": "assets/images/messages/product.png",
+      "title": "Product manager",
+      "timestamp": "2.5 hrs ago",
+      "description": "Lorem ipsum dolor amet cosec...",
+      "notificationCount": 3,
+      "status":"success",
+      "isRead": false
+    },
+    {
+      "link": "javascript:void(0);",
+      "source": "assets/images/messages/ui-ux-design.png",
+      "title": "UI UX Designing",
+      "timestamp": "6 hrs ago",
+      "description": "Lorem ipsum dolor amet cosec...",
+      "notificationCount": 3,
+      "status":"success",
+      "isRead": false
+    },
+  {
+    "link": "javascript:void(0);",
+    "source": "assets/images/messages/web-design-software-engineering.png",
+    "title": "Software Development",
+    "timestamp": "3 hrs ago",
+    "description": "Lorem ipsum dolor amet cosec...",
+    "notificationCount": 3,
+    "status":"warning",
+    "isRead": false
+  },
+  {
+    "link": "javascript:void(0);",
+    "source": "assets/images/messages/firecircle-icon-graphic-branding-graphic-design-large-white.png",
+    "title": "Designing Services",
+    "timestamp": "1.30 hrs ago",
+    "description": "Lorem ipsum dolor amet cosec...",
+    "notificationCount": 2,
+    "status":"success",
+    "isRead": false
+  },
+  {
+    "link": "javascript:void(0);",
+    "source": "assets/images/messages/app.png",
+    "title": "App Development",
+    "timestamp": "2 hrs ago",
+    "description": "Lorem ipsum dolor amet cosec...",
+    "notificationCount": 1,
+    "status":"warning",
+    "isRead": false
+  }
+]
+}

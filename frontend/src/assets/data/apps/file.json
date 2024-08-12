@@ -1,0 +1,97 @@
+{
+  "UserFile": [
+    {
+      "file": "Main-admin-design.zip",
+      "size": "7.05 MB",
+      "avatar":"assets/images/file/zip.png",
+      "actions": [
+        {
+            "text": "view",
+            "type":"view"
+        }
+      ]
+    },
+    {
+      "file": "Product-Guidelines.Pdf",
+      "size": "5.07 KB",
+      "avatar":"assets/images/file/pdf.png",
+      "actions": [
+        {
+          "text": "view",
+          "type":"view"
+        },
+        {
+          "text": "download",
+          "type":"download"
+        }
+      ]
+    },
+    {
+      "file": "Admin-Wireframe.Psd",
+      "size": "2.05 MB",
+      "avatar":"assets/images/file/psd.png",
+      "actions": [
+        {
+          "text": "view",
+          "type":"view"
+        }
+      ]
+    },
+    {
+      "file": "Wirefram-Escreenshots.Jpg",
+      "size": "522 KB",
+      "avatar":"assets/images/file/jpg.png",
+      "actions": [
+        {
+          "text": "view",
+          "type":"view"
+        },
+        {
+          "text": "download",
+          "type":"download"
+        }
+      ]
+    },
+    {
+      "file": "Logo.Png",
+      "size": "522 KB",
+      "avatar":"assets/images/file/png.png",
+      "actions": [
+        {
+          "text": "view",
+          "type":"view"
+        },
+        {
+          "text": "download",
+          "type":"download"
+        }
+      ]
+    },
+    {
+      "file": "Wirefram-Escreenshots.Jpg",
+      "size": "522 KB",
+      "avatar":"assets/images/file/jpg.png",
+      "actions": [
+        {
+          "text": "view",
+          "type":"view"
+        },
+        {
+          "text": "download",
+          "type":"download"
+        }
+      ]
+    },
+    {
+      "file": "Admin-Wireframe.Psd",
+      "size": "2.05 MB",
+      "avatar":"assets/images/file/psd.png",
+      "actions": [
+        {
+          "text": "view",
+          "type":"view"
+        }
+      ]
+    }
+  ]
+}

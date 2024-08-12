@@ -1,0 +1,331 @@
+{
+    "plugins": [
+        {
+            "id": 1,
+            "mainTitle": "Introduction to plugins",
+            "links": [
+                {
+                    "title": "Log in and out of Plugins",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Switch between accounts",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Change your email",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Reactivate your account",
+                    "url": "/pages/knowledge-base/all-article"
+                }
+            ],
+            "seeMoreLink": {
+                "text": "See more",
+                "url": "/pages/knowledge-base/all-article"
+            }
+        },
+        {
+            "id": 2,
+            "mainTitle": "Introduction to plugins",
+            "links": [
+                {
+                    "title": "Log in and out of Plugins",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Switch between accounts",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Change your email",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Reactivate your account",
+                    "url": "/pages/knowledge-base/all-article"
+                }
+            ],
+            "seeMoreLink": {
+                "text": "See more",
+                "url": "/pages/knowledge-base/all-article"
+            }
+        },
+        {
+            "id": 3,
+            "mainTitle": "Plugin Usage Guidelines",
+            "links": [
+                {
+                    "title": "Getting Started with Plugins",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Customizing Plugin Settings",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Troubleshooting Plugin Issues",
+                    "url": "/pages/knowledge-base/all-article"
+                }
+            ],
+            "seeMoreLink": {
+                "text": "See more",
+                "url": "/pages/knowledge-base/all-article"
+            }
+        },
+        {
+            "id": 4,
+            "mainTitle": "Advanced Plugin Features",
+            "links": [
+                {
+                    "title": "API Integration with Plugins",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Extending Functionality through Plugins",
+                    "url": "/pages/knowledge-base/all-article"
+                }
+            ],
+            "seeMoreLink": {
+                "text": "See more",
+                "url": "/pages/knowledge-base/all-article"
+            }
+        },
+        {
+            "id": 5,
+            "mainTitle": "Managing Plugin Updates",
+            "links": [
+                {
+                    "title": "Checking for Plugin Updates",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Updating Plugins to Latest Version",
+                    "url": "/pages/knowledge-base/all-article"
+                }
+            ],
+            "seeMoreLink": {
+                "text": "See more",
+                "url": "/pages/knowledge-base/all-article"
+            }
+        },
+        {
+            "id": 6,
+            "mainTitle": "Security Best Practices for Plugins",
+            "links": [
+                {
+                    "title": "Securing Your Plugins",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Plugin Permissions and Access",
+                    "url": "/pages/knowledge-base/all-article"
+                }
+            ],
+            "seeMoreLink": {
+                "text": "See more",
+                "url": "/pages/knowledge-base/all-article"
+            }
+        },
+        {
+            "id": 7,
+            "mainTitle": "Creating Custom Plugins",
+            "links": [
+                {
+                    "title": "Building Your First Custom Plugin",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Publishing and Distributing Plugins",
+                    "url": "/pages/knowledge-base/all-article"
+                }
+            ],
+            "seeMoreLink": {
+                "text": "See more",
+                "url": "/pages/knowledge-base/all-article"
+            }
+        },
+        {
+            "id": 8,
+            "mainTitle": "Plugin Compatibility Guide",
+            "links": [
+                {
+                    "title": "Ensuring Compatibility with HexaDash",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Testing and Debugging Plugins",
+                    "url": "/pages/knowledge-base/all-article"
+                }
+            ],
+            "seeMoreLink": {
+                "text": "See more",
+                "url": "/pages/knowledge-base/all-article"
+            }
+        }
+    ],
+    "themes": [
+        {
+            "id": 1,
+            "mainTitle": "Introduction to themes",
+            "links": [
+                {
+                    "title": "Log in and out of Plugins",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Switch between accounts",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Change your email",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Reactivate your account",
+                    "url": "/pages/knowledge-base/all-article"
+                }
+            ],
+            "seeMoreLink": {
+                "text": "See more",
+                "url": "/pages/knowledge-base/all-article"
+            }
+        },
+        {
+            "id": 2,
+            "mainTitle": "Introduction to themes",
+            "links": [
+                {
+                    "title": "Log in and out of Plugins",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Switch between accounts",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Change your email",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Reactivate your account",
+                    "url": "/pages/knowledge-base/all-article"
+                }
+            ],
+            "seeMoreLink": {
+                "text": "See more",
+                "url": "/pages/knowledge-base/all-article"
+            }
+        }
+    ],
+    "extensions": [
+        {
+            "id": 1,
+            "mainTitle": "Introduction to extension",
+            "links": [
+                {
+                    "title": "Log in and out of Plugins",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Switch between accounts",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Change your email",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Reactivate your account",
+                    "url": "/pages/knowledge-base/all-article"
+                }
+            ],
+            "seeMoreLink": {
+                "text": "See more",
+                "url": "/pages/knowledge-base/all-article"
+            }
+        },
+        {
+            "id": 2,
+            "mainTitle": "Introduction to extension",
+            "links": [
+                {
+                    "title": "Log in and out of Plugins",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Switch between accounts",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Change your email",
+                    "url": "/pages/knowledge-base/all-article"
+                },
+                {
+                    "title": "Reactivate your account",
+                    "url": "/pages/knowledge-base/all-article"
+                }
+            ],
+            "seeMoreLink": {
+                "text": "See more",
+                "url": "/pages/knowledge-base/all-article"
+            }
+        }
+    ],
+    "article": [
+      {
+        "id": 1,
+        "subTitle": "Article",
+        "title": "Learn everything you need to know getting help with Lorem Ipsum",
+        "link": "/pages/knowledge-base/all-article",
+        "linkText": "Read more",
+        "statusColor":"primary"
+      },
+      {
+        "id": 2,
+        "subTitle": "Article",
+        "title": "Learn the basics via this module-based course.",
+        "link": "/pages/knowledge-base/all-article",
+        "linkText": "Read more",
+        "statusColor":"secondary"
+
+      },
+      {
+        "id": 3,
+        "subTitle": "Article",
+        "title": "Does Lorem comply with the General Data Protection Regulation for EU customers?",
+        "link": "/pages/knowledge-base/all-article",
+        "linkText": "Read more",
+        "statusColor":"info"
+      },
+      {
+        "id": 4,
+        "subTitle": "Article",
+        "title": "Explore advanced techniques for Lorem Ipsum",
+        "link": "/pages/knowledge-base/all-article",
+        "linkText": "Read more",
+        "statusColor":"warning"
+      },
+      {
+        "id": 5,
+        "subTitle": "Article",
+        "title": "Lorem Ipsum: A Comprehensive Guide",
+        "link": "/pages/knowledge-base/all-article",
+        "linkText": "Read more",
+        "statusColor":"danger"
+
+      },
+      {
+        "id": 6,
+        "subTitle": "Article",
+        "title": "Tips and tricks for mastering Lorem Ipsum",
+        "link": "/pages/knowledge-base/all-article",
+        "linkText": "Read more",
+        "statusColor":"primary"
+      }
+    ]
+
+}
+
+

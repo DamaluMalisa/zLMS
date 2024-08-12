@@ -1,0 +1,68 @@
+<div nz-row [nzGutter]="25">
+  <!-- skeleton -->
+<ng-template #loadingSkeleton>
+  <nz-skeleton [nzAvatar]="true" class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true" [nzParagraph]="{ rows: 4 }"></nz-skeleton>
+</ng-template>
+  <!-- skeleton -->
+
+<!-- overview List -->
+<div nz-col nzXs="24" nzXXl="24" class="mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-danial-full></nz-danial-full>
+  </ng-container>
+</div>
+<!-- end: overview List -->
+
+<!-- sales revenue -->
+<div nz-col nzXs="24" nzXXl="16" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-userOverview></nz-userOverview>
+  </ng-container>
+</div>
+<!-- end: sales revenue -->
+
+<!-- source revenue -->
+<div nz-col nzXs="24" nzXl="10" nzXXl="8" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <app-calendar-mini></app-calendar-mini>
+  </ng-container>
+</div>
+<!-- end: source revenue -->
+
+<!-- new product -->
+<div nz-col nzXs="24" nzXXl="12" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-memberProgress></nz-memberProgress>
+  </ng-container>
+</div>
+<!-- end: new product -->
+
+<!-- Best Seller -->
+<div nz-col nzXs="24" nzXXl="12" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-upcomingEvent></nz-upcomingEvent>
+  </ng-container>
+</div>
+<!-- end: Best Seller -->
+
+<div nz-col nzXs="24" nzLg="12" nzXXl="8" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <app-knowledge-base></app-knowledge-base>
+  </ng-container>
+</div>
+<div nz-col nzXs="24" nzLg="12" nzXXl="8" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <app-timeline></app-timeline>
+  </ng-container>
+</div>
+<div nz-col nzXs="24" nzLg="12" nzXXl="8" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <app-mini-inbox></app-mini-inbox>
+  </ng-container>
+</div>
+<div nz-col nzXs="24" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <app-blog-cards></app-blog-cards>
+  </ng-container>
+</div>
+</div>

@@ -1,0 +1,33 @@
+
+<div nz-row nzGutter="25">
+  <!-- skeleton -->
+<ng-template #loadingSkeleton>
+  <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true" [nzParagraph]="{ rows: 6 }"></nz-skeleton>
+</ng-template>
+  <!-- skeleton -->
+
+<div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <bar-chart></bar-chart>
+  </ng-container>
+</div>
+<div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <line-chart></line-chart>
+  </ng-container>
+</div>
+<div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <doughnut-chart></doughnut-chart>
+  </ng-container>
+</div>
+<div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <radar-chart></radar-chart>
+  </ng-container>
+</div>
+<div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <pie-chart></pie-chart>
+  </ng-container>
+</div>

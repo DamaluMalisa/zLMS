@@ -1,0 +1,160 @@
+<!-- skeleton -->
+<ng-template #loadingSkeleton>
+  <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzAvatar]="true" [nzActive]="true"
+    [nzParagraph]="{ rows: 5 }"></nz-skeleton>
+</ng-template>
+<!-- skeleton -->
+<div nz-row nzGutter="25" nzJustify="center">
+  <div nz-col nzLg="15" nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class="bg-transparent px-[30px] max-xl:px-[15px] pb-5 max-xl:pb-0">
+        <div class="mb-[25px]">
+          <div class="max-h-[450px] rounded-10">
+            <!-- top banner -->
+            <img class="object-cover w-full h-full" src="assets/images/blogs/header-banner.png" alt="blog-details">
+          </div>
+          <!-- Content body -->
+          <div class="px-24 max-3xl:px-14 max-2xl:px-[30px] max-xl:px-0">
+            <h1 class="mt-10 mb-6 font-semibold text-dark dark:text-white/[.87] text-3xl lg:text-[26px] max-sm:text-2xl leading-10">Know More About Time Management System on your Daily Works</h1>
+            <ul class="flex flex-wrap items-center mb-11 max-lg:mb-8 max-md:mb-5">
+              <li class="relative flex items-center gap-x-2.5 m-1 text-light dark:text-white/60 text-15">
+                <img class="max-w-[50px] rounded-full" src="assets/images/avatars/tm1.png" alt="hexadash blog author">
+                <span class="inline-block text-base font-semibold text-dark dark:text-white/[.87]">Charli Day</span>
+              </li>
+              <li class="relative m-1 ltr:pl-2.5 rtl:pr-2.5 text-light dark:text-white/60 text-15 before:absolute before:h-1 before:w-1 ltr:before:left-0 rtl:before:right-0 before:top-1/2 before:-translate-y-1/2 before:bg-light before:rounded-full">01 July 2020</li>
+              <li class="relative m-1 ltr:pl-2.5 rtl:pr-2.5 text-light dark:text-white/60 text-15 before:absolute before:h-1 before:w-1 ltr:before:left-0 rtl:before:right-0 ltr:before:right-0 rtl:before:left-0 before:top-1/2 before:-translate-y-1/2 before:bg-light before:rounded-full">
+                <a class="text-light dark:text-white/60 hover:text-primary" href="#">Development</a>
+              </li>
+              <li class="relative m-1 ltr:pl-2.5 rtl:pr-2.5 text-light dark:text-white/60 text-15 before:absolute before:h-1 before:w-1 ltr:before:left-0 rtl:before:right-0 before:top-1/2 before:-translate-y-1/2 before:bg-light before:rounded-full">6 mins read</li>
+            </ul>
+            <p class="text-lg text-body dark:text-white/60 mb-[20px]">”Time management” is the process of organizing and planning how to divide your time between specific activities. Good time management enables you to work smarter – not harder – so that you get more done in less time, even when time is tight and pressures are high. Failing to manage your time damages your effectiveness and causes stress.</p>
+            <p class="text-lg text-body dark:text-white/60 mb-[20px]">”Time management” is the process of organizing and planning how to divide your time between specific activities. Good time management enables you to work smarter – not harder – so that you get more done enables you to work smarter.</p>
+            <h2 class="mt-12 mb-5 text-dark dark:text-white/[.87] text-3xl max-lg:text-[26px] max-sm:text-2xl font-semibold">What is Time Management?</h2>
+            <p class="text-lg text-body dark:text-white/60 mb-[20px]">”Time management” is the process of organizing and planning how to divide your time between specific activities. Good time management enables you to work smarter – not harder – so that you get more done in less time, even when time is tight and pressures are high. Failing to manage your time damages your effectiveness and causes stress.</p>
+            <img class="w-full" src="assets/images/blogs/bodyTime.png" alt="hexadash Blog">
+            <h3 class="mt-12 mb-5 text-2xl font-semibold text-dark dark:text-white/[.87] max-md:text-xl max-sm:text-lg">How Can you Use your Time Properly?</h3>
+            <p class="text-lg text-body dark:text-white/60 mb-[20px]">”Time management” is the process of organizing and planning how to divide your time between specific activities. Good time management enables you to work smarter – not harder – so that you get more done in less time, even when time is tight and pressures are high</p>
+            <blockquote class="pt-[17px] pe-[22px] pb-[15px] ps-[45px] ms-[15px] bg-transparent border-s border-secondary mb-[50px]">
+              <div class="relative">
+                <div class="absolute top-0 start-[-20px]">
+                  <svg-icon class=" text-light dark:text-white/60 w-[15px] h-[15px] [&>svg]:w-[15px] [&>svg]:h-[15px]" src="assets/images/svg/blockquote-left.svg">
+                  </svg-icon>
+                </div>
+                  <p class="text-[20px] leading-[1.63] text-dark dark:text-white/[.87] relative mb-0 font-normal after:inline-block after:content-[''] after:bg-[url('assets/images/svg/blockquote-right.svg')] after:bg-[length:15px_28px] after:w-[28px] after:h-[28px] after:z-[1] after:bg-no-repeat after:align-middle">
+                    Usability design is to improve the usability of a product, which is an important part to guide the actual design. It can also be regarded. A month ago, I agreed to
+                  </p>
+              </div>
+              <cite class="text-[18px] font-semibold ps-[32px] text-dark dark:text-white/[.87] mt-[14px] inline-flex items-center before:absolute before:start-0 before:top-[50%] before:w-[20px] before:h-[2px] before:translate-y-[-50%] before:content-[''] before:z-[22px] before:bg-deep dark:before:bg-white/10 not-italic relative">Daniel Brownspan,<span class="text-[18px] font-normal leading-[1.22] text-theme-gray dark:text-white/60 ms-[6px]">Founder of Company</span></cite>
+            </blockquote>
+            <h4 class="mt-12 mb-5 font-semibold text-dark dark:text-white/[.87] text-22">Value of Time Management</h4>
+            <p class="text-lg text-body dark:text-white/60">”Time management” is the process of organizing and planning how to divide your time between specific activities. Good time management enables you to work smarter.</p>
+            <ul class="">
+              <li class="relative mb-3 ltr:pl-4 rtl:pr-4 text-lg before:absolute before:h-1.5 before:w-1.5 ltr:before:left-0 rtl:before:right-0 before:top-2.5 before:bg-dark dark:before:bg-white/60 before:rounded-full">
+                <span class="inline-block font-medium ltr:mr-1 rtl:ml-1 text-dark dark:text-white/[.87]">Trim transparent pixels on exports:</span>
+                <span class="text-body dark:text-white/60">Usability design is to improve the usability of a product, which is an important.</span>
+              </li>
+              <li class="relative mb-3 ltr:pl-4 rtl:pr-4 text-lg before:absolute before:h-1.5 before:w-1.5 ltr:before:left-0 rtl:before:right-0 before:top-2.5 before:bg-dark dark:before:bg-white/60 before:rounded-full">
+                <span class="inline-block font-medium ltr:mr-1 rtl:ml-1 text-dark dark:text-white/[.87]">Crash and bug fixes:</span>
+                <span class="text-body dark:text-white/60">Usability design is to improve the usability of a product, which is an important part to guide.</span>
+              </li>
+            </ul>
+            <h5 class="mt-12 mb-5 text-xl font-semibold text-dark dark:text-white/[.87]">How Can you Benefit from Time Management System?</h5>
+            <p class="text-lg text-body dark:text-white/60">”Time management” is the process of organizing and planning how to divide your time between specific activities. Good time management enables you to work smarter.</p>
+            <h5 class="mt-12 mb-5 text-xl font-semibold text-dark dark:text-white/[.87]">Help Users Fill in Forms</h5>
+            <p class="text-lg text-body dark:text-white/60">”Time management” is the process of organizing and planning how to divide your time between specific activities. Good time management enables you to work smarter..</p>
+            <ul class="hexadash-blog-list">
+              <li class="relative mb-3 ltr:pl-4 rtl:pr-4 text-lg before:absolute before:h-1.5 before:w-1.5 ltr:before:left-0 rtl:before:right-0 before:top-2.5 before:bg-dark dark:before:bg-white/60 before:rounded-full">
+                <span class="text-body dark:text-white/60">Only be run by an explicit user action</span>
+              </li>
+              <li class="relative mb-3 ltr:pl-4 rtl:pr-4 text-lg before:absolute before:h-1.5 before:w-1.5 ltr:before:left-0 rtl:before:right-0 before:top-2.5 before:bg-dark dark:before:bg-white/60 before:rounded-full">
+                <span class="text-body dark:text-white/60">Show UI in a single plugin-specific dialog</span>
+              </li>
+              <li class="relative mb-3 ltr:pl-4 rtl:pr-4 text-lg before:absolute before:h-1.5 before:w-1.5 ltr:before:left-0 rtl:before:right-0 before:top-2.5 before:bg-dark dark:before:bg-white/60 before:rounded-full">
+                <span class="text-body dark:text-white/60">Make a technology change (described in the next section) that avoided the privately-disclosed vulnerabilities.</span>
+              </li>
+            </ul>
+            <ul class="flex flex-wrap items-center -m-1">
+              <li class="m-1">
+                <a class="inline-flex items-center justify-center bg-regularBG dark:bg-white/10 min-h-[34px] px-2.5 text-body dark:text-white/60 text-base rounded-md" href="#">Design Process</a>
+              </li>
+              <li class="m-1">
+                <a class="inline-flex items-center justify-center bg-regularBG dark:bg-white/10 min-h-[34px] px-2.5 text-body dark:text-white/60 text-base rounded-md" href="#">Prototype</a>
+              </li>
+              <li class="m-1">
+                <a class="inline-flex items-center justify-center bg-regularBG dark:bg-white/10 min-h-[34px] px-2.5 text-body dark:text-white/60 text-base rounded-md" href="#">Design Process</a>
+              </li>
+              <li class="m-1">
+                <a class="inline-flex items-center justify-center bg-regularBG dark:bg-white/10 min-h-[34px] px-2.5 text-body dark:text-white/60 text-base rounded-md" href="#">Prototype</a>
+              </li>
+            </ul>
+            <ul class="flex flex-wrap items-center mt-12 -mx-1 -mb-1">
+              <li class="m-1 font-medium ltr:pr-4 rtl:pl-4 text-dark dark:text-white/[.87] text-[16px]">Share this article:</li>
+              <li class="m-1">
+                <a class="group inline-flex items-center justify-center gap-x-1 bg-white dark:bg-white/10 dark:hover:bg-facebook hover:bg-facebook min-h-[34px] px-3.5 text-body dark:text-white/60 hover:text-white dark:hover:text-white/[.87] text-15 border border-regular dark:border-white/10 rounded-md transition duration-0 hover:duration-150" href="#">
+                  <span nz-icon nzType="facebook" nzTheme="outline"></span>
+                  <span>Share</span>
+                </a>
+              </li>
+              <li class="m-1">
+                <a class="group inline-flex items-center justify-center gap-x-1 bg-white dark:bg-white/10 dark:hover:bg-twitter hover:bg-twitter min-h-[34px] px-3.5 text-body dark:text-white/60 hover:text-white dark:hover:text-white/[.87] text-15 border border-regular dark:border-white/10 rounded-md transition duration-0 hover:duration-150" href="#">
+                  <span nz-icon nzType="twitter" nzTheme="outline"></span>
+                  <span>Tweet</span>
+                </a>
+              </li>
+              <li class="m-1">
+                <a class="group inline-flex items-center justify-center gap-x-1 bg-white dark:bg-white/10 dark:hover:bg-linkedin hover:bg-linkedin min-h-[34px] px-3.5 text-body dark:text-white/60 hover:text-white dark:hover:text-white/[.87] text-15 border border-regular dark:border-white/10 rounded-md transition duration-0 hover:duration-150" href="#">
+                  <span nz-icon nzType="linkedin" nzTheme="outline"></span>
+                  <span>Share</span>
+                </a>
+              </li>
+              <li class="m-1">
+                <a class="group inline-flex items-center justify-center gap-x-1 bg-white dark:bg-white/10 dark:hover:bg-link hover:bg-link min-h-[34px] px-3.5 text-body dark:text-white/60 hover:text-white dark:hover:text-white/[.87] text-15 border border-regular dark:border-white/10 rounded-md transition duration-0 hover:duration-150" href="#">
+                  <span nz-icon nzType="link" nzTheme="outline"></span>
+                  <span>Copy</span>
+                </a>
+              </li>
+            </ul>
+            <div class="flex items-start gap-5 mt-12 bg-white rounded-lg max-sm:flex-col dark:bg-white/10 p-9 shadow-custom dark:shadow-none">
+              <div>
+                <img class="max-w-[70px]" src="assets/images/avatars/tm1.png" alt="hexadash Blog">
+              </div>
+              <div>
+                <span class="text-body dark:text-white/60 text-15">Written By</span>
+                <span class="block text-lg font-semibold text-dark dark:text-white/[.87]">Charli Day</span>
+                <p class="mt-5 mb-0 text-base text-light dark:text-white/60">Charli Day is a British writer and social media manager specializing in dynamic branding, campaign strategy and content engagement. </p>
+              </div>
+            </div>
+            <!-- fixed socials -->
+            <div [ngClass]="{ 'fixed top-0 ms-[820px] text-center translate-y-40': isShareGroupVisible, 'hidden translate-y-[160px] opacity-0': !isShareGroupVisible }">
+              <span class="text-base font-semibold text-breadcrumbs dark:text-white/[.87]">Share</span>
+              <ul>
+                <li class="my-2.5">
+                  <a class="flex items-center justify-center bg-white rounded-full dark:bg-[#1b1d2a] w-[50px] h-[50px] shadow-regular dark:shadow-[0_5px_20px_rgba(1,4,19,.60)] transition-[0.3] dark:hover:bg-facebook dark:hover:text-white text-facebook" href="#">
+                    <span nz-icon nzType="facebook" nzTheme="outline"></span>
+                  </a>
+                </li>
+                <li class="my-2.5">
+                  <a class="flex items-center justify-center bg-white rounded-full dark:bg-[#1b1d2a] w-[50px] h-[50px] shadow-regular dark:shadow-[0_5px_20px_rgba(1,4,19,.60)] transition-[0.3] dark:hover:bg-twitter text-twitter dark:hover:text-white" href="#">
+                    <span nz-icon nzType="twitter" nzTheme="outline"></span>
+                  </a>
+                </li>
+                <li class="my-2.5">
+                  <a class="flex items-center justify-center bg-white rounded-full dark:bg-[#1b1d2a] w-[50px] h-[50px] shadow-regular dark:shadow-[0_5px_20px_rgba(1,4,19,.60)] transition-[0.3] dark:hover:bg-linkedin text-linkedin dark:hover:text-white" href="#">
+                    <span nz-icon nzType="linkedin" nzTheme="outline"></span>
+                  </a>
+                </li>
+                <li class="my-2.5">
+                  <a class="flex items-center justify-center bg-white rounded-full dark:bg-[#1b1d2a] w-[50px] h-[50px] shadow-regular dark:shadow-[0_5px_20px_rgba(1,4,19,.60)] transition-[0.3] text-dark dark:text-white/[.87]" href="#">
+                    <span nz-icon nzType="link" nzTheme="outline"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- End: Content body -->
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

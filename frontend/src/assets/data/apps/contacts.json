@@ -1,0 +1,194 @@
+[
+  {
+    "avatar": "tm1.png",
+    "name": "Musfiqur Rohim",
+    "rule": "UI/UX Designer",
+    "checked" : false,
+    "star":"inactive",
+    "user": [
+      {
+        "type": "call",
+        "icon": "phone",
+        "name": "+90014525"
+      },
+      {
+        "type": "mail",
+        "icon": "mail",
+        "name": "john@gmail.com"
+      },
+      {
+        "type": "map",
+        "icon": "map-pin",
+        "name": "Business Development"
+      }
+    ]
+  },
+  {
+    "avatar": "tm2.png",
+    "name": "John Doe",
+    "checked" : false,
+    "rule": "Web Developer",
+    "star":"active",
+    "user": [
+      {
+        "type": "call",
+        "icon": "phone",
+        "name": "+90012345"
+      },
+      {
+        "type": "skype",
+        "icon": "skype",
+        "name": "johndoe"
+      },
+      {
+        "type": "map",
+        "icon": "map-pin",
+        "name": "Technical Support"
+      }
+    ]
+  },
+  {
+    "avatar": "tm3.png",
+    "name": "Alice Smith",
+    "checked" : false,
+    "rule": "Graphic Designer",
+    "star":"inactive",
+    "user": [
+      {
+        "type": "call",
+        "icon": "phone",
+        "name": "+90098765"
+      },
+      {
+        "type": "mail",
+        "icon": "mail",
+        "name": "alice.smith@gmail.com"
+      },
+      {
+        "type": "map",
+        "icon": "map-pin",
+        "name": "Marketing"
+      }
+    ]
+  },
+  {
+    "avatar": "tm4.png",
+    "name": "David Johnson",
+    "checked" : false,
+    "rule": "Project Manager",
+    "star":"inactive",
+    "user": [
+      {
+        "type": "call",
+        "icon": "phone",
+        "name": "+90024680"
+      },
+      {
+        "type": "mail",
+        "icon": "mail",
+        "name": "david.johnson@gmail.com"
+      },
+      {
+        "type": "map",
+        "icon": "map-pin",
+        "name": "Operations"
+      }
+    ]
+  },
+  {
+    "avatar": "tm5.png",
+    "name": "Emily Brown",
+    "checked" : false,
+    "rule": "Content Writer",
+    "star":"inactive",
+    "user": [
+      {
+        "type": "call",
+        "icon": "phone",
+        "name": "+90036912"
+      },
+      {
+        "type": "mail",
+        "icon": "mail",
+        "name": "emily.brown@gmail.com"
+      },
+      {
+        "type": "map",
+        "icon": "map-pin",
+        "name": "Content Creation"
+      }
+    ]
+  },
+  {
+    "avatar": "tm1.png",
+    "name": "Michael Wilson",
+    "checked" : false,
+    "rule": "Sales Executive",
+    "star":"inactive",
+    "user": [
+      {
+        "type": "call",
+        "icon": "phone",
+        "name": "+90075319"
+      },
+      {
+        "type": "mail",
+        "icon": "mail",
+        "name": "michael.wilson@gmail.com"
+      },
+      {
+        "type": "map",
+        "icon": "map-pin",
+        "name": "Sales Department"
+      }
+    ]
+  },
+  {
+    "avatar": "tm2.png",
+    "name": "Sophia Taylor",
+    "checked" : false,
+    "rule": "HR Manager",
+    "star":"inactive",
+    "user": [
+      {
+        "type": "call",
+        "icon": "phone",
+        "name": "+90086420"
+      },
+      {
+        "type": "mail",
+        "icon": "mail",
+        "name": "sophia.taylor@gmail.com"
+      },
+      {
+        "type": "map",
+        "icon": "map-pin",
+        "name": "Human Resources"
+      }
+    ]
+  },
+  {
+    "avatar": "tm3.png",
+    "name": "Oliver Anderson",
+    "checked" : false,
+    "rule": "Financial Analyst",
+    "star":"active",
+    "user": [
+      {
+        "type": "call",
+        "icon": "phone",
+        "name": "+90095173"
+      },
+      {
+        "type": "mail",
+        "icon": "mail",
+        "name": "oliver.anderson@gmail.com"
+      },
+      {
+        "type": "map",
+        "icon": "map-pin",
+        "name": "Finance Department"
+      }
+    ]
+  }
+]

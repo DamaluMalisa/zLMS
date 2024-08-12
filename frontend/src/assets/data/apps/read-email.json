@@ -1,0 +1,37 @@
+[
+  {
+      "name": "Mohammad Delower Hossain",
+      "avatar": "assets/images/sellers/2.png",
+      "title": "What are you doing?",
+      "date": "5:34AM",
+      "to": "name@example.com",
+      "respect":"Hi Delower",
+      "content": "Good luck. You're gonna need it. General Madine. We have stolen a small Imperial shuttle. Disguised as a cargo ship, and using a secret Imperial code, a strike team will land on the moon and deactivate the shield generator. Sounds dangerous. I wonder who they found to pull that off. General Solo, is your strike team assembled? Uh, my team's ready. I don't have a command crew for the shuttle. Rawwwrr! Well, it's gonna be rough, pal. I didn't want to speak for you. That's one. Uh, General... count me in. I'm with you, too! What is it? Ask me again sometime. Luke. Hi, Han... Chewie. Exciting is hardly the word I would use.",
+      "checked" : false,
+      "attachShow":"block",
+      "inboxActive":"unread",
+      "star":"inactive",
+      "attachment": [
+          {
+              "file": "men.png",
+              "size": "256.5 KB",
+              "type": "image"
+          },
+          {
+              "file": "Attached.pdf",
+              "size": "256.5 KB",
+              "type": "pdf"
+          },
+          {
+              "file": "Attached.doc",
+              "size": "256.5 KB",
+              "type": "doc"
+          },
+          {
+              "file": "Attached.zip",
+              "size": "256.5 KB",
+              "type": "zip"
+          }
+      ]
+  }
+]

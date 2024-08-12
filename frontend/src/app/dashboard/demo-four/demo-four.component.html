@@ -1,0 +1,94 @@
+<div nz-row [nzGutter]="25">
+  <!-- Skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton [nzAvatar]="true" class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle"
+      [nzActive]="true" [nzParagraph]="{ rows: 4 }"></nz-skeleton>
+  </ng-template>
+  <ng-template #loadingSkeleton2>
+    <nz-skeleton [nzAvatar]="true" class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle"
+      [nzActive]="true" [nzParagraph]="{ rows: 11 }"></nz-skeleton>
+  </ng-template>
+  <!-- End: Skeleton -->
+
+  <!-- Congrats Danial -->
+  <div nz-col nzXs="24" nzXXl="8" nzXl="12" nzLg="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-danial></nz-danial>
+    </ng-container>
+  </div>
+  <!-- End: Congrats Danial -->
+
+  <!-- Performance Overview -->
+  <div nz-col nzXs="24" nzXXl="8" nzXl="12" nzLg="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-performance-overview></nz-performance-overview>
+    </ng-container>
+  </div>
+  <!-- End: Performance Overview -->
+
+  <!-- News -->
+  <div nz-col nzXs="24" nzXXl="8" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-news></nz-news>
+    </ng-container>
+  </div>
+  <!-- End: News -->
+
+  <!-- Task List -->
+  <div nz-col nzXs="24" nzXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <task-list></task-list>
+    </ng-container>
+  </div>
+  <!-- End: Task List -->
+
+  <!-- MarketingCampaigns -->
+  <div nz-col nzXs="24" nzXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-marketingCampaigns [componentId]="'component1'" [desiredId]="1"></nz-marketingCampaigns>
+    </ng-container>
+  </div>
+  <!-- End: MarketingCampaigns -->
+
+  <div nz-col nzXs="24" nzXXl="16">
+    <div nz-row [nzGutter]="25">
+      <!-- Profile Card -->
+      <div nz-col nzXs="24" nzXl="12" class="mb-[25px]">
+        <ng-container *ngIf="showContent; else loadingSkeleton">
+          <app-profile-card></app-profile-card>
+        </ng-container>
+      </div>
+      <!-- End: Profile Card -->
+
+      <!-- Team List -->
+      <div nz-col nzXs="24" nzXl="12" class="mb-[25px]">
+        <ng-container *ngIf="showContent; else loadingSkeleton">
+          <app-team-list></app-team-list>
+        </ng-container>
+      </div>
+      <!-- End: Team List -->
+
+      <!-- Social Media Traffic -->
+      <div nz-col nzXs="24" class="mb-[25px]">
+        <ng-container *ngIf="showContent; else loadingSkeleton">
+          <app-socialMediaTraffic></app-socialMediaTraffic>
+        </ng-container>
+      </div>
+      <!-- Social Media Traffic -->
+    </div>
+  </div>
+  <div nz-col nzXs="24" nzXXl="8" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton2">
+       <!-- User Chat -->
+      <app-userChat
+            [chatList]="chatList"
+            [msg]="msg"
+            [sendMsg]="sendMsg"
+            [chatId]="chatId"
+            [chatType]="chatType"
+        >
+      </app-userChat>
+       <!-- End: User Chat -->
+    </ng-container>
+  </div>
+</div>

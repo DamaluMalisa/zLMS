@@ -1,0 +1,70 @@
+/* Important */
+.header {
+    .logo {
+        @apply w-[280px] flex;
+
+        @include screen-laptop-only {
+            @apply w-[230px];
+        }
+
+        @include screen-tablet {
+            @apply hidden;
+        }
+
+        .logo-fold {
+          @apply hidden;
+        }
+
+        &.logo-white {
+          @apply hidden;
+        }
+    }
+
+    .nav-wrap {
+
+        .desktop-toggle {
+            @include screen-tablet {
+              @apply hidden;
+            }
+        }
+
+        .mobile-toggle {
+            @include screen-tablet-above {
+              @apply hidden;
+            }
+        }
+    }
+
+    .ant-dropdown-link,
+    .ant-dropdown-trigger  {
+        .anticon:not(.anticon-ellipsis) {
+            @apply text-[18px] transform-none;
+        }
+    }
+
+    &.header-folded {
+
+        .logo {
+            @apply w-[80px];
+        }
+    }
+}
+
+.is-folded {
+    @include screen-tablet-above {
+        .header {
+
+            .logo {
+              @apply w-[80px];
+
+                img {
+                  @apply hidden;
+                }
+
+                .logo-fold {
+                  @apply block;
+                }
+            }
+        }
+    }
+}

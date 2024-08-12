@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "es2020",
+    "useDefineForClassFields": true,
+    "strict": false,
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "chart.js": [
+        "node_modules/chart.js/dist/Chart.min.js"
+      ]
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "include": [
+    "src/**/*",
+    "node_modules/ngx-quill/**/*"
+  ],
+  "paths": {
+    "@babel/runtime": ["node_modules/@babel/runtime"],
+    "@babel/runtime/*": ["node_modules/@babel/runtime/*"]
+  }
+}

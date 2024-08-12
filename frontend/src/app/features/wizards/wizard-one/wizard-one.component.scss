@@ -1,0 +1,73 @@
+
+:host ::ng-deep .checkout .ant-steps-item-container {
+  @apply relative flex flex-col items-center lg:w-1/2 max-lg:w-[70%] max-md:w-full md:ps-4 max-md:p-0;
+}
+
+:host ::ng-deep .checkout .ant-steps-item .ant-steps-item-icon{
+  @apply w-[50px] h-[50px] leading-[50px] border-0 bg-white dark:bg-white/10 shadow-md;
+}
+
+:host ::ng-deep .checkout .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon{
+  @apply bg-primary;
+}
+
+:host ::ng-deep .checkout .ant-steps-item-finish .ant-steps-item-icon {
+  @apply text-white dark:text-white bg-success border-success dark:bg-success;
+}
+
+:host ::ng-deep .checkout .ant-steps-item .ant-steps-item-icon .ant-steps-icon {
+  @apply text-[16px] font-medium text-dark dark:text-white/[.87] flex items-center justify-center h-full;
+}
+
+:host ::ng-deep .checkout .ant-steps-item-finish .ant-steps-item-icon .ant-steps-icon {
+  @apply text-white dark:text-white/[.87];
+}
+
+:host ::ng-deep .checkout .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title{
+  @apply text-dark dark:text-white/[.87];
+}
+
+:host ::ng-deep .checkout .ant-steps-item.ant-steps-item-active .ant-steps-item-icon .ant-steps-icon {
+    @apply text-white dark:text-white/[.87];
+}
+
+:host ::ng-deep .checkout .ant-steps-item .ant-steps-item-title {
+    @apply text-[15px] font-medium mt-[8px] xl:ps-[10px] max-xl:ps-[30px];
+}
+
+:host ::ng-deep .checkout .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title {
+    @apply text-dark/80 dark:text-white/[.87];
+}
+
+:host ::ng-deep .checkout .ant-steps-item.ant-steps-item-active .ant-steps-item-title {
+    @apply text-dark dark:text-white/[.87];
+}
+
+:host ::ng-deep .checkout .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title{
+  @apply text-dark/80 dark:text-white/60;
+}
+
+:host ::ng-deep .checkout .ant-steps-item-title{
+  @apply after:hidden;
+}
+
+:host ::ng-deep .checkout .ant-steps-item .ant-steps-item-container{
+  @apply relative;
+}
+
+:host ::ng-deep .checkout .ant-steps-item .ant-steps-item-container:after{
+  @apply absolute ltr:left-full rtl:right-full top-[35px] 2xl:w-[110%] lg:w-[120%] max-lg:hidden h-[6px] bg-no-repeat bg-center bg-cover content-[''] bg-[url('../../../../assets/images/checkout/progress.png')];
+}
+
+:host ::ng-deep .checkout .ant-steps-item.ant-steps-item-process .ant-steps-item-container:after{
+  @apply bg-[url('../../../../assets/images/checkout/progress-active.png')];
+}
+
+:host ::ng-deep .checkout .ant-steps-item.ant-steps-item-finish .ant-steps-item-container:after{
+  @apply bg-[url('../../../../assets/images/checkout/progress-success.png')];
+}
+
+:host ::ng-deep .checkout .ant-steps-item.last .ant-steps-item-container{
+@apply after:hidden;
+}
+

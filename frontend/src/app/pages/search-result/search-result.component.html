@@ -1,0 +1,89 @@
+<div nz-row nzGutter="25" class="mb-[30px]">
+  <!-- skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true"
+      [nzParagraph]="{ rows: 12 }"></nz-skeleton>
+  </ng-template>
+  <!-- skeleton -->
+
+  <div nz-col nzXs="24" nzMd="18" nzXl="10" class="mb-[30px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class="flex flex-col gap-[30px]">
+          <!-- search bar -->
+          <div>
+            <nz-input-group class="px-5 border border-regular dark:border-white/10 rounded-[100px] h-[50px] shadow-none bg-white dark:bg-white/10" [nzSuffix]="suffixIconSearch">
+              <input
+                class=" !bg-transparent placeholder:text-light dark:placeholder:text-white/60 dark:caret-white/60 text-dark dark:text-white/[.87]"
+                type="text" nz-input placeholder="Type and search..." [(ngModel)]="searchKeyword" (input)="filterItems()"
+              />
+            </nz-input-group>
+            <ng-template #suffixIconSearch>
+              <span
+                *ngIf="searchKeyword"
+                class="cursor-pointer text-light dark:text-white/60 hover:text-danger" nz-icon nzType="close-circle" (click)="clearSearch()"
+              ></span>
+              <span
+                *ngIf="!searchKeyword"
+                class="text-light dark:text-white/60" nz-icon nzType="search"
+              ></span>
+            </ng-template>
+          </div>
+          <!-- Keyword filler button -->
+          <div class="max-md:flex max-md:justify-center">
+            <ul class="flex flex-wrap items-center mb-0 gap-[10px] max-md:justify-center">
+              <li
+              *ngFor="let item of filterItemsOptions; let i = index"
+              >
+                <button nz-button
+                class="px-[15px] py-[5px] text-13 font-medium rounded-[5px] shadow[0_3px_6px_rgba(116,116,116,0.02)] border-none"
+                [ngClass]="{ 'bg-primary text-white border-primary': selectedItemIndex === i, 'bg-white dark:bg-white/10 text-light dark:text-white/60': selectedItemIndex !== i }" (click)="selectItem(i)"
+                >
+                  {{ item.label }}
+                </button>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+        <div class="bg-white dark:bg-white/10 p-[25px] rounded-[10px]">
+          <div nz-row nzGutter="25">
+            <div nz-col nzXs="24" nzXl="20">
+              <div class="flex items-center justify-between mb-[18px] pb-6 border-b border-regular dark:border-white/10">
+                <p class="mb-0 text-body dark:text-white/60 test-base">
+                  <span class="fon:t-semibold me-1 text-dark dark:text-white/[.87]">{{ matchedItemsCount }}</span>results found for<span class="ms-1 font-semibold text-dark dark:text-white/[.87]">“{{ filterItemsOptions[selectedItemIndex].label }}”</span>
+                </p>
+                <p class="mb-0 text-end md:text-start md:mt-[10px] text-body dark:text-white/60 text-15">Showing {{ paginatedItems.length }} of {{ totalItems }} results.</p>
+              </div>
+            </div>
+            <div nz-col nzXs="24" nzXl="12">
+              <ul>
+                <li class="mb-8 last:mb-7" *ngFor="let item of paginatedItems">
+                  <h3 class="mb-2 text-base font-medium text-dark dark:text-white/[.87]">
+                    <span *ngIf="item.keyword" class="font-semibold text-primary text-[16px] capitalize">{{ item.keyword }}</span>
+                    {{ item.title }}
+                  </h3>
+                  <p class="mb-0 text-body dark:text-white/60">{{ item.description }}</p>
+                </li>
+              </ul>
+            </div>
+            <div nz-col nzXs="24">
+              <div class="mt-[10px] pt-[30px] border-t border-regular dark:border-white/10">
+                <div>
+                  <nz-pagination
+                    [nzPageIndex]="currentPage"
+                    [nzTotal]="totalItems"
+                    [nzPageSize]="itemsPerPage"
+                    nzShowSizeChanger
+                    (nzPageIndexChange)="handlePageIndexChange($event)"
+                  ></nz-pagination>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </ng-container>
+</div>
+

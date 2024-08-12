@@ -1,0 +1,110 @@
+
+<div nz-row nzGutter="25">
+  <div nz-col nzXXl="6" nzXl="9" nzXs="24" class="mb-[25px]">
+    <!-- New project added -->
+    <button class="h-[50px] text-[14px] font-medium w-full rounded-[8px] mb-[25px] bg-primary border-primary text-white flex items-center justify-center gap-[6px]" nz-button (click)="showNewProject(newProjectContent)">
+      <i nz-icon nzType="plus"></i>
+      <span class="m-0">Create New</span>
+    </button>
+    <ng-template #newProjectContent>
+      <form nz-form class="form">
+        <nz-form-item nz-form-item class="mb-[25px]">
+            <nz-form-label class="flex items-center [&>label]:text-light font-medium [&>label]:dark:text-white/[.87]"  nzLg="5" nzMd="9" nzXs="24" nzFor="name">Title</nz-form-label>
+            <nz-form-control nzLg="19" nzMd="15" nzXs="24">
+              <input class="w-full rounded-6 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder-shown:text-light-extra dark:placeholder-shown:text-white/60 text-theme-gray dark:text-white/60" nz-input name="name" type="text" placeholder="Please set event title">
+            </nz-form-control>
+        </nz-form-item >
+        <nz-form-item nz-form-item class="mb-[25px]">
+            <nz-form-label class="flex items-center [&>label]:text-light font-medium [&>label]:dark:text-white/[.87]"  nzLg="5" nzMd="9" nzXs="24" nzFor="name">Event Type</nz-form-label>
+            <nz-form-control nzLg="19" nzMd="15" nzXs="24">
+              <nz-radio-group [(ngModel)]="radioValue" nzName="radiogroup">
+                <label class="dark:text-white/[.87] text-light text-[15px]" nz-radio nzValue="A">Event</label>
+                <label class="dark:text-white/[.87] text-light text-[15px]" nz-radio nzValue="B">Reminder</label>
+                <label class="dark:text-white/[.87] text-light text-[15px]" nz-radio nzValue="C">Task</label>
+              </nz-radio-group>
+            </nz-form-control>
+        </nz-form-item >
+        <nz-form-item>
+        <nz-form-label class="flex items-center [&>label]:text-light font-medium [&>label]:dark:text-white/[.87]"  nzLg="5" nzMd="9" nzXs="24">Start Date</nz-form-label>
+            <nz-form-control nzLg="19" nzMd="15" nzXs="24">
+              <nz-date-picker
+              class="w-full h-[50px] border-normal dark:border-white/10 px-[20px] placeholder-shown:text-light-extra dark:placeholder-shown:text-white/60 rounded-[5px] dark:bg-white/10"
+                [nzDisabledDate]="disabledStartDate"
+                nzShowTime
+                nzFormat="yyyy-MM-dd HH:mm:ss"
+                [(ngModel)]="startValue"
+                nzPlaceHolder="Start"
+                [ngModelOptions]="{standalone: true}"
+                (nzOnOpenChange)="handleStartOpenChange($event)"
+              ></nz-date-picker>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label class="flex items-center [&>label]:text-light font-medium [&>label]:dark:text-white/[.87]"  nzLg="5" nzMd="9" nzXs="24">End Date</nz-form-label>
+          <nz-form-control nzLg="19" nzMd="15" nzXs="24">
+            <nz-date-picker
+            class="w-full h-[50px] border-normal dark:border-white/10 px-[20px] placeholder-shown:text-light-extra dark:placeholder-shown:text-white/60 rounded-[5px] dark:bg-white/10"
+              #endDatePicker
+              [nzDisabledDate]="disabledEndDate"
+              nzShowTime
+              nzFormat="yyyy-MM-dd HH:mm:ss"
+              [(ngModel)]="endValue"
+              nzPlaceHolder="End"
+              [ngModelOptions]="{standalone: true}"
+              (nzOnOpenChange)="handleEndOpenChange($event)"
+            ></nz-date-picker>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label class="flex items-center [&>label]:text-light font-medium [&>label]:dark:text-white/[.87]" nzLg="5" nzMd="9" nzXs="24">Description</nz-form-label>
+          <nz-form-control nzLg="19" nzMd="15" nzXs="24">
+            <textarea class="h-[118px] border-normal dark:border-white/10 px-[20px] placeholder-shown:text-light-extra dark:placeholder-shown:text-white/60 rounded-[5px] py-[15px] dark:bg-white/10 dark:text-white/60" nz-input placeholder="Project Description" name="first"></textarea>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label class="flex items-center [&>label]:text-light font-medium [&>label]:dark:text-white/[.87]" nzLg="5" nzMd="9" nzXs="24">Label</nz-form-label>
+          <nz-form-control nzLg="19" nzMd="15" nzXs="24">
+            <nz-select class="min-w-[260px] capitalize [&>nz-select-top-control]:border-normal dark:[&>nz-select-top-control]:border-white/10 [&>nz-select-top-control]:bg-white [&>nz-select-top-control]:dark:bg-white/10 [&>nz-select-top-control]:shadow-none [&>nz-select-top-control]:text-dark [&>nz-select-top-control]:dark:text-white/60 [&>nz-select-top-control]:h-[50px] [&>nz-select-top-control]:flex [&>nz-select-top-control]:items-center [&>nz-select-top-control]:rounded-[5px] [&>nz-select-top-control]:px-[20px] [&>.ant-select-arrow]:text-theme-gray dark:[&>.ant-select-arrow]:text-white/60" ngModel="category2" name="first">
+              <nz-option nzValue="primary" nzLabel="primary"></nz-option>
+              <nz-option nzValue="secondary" nzLabel="secondary"></nz-option>
+              <nz-option nzValue="success" nzLabel="success"></nz-option>
+              <nz-option nzValue="warning" nzLabel="warning"></nz-option>
+              <nz-option nzValue="info" nzLabel="info"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+      </form>
+    </ng-template>
+    <div class="mini-calendar mb-[25px]">
+      <full-calendar [options]="calendarOptions2" class="bg-white dark:bg-white/10 rounded-10"></full-calendar>
+    </div>
+    <div class="bg-white dark:bg-white/10 rounded-10 p-[25px]">
+      <div class="flex items-center justify-between mb-[18px] text-dark dark:text-white/[.87]">
+        <h3 class="font-medium text-[18px] text-dark dark:text-white/[.87]">My Calendars</h3>
+        <a href="#" class="text-light text-[14px]">
+          <span nz-icon nzType="plus" nzTheme="outline"></span>
+        </a>
+      </div>
+      <ul>
+        <li class="flex items-center mb-[10px]" *ngFor='let event of currentEvents()'>
+          <span class="flex relative items-center text-sm ps-4 text-body dark:text-white/60 before:absolute before:bg-{{event.extendedProps.label}} before:w-2 before:h-2 before:rounded-full ltr:before:left-0 rtl:before:right-0 before:top-1/2 before:-translate-y-2/4 capitalize">{{event.title}}</span>
+          <span class="hidden before:bg-secondary"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div nz-col nzXXl="18" nzXl="15" nzXs="24">
+    <full-calendar class="relative bg-white main-calendar dark:bg-white/10 rounded-10 p-[25px] overflow-x-auto" *ngIf='calendarVisible()' [options]='calendarOptions()'>
+      <ng-template #eventContent let-arg>
+        <div [ngClass]="['rounded-4 px-[5px] overflow-x-hidden w-full bg-' + arg.event.extendedProps.label]">
+          <h6 class="text-[15px] text-white font-normal capitalize">{{ arg.event.title }}</h6>
+          <p class="text-[13px] text-white" *ngIf="arg.event.extendedProps.description">{{ arg.event.extendedProps.description }}</p>
+          <div class="{{arg.event.extendedProps.label}}"></div>
+        </div>
+      </ng-template>
+    </full-calendar>
+  </div>
+</div>
+
+
+

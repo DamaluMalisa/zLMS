@@ -1,0 +1,70 @@
+ <!-- skeleton -->
+ <ng-template #loadingSkeleton>
+  <nz-skeleton [nzAvatar]="true" class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle"
+    [nzActive]="true" [nzParagraph]="{ rows: 5 }"></nz-skeleton>
+</ng-template>
+<!-- skeleton -->
+
+<ng-container *ngIf="showContent; else loadingSkeleton">
+  <div class="bg-white dark:bg-white/10 rounded-10 checkout mb-[30px] px-[30px] pt-[50px] pb-[70px]">
+    <div nz-row gutter="25" nzJustify="center">
+        <div nz-col nzXs="24" nzXXl="16">
+          <div>
+            <nz-steps class="max-md:flex-col max-md:justify-center max-md:gap-[20px]" [nzCurrent]="current">
+              <nz-step class="max-md:p-0" [nzStatus]="getStatus(0)" nzTitle="Create Account"></nz-step>
+              <nz-step class="max-md:p-0" [nzStatus]="getStatus(1)" nzTitle="Shipping Address"></nz-step>
+              <nz-step class="max-md:p-0" [nzStatus]="getStatus(2)" nzTitle="Payment Method"></nz-step>
+              <nz-step class="last max-md:p-0" [nzStatus]="isReviewOrderFinished ? 'finish' : getStatus(3)" nzTitle="Review Order"></nz-step>
+            </nz-steps>
+
+            <div nz-row nzJustify="center">
+              <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="16" nzXl="12">
+                <div class="steps-content mt-[44px] border-dashed border-1 border-normal dark:border-white/10 p-[30px]  rounded-10 min-h-[200px] pt-[30px]">
+                  <div *ngIf="!showConfirmation; else confirmationContent">
+                    <div *ngIf="current === 0">
+                      <!-- Custom form markup for the first step -->
+                      <create-account></create-account>
+                    </div>
+                    <div *ngIf="current === 1">
+                      <!-- Custom form markup for the second step -->
+                      <shipping-address></shipping-address>
+                    </div>
+                    <div *ngIf="current === 2">
+                      <!-- Custom form markup for the third step -->
+                      <payment-method></payment-method>
+                    </div>
+                    <div *ngIf="current === 3">
+                      <!-- Custom form markup for the fourth step -->
+                      <review></review>
+                    </div>
+                  </div>
+                  <ng-template #confirmationContent>
+                    <div class="text-center">
+                      <span class="text-[40px] dark:[&>svg>path:nth-child(2)]:fill-transparent" nz-icon [nzType]="'check-circle'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#52c41a'"></span>
+                      <p class="text-[20px] text-dark dark:text-white/[.87] font-medium mt-[20px] mb-[10px]">Payment Successful</p>
+                      <span class="text-theme-gray dark:text-white/60 text-[15px]">Thank you! We've received your payment.</span>
+                    </div>
+                  </ng-template>
+                </div>
+                <div class="mt-[25px] flex justify-between items-center">
+                  <button class="bg-white dark:bg-transparent inline-flex items-center outline-none shadow-none w-fit duration-300 text-theme-gray dark:text-white/60 capitalize px-[20px] text-[15px] border-normal dark:border-white/10 dark:hover:border-white/20 border-1 rounded-[5px] gap-[8px] h-[46px]"  nz-button (click)="pre()" *ngIf="current > 0 && !showConfirmation">
+                    <span class="text-light" nz-icon nzType="arrow-left" nzTheme="outline"></span>
+                    <span>Previous</span>
+                  </button>
+                  <button class="bg-primary hover:bg-primary-hbr inline-flex items-center outline-none shadow-none w-fit duration-300 text-white capitalize px-[20px] text-[15px] border-primary hover:border-primary-hbr rounded-[5px] gap-[8px] h-[46px]" nz-button nzType="primary" (click)="next()" *ngIf="current < 3 && !showConfirmation">
+                    <span>Save & Next</span>
+                    <span nz-icon nzType="arrow-right" nzTheme="outline"></span>
+                  </button>
+                  <button class="bg-primary hover:bg-primary-hbr inline-flex items-center outline-none shadow-none w-fit duration-300 text-white capitalize px-[20px] text-[15px] border-primary hover:border-primary-hbr rounded-[5px] gap-[8px] h-[46px]" nz-button nzType="primary" (click)="confirm()" *ngIf="current === 3 && !showConfirmation">
+                    <span>Done</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</ng-container>
+
+

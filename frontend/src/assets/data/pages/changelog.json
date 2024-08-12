@@ -1,0 +1,24 @@
+[
+  {
+    "id": 3,
+    "date": "August 29, 2023",
+    "version": "1.0.2",
+    "new": ["Added Six demo Pages","Added one apps ( Calendar)", "Enhanced UI elements (added 14 new elements)","Added 4 feature pages"],
+    "updated": ["Dark mode further optimized and improved","Chart functionality improved","Completed pricing,blogs,banners pages"],
+    "fixed": ["Fixed CSS issues"]
+  },
+  {
+    "id": 2,
+    "date": "July 24, 2023",
+    "version": "1.0.1",
+    "new": ["Added Two demo Pages","Added twe apps ( Support, Import & Export)", "Enhanced UI elements ( Radio UI element added)"],
+    "updated": ["Dark mode further optimized and improved","Chart functionality improved"],
+    "fixed": ["Fixed CSS issues"]
+  },
+  {
+    "id": 1,
+    "date": "March 08, 2023",
+    "version": "1.0.0",
+    "new": ["Initialize Release"]
+  }
+]

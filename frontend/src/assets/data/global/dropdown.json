@@ -1,0 +1,24 @@
+{
+  "appItems": [
+    {
+      "icon": "printer",
+      "name": "printer"
+    },
+    {
+      "icon": "book-open",
+      "name": "pdf"
+    },
+    {
+      "icon": "file-text",
+      "name": "Google Sheets"
+    },
+    {
+      "icon": "x",
+      "name": "Excel (XLSX)"
+    },
+    {
+      "icon": "file",
+      "name": "CSV"
+    }
+  ]
+}

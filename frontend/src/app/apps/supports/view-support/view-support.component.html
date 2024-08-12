@@ -1,0 +1,32 @@
+<div nz-row [nzGutter]="25">
+  <!-- skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzAvatar]="true" [nzActive]="true"
+      [nzParagraph]="{ rows: 4 }"></nz-skeleton>
+  </ng-template>
+  <ng-template #loadingSkeleton2>
+    <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzAvatar]="true" [nzActive]="true"
+      [nzParagraph]="{ rows: 15 }"></nz-skeleton>
+  </ng-template>
+  <!-- skeleton -->
+
+  <div nz-col nzXs="24" class="sm:mb-[25px] mb-[15px] max-sm:justify-center max-sm:flex">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <app-go-back></app-go-back>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24" nzLg="16" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton2">
+      <div class="bg-white dark:bg-white/10 rounded-10 pt-[25px] px-[25px] pb-[30px] shadow-[0_5px_20px_rgba(173,181,217,0.05)] mb-[25px]">
+        <app-help-card></app-help-card>
+      </div>
+      <app-ticket-user></app-ticket-user>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24" nzLg="8" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton2">
+      <app-file-attachment></app-file-attachment>
+    </ng-container>
+  </div>
+</div>
+

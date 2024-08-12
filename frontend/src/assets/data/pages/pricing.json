@@ -1,0 +1,132 @@
+{
+  "pricing": [
+    {
+      "title": "Free Forever",
+      "subtitle": "For Individuals",
+      "currency": "",
+      "price": "free",
+      "pricePeriod": "",
+      "status": "dark",
+      "features": [
+        {
+          "icon": "check",
+          "text": "100MB File Space"
+        },
+        {
+          "icon": "check",
+          "text": "2 Active Projects"
+        },
+        {
+          "icon": "check",
+          "text": "Limited Boards"
+        },
+        {
+          "icon": "check",
+          "text": "Basic Project Management"
+        }
+      ],
+      "buttonText": "Current Plan"
+    },
+    {
+      "title": "Business",
+      "subtitle": "For 2 Users",
+      "currency": "$",
+      "price": "19",
+      "pricePeriod": "per month",
+      "status": "primary",
+      "features": [
+        {
+          "icon": "check",
+          "text": "50GB File Space"
+        },
+        {
+          "icon": "check",
+          "text": "90 Projects"
+        },
+        {
+          "icon": "check",
+          "text": "Limited Boards"
+        },
+        {
+          "icon": "check",
+          "text": "Basic Project Management"
+        },
+        {
+          "icon": "check",
+          "text": "Custom Post Types"
+        }
+      ],
+      "buttonText": "get started"
+    },
+    {
+      "title": "Basic Plan",
+      "subtitle": "For 10 Users",
+      "currency": "$",
+      "price": "39",
+      "pricePeriod": "per month",
+      "status": "secondary",
+      "features": [
+        {
+          "icon": "check",
+          "text": "300GB File Space"
+        },
+        {
+          "icon": "check",
+          "text": "300 Active Projects"
+        },
+        {
+          "icon": "check",
+          "text": "Limited Boards"
+        },
+        {
+          "icon": "check",
+          "text": "Basic Project Management"
+        },
+        {
+          "icon": "check",
+          "text": "Custom Post Types"
+        },
+        {
+          "icon": "check",
+          "text": "Subtasks"
+        }
+      ],
+      "buttonText": "get started"
+    },
+    {
+      "title": "Enterprise",
+      "subtitle": "For 50 Users",
+      "currency": "$",
+      "price": "79",
+      "pricePeriod": "per month",
+      "status": "success",
+      "features": [
+        {
+          "icon": "check",
+          "text": "Unlimited File Space"
+        },
+        {
+          "icon": "check",
+          "text": "Unlimited Projects"
+        },
+        {
+          "icon": "check",
+          "text": "Limited Boards"
+        },
+        {
+          "icon": "check",
+          "text": "Basic Project Management"
+        },
+        {
+          "icon": "check",
+          "text": "Custom Post Types"
+        },
+        {
+          "icon": "check",
+          "text": "Subtasks"
+        }
+      ],
+      "buttonText": "get started"
+    }
+  ]
+}

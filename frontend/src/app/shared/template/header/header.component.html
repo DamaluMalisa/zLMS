@@ -1,0 +1,439 @@
+
+<div class="border-b header border-[#edf2f9] dark:border-none bg-white dark:bg-[#323540] min-h-[72px] fixed top-0 w-full z-[1000] flex">
+  <div class="border-r border-[#edf2f9] dark:border-transparent logo logo-dark transition duration-200 ease-in-out items-center h-[71px]">
+        <!-- <a class="block text-center" href="">-->
+    <!--      <img id="logo-img" class="ps-[30px]" ngSrc="assets/images/logo/logo-dark.png" alt="Logo" height="32" width="140">-->
+    <!--      <img id="logo-fold-img" class="p-[24px] logo-fold" ngSrc="assets/images/logo/logo-fold.png" alt="Logo"-->
+    <!--           height="512" width="512"> -->
+    <!--    </a>-->
+  </div>
+  <div class="flex flex-1 nav-wrap md:ps-[20px] md:pe-[30px] ps-[10px] pe-[15px] bg-white dark:bg-[#1b1d2a]">
+    <ul class="flex items-center mb-0 list-none nav-left ps-0 gap-x-[14px] gap-y-[9px]">
+      <li class="desktop-toggle">
+        <a class="flex items-center justify-center w-[40px] h-[40px] rounded-full bg-transparent hover:bg-primary/10 hover:text-primary group transition duration-200 ease-in-out text-[#525768] dark:text-white/60 dark:hover:bg-white/10" (click)="toggleFold()">
+          <svg-icon [ngClass]="{
+            'is-folded': isFolded,
+            'is-expand' : isExpand
+          }" class="[&>svg]:w-[20px] text-current [&.is-folded>svg]:hidden" src="assets/images/svg/align-center-alt.svg" />
+          <svg-icon [ngClass]="{
+            'is-folded': isFolded,
+            'is-expand' : isExpand
+          }" class="[&>svg]:w-[20px] text-current [&>svg]:hidden [&.is-folded>svg]:block" src="assets/images/svg/align-left.svg" />
+        </a>
+      </li>
+      <li class="mobile-toggle">
+        <a class="flex items-center justify-center w-[40px] h-[40px] rounded-full bg-transparent hover:bg-primary/10 hover:text-primary group transition duration-200 ease-in-out text-[#525768] dark:text-white/60 dark:hover:bg-white/10" (click)="toggleExpand()">
+          <svg-icon [ngClass]="{
+            'is-folded': isFolded,
+            'is-expand' : isExpand
+          }" class="[&>svg]:w-[20px] text-current [&.is-expand>svg]:hidden" src="assets/images/svg/align-center-alt.svg" />
+          <svg-icon [ngClass]="{
+            'is-folded': isFolded,
+            'is-expand' : isExpand
+          }" class="[&>svg]:w-[20px] text-current [&>svg]:hidden [&.is-expand>svg]:block" src="assets/images/svg/align-left.svg" />
+        </a>
+      </li>
+      <li>
+        <a class="inline-flex items-center bg-normalBG hover:bg-primary/10 hover:text-primary dark:bg-[#282b37] dark:text-white/60 min-h-[34px] max-sm:w-[34px] max-sm:justify-center px-4 max-sm:px-0 rounded-2xl gap-[8px] dark:hover:bg-white/60 group dark:hover:text-dark transition duration-200 capitalize" (click)="quickViewToggle()">
+          <i nz-icon nzType="edit" theme="outline"></i>
+          <span class="text-sm font-medium text-body group-hover:text-primary dark:text-white/60 dark:group-hover:text-current max-sm:hidden">
+            customize...
+          </span>
+        </a>
+        <nz-drawer [nzWidth]="280" nzTitle="Theme Config" [nzClosable]="false" [nzVisible]="quickViewVisible"
+                   nzPlacement="right" (nzOnClose)="quickViewToggle()">
+          <ng-container *nzDrawerContent>
+            <app-quick-view></app-quick-view>
+          </ng-container>
+        </nz-drawer>
+      </li>
+    </ul>
+    <!-- Top Menu -->
+    <app-menu></app-menu>
+    <!-- desktop -->
+    <div class="items-center hidden ms-auto xl:flex">
+      <ng-container *ngTemplateOutlet="myTemplate"></ng-container>
+    </div>
+    <ng-template #myTemplate>
+      <ul class="flex items-center justify-end flex-auto mb-0 list-none ps-0 nav-right sm:gap-x-[25px] max-sm:gap-x-[15px] gap-y-[15px]" *ngIf="authService.validateRoles(['ROLE_STUDENT'], 'any')">
+<!--        <li>-->
+<!--          <a class="flex items-center" nz-dropdown nzTrigger="click" [nzDropdownMenu]="search" nzPlacement="bottomRight" #suffixIconSearch>-->
+<!--            <svg-icon src="assets/images/svg/search.svg"></svg-icon>-->
+<!--          </a>-->
+<!--          <nz-dropdown-menu #search="nzDropdownMenu">-->
+<!--            <nz-input-group class="dark:bg-[#282936] p-1.5 h-[48px] px-[20px] dark:shadow-none border-1 border-regular dark:border-white/10 rounded-6" [nzSuffix]="suffixIconSearch">-->
+<!--              <input class="capitalize bg-white placeholder:text-theme-light text-theme-gray dark:text-white/[.87] dark:bg-transparent text-ellipsis" type="text" nz-input placeholder="search here">-->
+<!--            </nz-input-group>-->
+<!--          </nz-dropdown-menu>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a class="flex items-center" nz-dropdown [nzDropdownMenu]="popMessages" nzTrigger="click" >-->
+<!--            <nz-badge [nzStyle]="{ backgroundColor: '#01B81A' }" nzDot>-->
+<!--              <svg-icon src="assets/images/svg/mail.svg"></svg-icon>-->
+<!--            </nz-badge>-->
+<!--          </a>-->
+<!--          <nz-dropdown-menu #popMessages="nzDropdownMenu">-->
+<!--            <div class="bg-white dark:bg-[#1b1e2b] shadow-[0_2px_8px_rgba(0,0,0,.15)] dark:shadow-[0_5px_30px_rgba(1,4,19,.60)] rounded-4 px-[15px] py-[12px] md:min-w-[380px] sm:w-[300px] max-sm:w-[230px]">-->
+<!--              <h1-->
+<!--                class="flex items-center justify-center text-sm rounded-md bg-section dark:bg-white/10 h-[50px] p-[10px] text-dark dark:text-white/[.87] font-semibold">-->
+<!--                <span class="title-text">-->
+<!--                  Messages-->
+<!--                    <span class="inline-flex items-center justify-center w-5 h-5 text-xs text-white rounded-full ms-[8px] bg-success dark:text-white/[.87]">-->
+<!--                      3-->
+<!--                    </span>-->
+<!--                  </span>-->
+<!--              </h1>-->
+<!--              <perfect-scrollbar>-->
+<!--                <ul class="p-0 max-h-[200px] relative">-->
+<!--                  <li *ngFor="let messages of appMessages" class="w-full">-->
+<!--                    <button class="group relative block w-full px-3 sm:py-3.5 max-sm:py-1.5 text-body dark:text-white/60 transition-[0.3s] hover:text-primary hover:bg-white dark:hover:bg-white/[.06] hover:shadow-custom dark:shadow-none dark:hover:shadow-[0_5px_30px_rgba(1,4,19,.20)] dark:rounded-4">-->
+<!--                      <figure class="inline-flex w-full mb-0 align-top sm:gap-x-[16px] gap-y-[8px] max-sm:flex-wrap">-->
+<!--                        <div class="text-{{ messages.status }} w-[40px] min-w-[40px] h-[40px] rounded-full relative">-->
+<!--                          <span class="bg-current absolute content-[''] w-[12px] h-[12px] rounded-full border-2 border-white right-0 bottom-0" *ngIf="!messages.isRead"></span>-->
+<!--                          <img class="object-cover w-[40px] h-[40px] bg-light-extra rounded-full"-->
+<!--                               src="{{ messages.source }}">-->
+<!--                        </div>-->
+<!--                        <figcaption class="w-full -mt-1 text-start">-->
+<!--                          <h1 class="flex items-center justify-between mb-0.5 text-sm text-current font-semibold">-->
+<!--                            {{ messages.title }}-->
+<!--                            <span class="text-xs font-normal text-{{ messages.status }}">{{ messages.timestamp }}</span></h1>-->
+<!--                          <div class="flex items-center gap-[30px] text-start">-->
+<!--                            <span-->
+<!--                              class="ps-0 min-w-[216px] text-theme-gray dark:text-white/60">{{ messages.description }}</span>-->
+<!--                            <span-->
+<!--                              class="inline-flex items-center justify-center w-4 h-4 text-white rounded-full bg-{{ messages.status }} dark:text-white/[.87] text-10" *ngIf="!messages.isRead">{{ messages.notificationCount }}</span>-->
+<!--                          </div>-->
+<!--                        </figcaption>-->
+<!--                      </figure>-->
+<!--                    </button></li>-->
+<!--                </ul>-->
+<!--              </perfect-scrollbar>-->
+<!--              <a class="flex items-center justify-center text-[13px] font-medium bg-[#f4f5f7] dark:bg-[#32333f] h-[50px] text-light hover:text-primary dark:hover:text-white/60 dark:text-white/[.87] mx-[-15px] mb-[-15px] rounded-b-6" href="#">See all messages</a>-->
+<!--            </div>-->
+<!--          </nz-dropdown-menu>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a class="flex items-center" nz-dropdown [nzDropdownMenu]="popNotification" nzTrigger="click">-->
+<!--            <nz-badge [nzStyle]="{ backgroundColor: '#FA8B0C' }" nzDot>-->
+<!--              <svg-icon src="assets/images/svg/bell.svg"></svg-icon>-->
+<!--            </nz-badge>-->
+<!--          </a>-->
+<!--          <nz-dropdown-menu #popNotification="nzDropdownMenu">-->
+<!--            <div  class="bg-white dark:bg-[#1b1e2b] shadow-[0_2px_8px_rgba(0,0,0,.15)] dark:shadow-[0_5px_30px_rgba(1,4,19,.60)] rounded-4 px-[15px] py-[12px] md:min-w-[400px] sm:w-[300px] max-sm:w-[230px]">-->
+<!--              <h1-->
+<!--                class="flex items-center justify-center text-sm rounded-md bg-section dark:bg-white/10 h-[50px] p-[10px] text-dark dark:text-white/[.87] font-semibold">-->
+<!--                <span class="title-text me-2.5">Notifications<span-->
+<!--                  class="inline-flex items-center justify-center w-5 h-5 text-xs text-white rounded-full bg-warning ms-3 dark:text-white/[.87]">3</span></span>-->
+<!--              </h1>-->
+<!--              <perfect-scrollbar>-->
+<!--                <ul class="p-0 max-h-[200px] relative">-->
+<!--                  <li *ngFor="let notification of appNotification" class="w-full">-->
+<!--                    <button class="group relative block w-full px-3 sm:py-3.5 max-sm:py-1.5 text-body dark:text-white/60 hover:bg-white dark:hover:bg-white/10 hover:shadow-custom dark:shadow-none dark:rounded-4">-->
+<!--                      <div class="flex items-start gap-[15px] flex-wrap max-xs:flex-col">-->
+<!--                        <div-->
+<!--                          class="flex items-center justify-center rounded-full w-[30px] h-[30px] bg-{{ notification.badge }}/10 text-{{ notification.badge }}">-->
+<!--                          <svg-icon class="[&>svg]:w-[15px] [&>svg]:h-[15px] [&>svg]:text-current" src="assets/images/svg/feather/{{ notification.icon }}.svg"></svg-icon>-->
+<!--                        </div>-->
+<!--                        <div class="flex items-center justify-between flex-1">-->
+<!--                          <div class="text-start">-->
+<!--                            <h1-->
+<!--                              class="flex items-center justify-between mb-0.5 text-[#5a5f7d] dark:text-white/[.87] text-sm font-normal flex-wrap">-->
+<!--                              <span class="text-primary me-1.5 font-medium">{{ notification.name }}</span>-->
+<!--                              {{ notification.message }}-->
+<!--                            </h1>-->
+<!--                            <p class="mb-0 text-xs text-theme-gray dark:text-white/60">{{ notification.timestamp }}</p>-->
+<!--                          </div>-->
+<!--                          <div><span-->
+<!--                            class="inline-flex items-center justify-center bg-{{ notification.badge }} w-1.5 h-1.5 ms-3 rounded-full"></span>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </button>-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--              </perfect-scrollbar>-->
+<!--              <a class="flex items-center justify-center text-[13px] font-medium bg-[#f4f5f7] dark:bg-[#32333f] h-[50px] text-light hover:text-primary dark:hover:text-white/60 dark:text-white/[.87] mx-[-15px] mb-[-15px] rounded-b-6" href="#">See all incoming activity</a>-->
+<!--            </div>-->
+<!--          </nz-dropdown-menu>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a class="flex items-center" nz-dropdown [nzDropdownMenu]="popSettings">-->
+<!--            <nz-badge>-->
+<!--              <svg-icon src="assets/images/svg/settings.svg"></svg-icon>-->
+<!--            </nz-badge>-->
+<!--          </a>-->
+<!--          <nz-dropdown-menu #popSettings="nzDropdownMenu">-->
+<!--            <perfect-scrollbar class="lg:w-[700px] md:w-[300px] max-md:w-[230px] px-[15px] py-[12px] bg-white dark:bg-[#1b1e2b] shadow-[0_2px_8px_rgba(0,0,0,.15)] dark:shadow-[0_5px_30px_rgba(1,4,19,.60)] rounded-4">-->
+<!--              <ul class="flex flex-wrap items-center md:[&>li]:flex-[50%] max-md:[&>li]:flex-[100%] max-h-[251px]">-->
+<!--                <li *ngFor="let settings of appSettings">-->
+<!--                  <figure class="flex items-start px-4 py-5 mb-0 hover:shadow-action dark:hover:shadow-[0_5px_30px_rgba(1,4,19,.60)]">-->
+<!--                    <img class="h-fit me-4" src="assets/images/others/settings/{{ settings.source }}.png" alt="{{ settings.source }}">-->
+<!--                    <figcaption>-->
+<!--                      <h1 class="mb-0.5 -mt-1 text-[15px] font-medium capitalize text-dark dark:text-white/[.87]">{{ settings.label }}</h1>-->
+<!--                      <p class="mb-0 text-theme-gray dark:text-white/60">{{ settings.des }} </p>-->
+<!--                    </figcaption>-->
+<!--                  </figure>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </perfect-scrollbar>-->
+<!--          </nz-dropdown-menu>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a class="flex items-center" nz-dropdown [nzDropdownMenu]="popLanguage">-->
+<!--            <nz-badge>-->
+<!--              <img class="min-w-[20px] min-h-[20px]" src="assets/images/others/flags/english.png" alt="">-->
+<!--            </nz-badge>-->
+<!--          </a>-->
+<!--          <nz-dropdown-menu #popLanguage="nzDropdownMenu">-->
+<!--            <ul class="block bg-white dark:bg-[#1b1d2a] rounded-6">-->
+<!--              <li class="bg-white dark:bg-white/10 hover:bg-primary/10 dark:hover:bg-primary/10">-->
+<!--                <button class="flex items-center px-3 py-1.5 text-sm text-dark dark:text-white/60">-->
+<!--                  <img class="w-3.5 h-3.5 me-2" src="assets/images/others/flags/english.png" alt="english">-->
+<!--                  <span>English</span>-->
+<!--                </button>-->
+<!--              </li>-->
+<!--              <li class="bg-white dark:bg-white/10 hover:bg-primary/10 dark:hover:bg-primary/10">-->
+<!--                <button class="flex items-center px-3 py-1.5 text-sm text-dark dark:text-white/60">-->
+<!--                  <img class="w-3.5 h-3.5 me-2" src="assets/images/others/flags/spanish.png" alt="spanish">-->
+<!--                  <span>Spanish</span>-->
+<!--                </button>-->
+<!--              </li>-->
+<!--              <li class="bg-white dark:bg-white/10 hover:bg-primary/10 dark:hover:bg-primary/10">-->
+<!--                <button class="flex items-center px-3 py-1.5 text-sm text-dark dark:text-white/60">-->
+<!--                  <img class="w-3.5 h-3.5 me-2" src="assets/images/others/flags/arabic.png" alt="arabic">-->
+<!--                  <span>Arabic</span>-->
+<!--                </button>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </nz-dropdown-menu>-->
+<!--        </li>-->
+        <li>
+          <span class="flex items-center cursor-pointer text-light whitespace-nowrap" nz-dropdown [nzDropdownMenu]="profile">
+            <nz-avatar [nzIcon]="'user'" nzSrc="assets/images/avatars/thumbs.png"></nz-avatar>
+            <span class="me-1.5 ms-2.5 text-body dark:text-white/60 text-sm font-medium max-md:hidden">{{ student[0]?.firstName }} {{ student[0]?.lastName }}</span>
+            <span class="[&>svg]:w-[10px] [&>svg]:h-[10px] [&>svg]:max-md:ms-[5px]" nz-icon nzType="down" nzTheme="outline"></span>
+          </span>
+          <nz-dropdown-menu #profile="nzDropdownMenu">
+            <div class="min-w-[310px] max-sm:min-w-full pt-4 px-[15px] py-[12px] bg-white dark:bg-[#1b1e2b] shadow-[0_2px_8px_rgba(0,0,0,.15)] dark:shadow-[0_5px_30px_rgba(1,4,19,.60)] rounded-4">
+              <figure
+                class="flex items-center text-sm rounded-[8px] bg-section dark:bg-white/10 py-[20px] px-[25px] mb-[12px]">
+                <nz-avatar [nzIcon]="'user'" nzSrc="assets/images/avatars/thumbs.png" class="me-4"></nz-avatar>
+                <figcaption>
+                  <h1 class="text-dark dark:text-white/[.87] mb-0.5 text-sm">{{ student[0]?.firstName }} {{ student[0]?.lastName }}</h1>
+                  <p class="mb-0 text-xs text-body dark:text-white/60">{{ student[0]?.studyProgram.name }}</p>
+                </figcaption>
+              </figure>
+              <ul nz-menu class="mb-0 bg-transparent shadow-none">
+                <li class="p-0 dark:hover:text-white hover:bg-primary/10 dark:hover:bg-white/10 rounded-4" nz-menu-item *ngFor="let authorMenu of appAuthorMenu">
+                  <button
+                    class="inline-flex items-center text-light dark:text-white/60 hover:text-primary hover:ps-6 w-full px-2.5 py-3 text-sm transition-all ease-in-out delay-150">
+                    <svg-icon class="h-fit me-4 [&>svg]:w-[18px] [&>svg]:h-[18px]" src="assets/images/svg/feather/{{authorMenu.icon}}.svg" alt="{{authorMenu.icon}}"></svg-icon>
+                    {{authorMenu.label}}</button>
+                </li>
+              </ul>
+              <a
+                class="flex items-center justify-center text-sm font-medium bg-[#f4f5f7] dark:bg-[#32333f] h-[50px] text-light hover:text-primary dark:hover:text-white/60 dark:text-white/[.87] mx-[-15px] mb-[-15px] rounded-b-6"
+                href="#" (click)="signOut()">
+                <i class="facebook"></i> Sign Out</a>
+            </div>
+          </nz-dropdown-menu>
+        </li>
+      </ul>
+      <ul class="flex items-center justify-end flex-auto mb-0 list-none ps-0 nav-right sm:gap-x-[25px] max-sm:gap-x-[15px] gap-y-[15px]" *ngIf="authService.validateRoles(['ROLE_TEACHER'], 'any')">
+        <!--        <li>-->
+        <!--          <a class="flex items-center" nz-dropdown nzTrigger="click" [nzDropdownMenu]="search" nzPlacement="bottomRight" #suffixIconSearch>-->
+        <!--            <svg-icon src="assets/images/svg/search.svg"></svg-icon>-->
+        <!--          </a>-->
+        <!--          <nz-dropdown-menu #search="nzDropdownMenu">-->
+        <!--            <nz-input-group class="dark:bg-[#282936] p-1.5 h-[48px] px-[20px] dark:shadow-none border-1 border-regular dark:border-white/10 rounded-6" [nzSuffix]="suffixIconSearch">-->
+        <!--              <input class="capitalize bg-white placeholder:text-theme-light text-theme-gray dark:text-white/[.87] dark:bg-transparent text-ellipsis" type="text" nz-input placeholder="search here">-->
+        <!--            </nz-input-group>-->
+        <!--          </nz-dropdown-menu>-->
+        <!--        </li>-->
+        <!--        <li>-->
+        <!--          <a class="flex items-center" nz-dropdown [nzDropdownMenu]="popMessages" nzTrigger="click" >-->
+        <!--            <nz-badge [nzStyle]="{ backgroundColor: '#01B81A' }" nzDot>-->
+        <!--              <svg-icon src="assets/images/svg/mail.svg"></svg-icon>-->
+        <!--            </nz-badge>-->
+        <!--          </a>-->
+        <!--          <nz-dropdown-menu #popMessages="nzDropdownMenu">-->
+        <!--            <div class="bg-white dark:bg-[#1b1e2b] shadow-[0_2px_8px_rgba(0,0,0,.15)] dark:shadow-[0_5px_30px_rgba(1,4,19,.60)] rounded-4 px-[15px] py-[12px] md:min-w-[380px] sm:w-[300px] max-sm:w-[230px]">-->
+        <!--              <h1-->
+        <!--                class="flex items-center justify-center text-sm rounded-md bg-section dark:bg-white/10 h-[50px] p-[10px] text-dark dark:text-white/[.87] font-semibold">-->
+        <!--                <span class="title-text">-->
+        <!--                  Messages-->
+        <!--                    <span class="inline-flex items-center justify-center w-5 h-5 text-xs text-white rounded-full ms-[8px] bg-success dark:text-white/[.87]">-->
+        <!--                      3-->
+        <!--                    </span>-->
+        <!--                  </span>-->
+        <!--              </h1>-->
+        <!--              <perfect-scrollbar>-->
+        <!--                <ul class="p-0 max-h-[200px] relative">-->
+        <!--                  <li *ngFor="let messages of appMessages" class="w-full">-->
+        <!--                    <button class="group relative block w-full px-3 sm:py-3.5 max-sm:py-1.5 text-body dark:text-white/60 transition-[0.3s] hover:text-primary hover:bg-white dark:hover:bg-white/[.06] hover:shadow-custom dark:shadow-none dark:hover:shadow-[0_5px_30px_rgba(1,4,19,.20)] dark:rounded-4">-->
+        <!--                      <figure class="inline-flex w-full mb-0 align-top sm:gap-x-[16px] gap-y-[8px] max-sm:flex-wrap">-->
+        <!--                        <div class="text-{{ messages.status }} w-[40px] min-w-[40px] h-[40px] rounded-full relative">-->
+        <!--                          <span class="bg-current absolute content-[''] w-[12px] h-[12px] rounded-full border-2 border-white right-0 bottom-0" *ngIf="!messages.isRead"></span>-->
+        <!--                          <img class="object-cover w-[40px] h-[40px] bg-light-extra rounded-full"-->
+        <!--                               src="{{ messages.source }}">-->
+        <!--                        </div>-->
+        <!--                        <figcaption class="w-full -mt-1 text-start">-->
+        <!--                          <h1 class="flex items-center justify-between mb-0.5 text-sm text-current font-semibold">-->
+        <!--                            {{ messages.title }}-->
+        <!--                            <span class="text-xs font-normal text-{{ messages.status }}">{{ messages.timestamp }}</span></h1>-->
+        <!--                          <div class="flex items-center gap-[30px] text-start">-->
+        <!--                            <span-->
+        <!--                              class="ps-0 min-w-[216px] text-theme-gray dark:text-white/60">{{ messages.description }}</span>-->
+        <!--                            <span-->
+        <!--                              class="inline-flex items-center justify-center w-4 h-4 text-white rounded-full bg-{{ messages.status }} dark:text-white/[.87] text-10" *ngIf="!messages.isRead">{{ messages.notificationCount }}</span>-->
+        <!--                          </div>-->
+        <!--                        </figcaption>-->
+        <!--                      </figure>-->
+        <!--                    </button></li>-->
+        <!--                </ul>-->
+        <!--              </perfect-scrollbar>-->
+        <!--              <a class="flex items-center justify-center text-[13px] font-medium bg-[#f4f5f7] dark:bg-[#32333f] h-[50px] text-light hover:text-primary dark:hover:text-white/60 dark:text-white/[.87] mx-[-15px] mb-[-15px] rounded-b-6" href="#">See all messages</a>-->
+        <!--            </div>-->
+        <!--          </nz-dropdown-menu>-->
+        <!--        </li>-->
+        <!--        <li>-->
+        <!--          <a class="flex items-center" nz-dropdown [nzDropdownMenu]="popNotification" nzTrigger="click">-->
+        <!--            <nz-badge [nzStyle]="{ backgroundColor: '#FA8B0C' }" nzDot>-->
+        <!--              <svg-icon src="assets/images/svg/bell.svg"></svg-icon>-->
+        <!--            </nz-badge>-->
+        <!--          </a>-->
+        <!--          <nz-dropdown-menu #popNotification="nzDropdownMenu">-->
+        <!--            <div  class="bg-white dark:bg-[#1b1e2b] shadow-[0_2px_8px_rgba(0,0,0,.15)] dark:shadow-[0_5px_30px_rgba(1,4,19,.60)] rounded-4 px-[15px] py-[12px] md:min-w-[400px] sm:w-[300px] max-sm:w-[230px]">-->
+        <!--              <h1-->
+        <!--                class="flex items-center justify-center text-sm rounded-md bg-section dark:bg-white/10 h-[50px] p-[10px] text-dark dark:text-white/[.87] font-semibold">-->
+        <!--                <span class="title-text me-2.5">Notifications<span-->
+        <!--                  class="inline-flex items-center justify-center w-5 h-5 text-xs text-white rounded-full bg-warning ms-3 dark:text-white/[.87]">3</span></span>-->
+        <!--              </h1>-->
+        <!--              <perfect-scrollbar>-->
+        <!--                <ul class="p-0 max-h-[200px] relative">-->
+        <!--                  <li *ngFor="let notification of appNotification" class="w-full">-->
+        <!--                    <button class="group relative block w-full px-3 sm:py-3.5 max-sm:py-1.5 text-body dark:text-white/60 hover:bg-white dark:hover:bg-white/10 hover:shadow-custom dark:shadow-none dark:rounded-4">-->
+        <!--                      <div class="flex items-start gap-[15px] flex-wrap max-xs:flex-col">-->
+        <!--                        <div-->
+        <!--                          class="flex items-center justify-center rounded-full w-[30px] h-[30px] bg-{{ notification.badge }}/10 text-{{ notification.badge }}">-->
+        <!--                          <svg-icon class="[&>svg]:w-[15px] [&>svg]:h-[15px] [&>svg]:text-current" src="assets/images/svg/feather/{{ notification.icon }}.svg"></svg-icon>-->
+        <!--                        </div>-->
+        <!--                        <div class="flex items-center justify-between flex-1">-->
+        <!--                          <div class="text-start">-->
+        <!--                            <h1-->
+        <!--                              class="flex items-center justify-between mb-0.5 text-[#5a5f7d] dark:text-white/[.87] text-sm font-normal flex-wrap">-->
+        <!--                              <span class="text-primary me-1.5 font-medium">{{ notification.name }}</span>-->
+        <!--                              {{ notification.message }}-->
+        <!--                            </h1>-->
+        <!--                            <p class="mb-0 text-xs text-theme-gray dark:text-white/60">{{ notification.timestamp }}</p>-->
+        <!--                          </div>-->
+        <!--                          <div><span-->
+        <!--                            class="inline-flex items-center justify-center bg-{{ notification.badge }} w-1.5 h-1.5 ms-3 rounded-full"></span>-->
+        <!--                          </div>-->
+        <!--                        </div>-->
+        <!--                      </div>-->
+        <!--                    </button>-->
+        <!--                  </li>-->
+        <!--                </ul>-->
+        <!--              </perfect-scrollbar>-->
+        <!--              <a class="flex items-center justify-center text-[13px] font-medium bg-[#f4f5f7] dark:bg-[#32333f] h-[50px] text-light hover:text-primary dark:hover:text-white/60 dark:text-white/[.87] mx-[-15px] mb-[-15px] rounded-b-6" href="#">See all incoming activity</a>-->
+        <!--            </div>-->
+        <!--          </nz-dropdown-menu>-->
+        <!--        </li>-->
+        <!--        <li>-->
+        <!--          <a class="flex items-center" nz-dropdown [nzDropdownMenu]="popSettings">-->
+        <!--            <nz-badge>-->
+        <!--              <svg-icon src="assets/images/svg/settings.svg"></svg-icon>-->
+        <!--            </nz-badge>-->
+        <!--          </a>-->
+        <!--          <nz-dropdown-menu #popSettings="nzDropdownMenu">-->
+        <!--            <perfect-scrollbar class="lg:w-[700px] md:w-[300px] max-md:w-[230px] px-[15px] py-[12px] bg-white dark:bg-[#1b1e2b] shadow-[0_2px_8px_rgba(0,0,0,.15)] dark:shadow-[0_5px_30px_rgba(1,4,19,.60)] rounded-4">-->
+        <!--              <ul class="flex flex-wrap items-center md:[&>li]:flex-[50%] max-md:[&>li]:flex-[100%] max-h-[251px]">-->
+        <!--                <li *ngFor="let settings of appSettings">-->
+        <!--                  <figure class="flex items-start px-4 py-5 mb-0 hover:shadow-action dark:hover:shadow-[0_5px_30px_rgba(1,4,19,.60)]">-->
+        <!--                    <img class="h-fit me-4" src="assets/images/others/settings/{{ settings.source }}.png" alt="{{ settings.source }}">-->
+        <!--                    <figcaption>-->
+        <!--                      <h1 class="mb-0.5 -mt-1 text-[15px] font-medium capitalize text-dark dark:text-white/[.87]">{{ settings.label }}</h1>-->
+        <!--                      <p class="mb-0 text-theme-gray dark:text-white/60">{{ settings.des }} </p>-->
+        <!--                    </figcaption>-->
+        <!--                  </figure>-->
+        <!--                </li>-->
+        <!--              </ul>-->
+        <!--            </perfect-scrollbar>-->
+        <!--          </nz-dropdown-menu>-->
+        <!--        </li>-->
+        <!--        <li>-->
+        <!--          <a class="flex items-center" nz-dropdown [nzDropdownMenu]="popLanguage">-->
+        <!--            <nz-badge>-->
+        <!--              <img class="min-w-[20px] min-h-[20px]" src="assets/images/others/flags/english.png" alt="">-->
+        <!--            </nz-badge>-->
+        <!--          </a>-->
+        <!--          <nz-dropdown-menu #popLanguage="nzDropdownMenu">-->
+        <!--            <ul class="block bg-white dark:bg-[#1b1d2a] rounded-6">-->
+        <!--              <li class="bg-white dark:bg-white/10 hover:bg-primary/10 dark:hover:bg-primary/10">-->
+        <!--                <button class="flex items-center px-3 py-1.5 text-sm text-dark dark:text-white/60">-->
+        <!--                  <img class="w-3.5 h-3.5 me-2" src="assets/images/others/flags/english.png" alt="english">-->
+        <!--                  <span>English</span>-->
+        <!--                </button>-->
+        <!--              </li>-->
+        <!--              <li class="bg-white dark:bg-white/10 hover:bg-primary/10 dark:hover:bg-primary/10">-->
+        <!--                <button class="flex items-center px-3 py-1.5 text-sm text-dark dark:text-white/60">-->
+        <!--                  <img class="w-3.5 h-3.5 me-2" src="assets/images/others/flags/spanish.png" alt="spanish">-->
+        <!--                  <span>Spanish</span>-->
+        <!--                </button>-->
+        <!--              </li>-->
+        <!--              <li class="bg-white dark:bg-white/10 hover:bg-primary/10 dark:hover:bg-primary/10">-->
+        <!--                <button class="flex items-center px-3 py-1.5 text-sm text-dark dark:text-white/60">-->
+        <!--                  <img class="w-3.5 h-3.5 me-2" src="assets/images/others/flags/arabic.png" alt="arabic">-->
+        <!--                  <span>Arabic</span>-->
+        <!--                </button>-->
+        <!--              </li>-->
+        <!--            </ul>-->
+        <!--          </nz-dropdown-menu>-->
+        <!--        </li>-->
+        <li>
+          <span class="flex items-center cursor-pointer text-light whitespace-nowrap" nz-dropdown [nzDropdownMenu]="profile">
+            <nz-avatar [nzIcon]="'user'" nzSrc="assets/images/avatars/thumbs.png"></nz-avatar>
+            <span class="me-1.5 ms-2.5 text-body dark:text-white/60 text-sm font-medium max-md:hidden">{{ teacher[0]?.firstName }} {{ teacher[0]?.lastName }}</span>
+            <span class="[&>svg]:w-[10px] [&>svg]:h-[10px] [&>svg]:max-md:ms-[5px]" nz-icon nzType="down" nzTheme="outline"></span>
+          </span>
+          <nz-dropdown-menu #profile="nzDropdownMenu">
+            <div class="min-w-[310px] max-sm:min-w-full pt-4 px-[15px] py-[12px] bg-white dark:bg-[#1b1e2b] shadow-[0_2px_8px_rgba(0,0,0,.15)] dark:shadow-[0_5px_30px_rgba(1,4,19,.60)] rounded-4">
+              <figure
+                class="flex items-center text-sm rounded-[8px] bg-section dark:bg-white/10 py-[20px] px-[25px] mb-[12px]">
+                <nz-avatar [nzIcon]="'user'" nzSrc="assets/images/avatars/thumbs.png" class="me-4"></nz-avatar>
+                <figcaption>
+                  <h1 class="text-dark dark:text-white/[.87] mb-0.5 text-sm">{{ teacher[0]?.firstName }} {{ teacher[0]?.lastName }}</h1>
+                  <p class="mb-0 text-xs text-body dark:text-white/60">[PH]</p>
+                </figcaption>
+              </figure>
+              <ul nz-menu class="mb-0 bg-transparent shadow-none">
+                <li class="p-0 dark:hover:text-white hover:bg-primary/10 dark:hover:bg-white/10 rounded-4" nz-menu-item *ngFor="let authorMenu of appAuthorMenu">
+                  <button
+                    class="inline-flex items-center text-light dark:text-white/60 hover:text-primary hover:ps-6 w-full px-2.5 py-3 text-sm transition-all ease-in-out delay-150">
+                    <svg-icon class="h-fit me-4 [&>svg]:w-[18px] [&>svg]:h-[18px]" src="assets/images/svg/feather/{{authorMenu.icon}}.svg" alt="{{authorMenu.icon}}"></svg-icon>
+                    {{authorMenu.label}}</button>
+                </li>
+              </ul>
+              <a
+                class="flex items-center justify-center text-sm font-medium bg-[#f4f5f7] dark:bg-[#32333f] h-[50px] text-light hover:text-primary dark:hover:text-white/60 dark:text-white/[.87] mx-[-15px] mb-[-15px] rounded-b-6"
+                href="#" (click)="signOut()">
+                <i class="facebook"></i> Sign Out</a>
+            </div>
+          </nz-dropdown-menu>
+        </li>
+      </ul>
+    </ng-template>
+    <!-- desktop -->
+    <!-- Mobile -->
+    <a class="items-center hidden max-xl:flex text-light text-[18px] dark:text-white/[.87] ms-auto" nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+      <span nz-icon nzType="more" nzTheme="outline"></span>
+    </a>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <div class="bg-white dark:bg-[#1b1c29] px-[20px] py-[6px] rounded-6 hidden max-xl:block">
+        <ng-container *ngTemplateOutlet="myTemplate"></ng-container>
+      </div>
+    </nz-dropdown-menu>
+    <!-- Mobile -->
+  </div>
+</div>

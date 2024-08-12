@@ -1,0 +1,113 @@
+<div nz-row nzGutter="25" class="mt-[4px]" nzJustify="center">
+  <div nz-col nzMd="12" class="mb-[25px]">
+  <div class="flex flex-1 nav-wrap md:ps-[20px] md:pe-[30px] ps-[10px] pe-[15px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class="flex items-center flex-wrap gap-[20px] max-md:justify-center">
+        <ng-container *ngIf="showContent; else loadingSkeleton">
+          <button nz-button
+                  class="inline-flex items-center bg-transparent border-none shadow-none text-[14px] capitalize font-medium text-theme-gray dark:text-white/60 gap-[4px] p-0 hover:text-primary group transition-all duration-200"
+                  (click)="closeGrader()">
+            <svg-icon class="w-[22px] h-[22px] text-body dark:text-white/60  text-[14px] group-hover:text-primary"
+                      src="assets/images/svg/unicons-line/arrow-left.svg"></svg-icon>
+            <span class="m-0">go back</span>
+          </button>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+  </div>
+  <div nz-col nzMd="12" class="mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <div class="flex items-center justify-end max-sm:justify-center gap-[20px] flex-wrap">
+      <div class="flex flex-wrap items-center gap-[20px] max-sm:justify-center">
+        <span class="text-theme-gray dark:text-white/60">Submission By:</span>
+        <nz-select
+          class="min-w-[260px] capitalize [&>nz-select-top-control]:border-none [&>nz-select-top-control]:bg-white [&>nz-select-top-control]:dark:bg-white/10 [&>nz-select-top-control]:shadow-none [&>nz-select-top-control]:text-dark [&>nz-select-top-control]:dark:text-white/60 [&>nz-select-top-control]:h-[40px] [&>nz-select-top-control]:flex [&>nz-select-top-control]:items-center [&>nz-select-top-control]:rounded-[4px] [&>nz-select-top-control]:px-[20px]"
+          [(ngModel)]="selectedStudentId"
+          (ngModelChange)="updateContent($event)">
+          <nz-option *ngFor="let student of subjectEnrollments" [nzValue]="student.student.id"
+                     [nzLabel]="student.student.firstName + ' ' + student.student.lastName"></nz-option>
+        </nz-select>
+      </div>
+    </div>
+  </ng-container>
+  </div>
+</div>
+
+<div class="pt-12"> <!-- Add padding-top here -->
+  <div nz-row class="w-full">
+    <ng-template #loadingSkeleton>
+      <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true"
+                   [nzParagraph]="{ rows: 7 }"></nz-skeleton>
+    </ng-template>
+
+    <div nz-col nzXXl="19" nzMd="16" nzXs="24" class="mb-[25px]"> <!-- Add border class here -->
+      <ng-container *ngIf="showContent && submissionContent; else loadingSkeleton">
+        <div class="relative p-0 m-0 bg-white dark:bg-white/10">
+          <div
+            class="h-[60px] ssm:h-auto px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+                      <p [innerHTML]="submissionContent" class="inline-block mb-[15px] text-body dark:text-white/60 overflow-y-auto p-4"></p>
+                    </div>
+<!--          <ngx-extended-pdf-viewer [src]="'https://s29.q4cdn.com/175625835/files/doc_downloads/test.pdf'"></ngx-extended-pdf-viewer>-->
+          <!-- <div class="static bg-white dark:bg-[#212e3d] pt-[54px] border-1 border-normal dark:border-white/10 rounded-10 dark:shadow-none z-998 sm:min-w-[400px]">
+            <div class="relative px-[30px] max-ssm:px-[15px] editor-style1">
+              <ng-container class="h-screen">
+                <editor id="editor" (ngModelChange)="modelChangeFn($event)" [(ngModel)]="submissionContent"
+                        apiKey="9ao97tdbbojmeeefmu2vif9zvwfh1xj75ae0r4q32r483gto" #editor [init]="editorConfig"></editor>
+
+              </ng-container>
+            </div>
+            <div class="flex items-center justify-between mx-[30px] pt-[20px] pb-[30px] border-t border-regular dark:border-white/10">
+            </div>
+          </div> -->
+
+
+        </div>
+      </ng-container>
+
+    </div>
+    <div *ngIf="showContent else loadingSkeleton" nz-col nzXXl="5" nzMd="8" nzXs="24" class="mb-[25px]"> <!-- Add border class here -->
+      <ng-container>
+        <div
+          class="h-[60px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+          <div class="p-[25px]">
+            <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+              <nz-form-item>
+                <nz-form-label class="flex items-center font-medium dark:text-white/60 mb-[10px]" nzXs="24"
+                               nzFor="textarea2">Grade out of 10
+                </nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
+                  <input
+                    class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                    nz-input placeholder="Basic usage" formControlName="grade" id="grade"
+                    [disabled]="hasStudentBeenGraded(selectedStudentId)"/>
+                </nz-form-control>
+              </nz-form-item>
+
+
+              <nz-form-item class="mb-[25px]">
+                <nz-form-label class="flex items-center font-medium dark:text-white/60 mb-[10px]" nzXs="24"
+                               nzFor="textarea1">Comments
+                </nz-form-label>
+                <nz-form-control nzXs="24" nzErrorTip="The input is not valid E-mail!">
+                  <textarea [disabled]="hasStudentBeenGraded(selectedStudentId)"
+                            class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60"
+                            nz-input formControlName="comments" id="comments"></textarea>
+                </nz-form-control>
+              </nz-form-item>
+            </form>
+            <div class="flex items-center justify-end max-md:justify-center">
+              <button
+                class="flex items-center px-[25px] text-sm text-white font-semibold bg-primary border-primary h-11 gap-[6px]"
+                [disabled]="hasStudentBeenGraded(selectedStudentId)" (click)="submitForm()"
+                nz-button>
+                <span class="m-0">Submit</span>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

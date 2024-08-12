@@ -1,0 +1,39 @@
+<div nz-row [nzGutter]="25">
+  <!-- skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton [nzAvatar]="true" class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle"
+      [nzActive]="true" [nzParagraph]="{ rows: 5 }"></nz-skeleton>
+  </ng-template>
+  <!-- skeleton -->
+
+  <!-- overview List -->
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-saleReport></nz-saleReport>
+    </ng-container>
+  </div>
+  <!-- end: overview List -->
+
+  <!-- overview List -->
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-saleGrowth></nz-saleGrowth>
+    </ng-container>
+  </div>
+  <!-- end: overview List -->
+  <!-- overview List -->
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-saleRevenue></nz-saleRevenue>
+    </ng-container>
+  </div>
+  <!-- end: overview List -->
+
+  <!-- overview List -->
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <nz-sourceRevenueGenerated></nz-sourceRevenueGenerated>
+    </ng-container>
+  </div>
+  <!-- end: overview List -->
+</div>

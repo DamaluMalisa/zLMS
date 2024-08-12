@@ -1,0 +1,189 @@
+.side-nav {
+  width: 280px;
+  overflow-y: auto;
+
+    @include screen-tablet {
+      inset-inline-start: -280px;
+    }
+
+    @include screen-laptop-only {
+        width: 230px;
+    }
+
+    .side-nav-menu {
+        margin-bottom: 72px;
+        margin-top: 18px;
+
+        &:not(.ant-menu-inline-collapsed) {
+            .dropdown-menu {
+                display: none;
+            }
+
+            .ant-menu-submenu-open {
+
+                > .dropdown-menu {
+                    display: block !important;
+                }
+            }
+        }
+
+        &.ant-menu-inline-collapsed {
+
+            .ant-menu-submenu {
+                position: relative;
+
+                .ant-menu {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    min-width: 200px;
+                    max-width: 250px;
+                    margin-inline-start: 4px;
+                    border-radius: .25rem;
+                }
+
+                &:hover {
+                    >.ant-menu {
+                      display: block;
+                    }
+                }
+
+                &.ant-menu-submenu-inline {
+
+                    > .ant-menu-submenu-title {
+
+                        .ant-menu-submenu-arrow {
+
+                            &:after {
+                                @include transform(rotate(-45deg) translateX(-2px));
+                            }
+
+                            &:before {
+                                @include transform(rotate(-130deg) translateX(2px));
+                            }
+                        }
+                    }
+                }
+            }
+
+            .p-l-50 {
+                padding-inline-start: 20px !important;
+            }
+
+            .p-l-30 {
+                padding-inline-start: 0px !important;
+            }
+        }
+    }
+}
+
+.is-folded {
+    .side-nav {
+        width: 80px;
+
+        .ant-menu-inline-collapsed {
+            width: 80px - 1px;
+        }
+    }
+
+    .custom-scrollbar {
+        overflow: visible;
+
+        .ps {
+            overflow: auto !important;
+            scrollbar-width: none;
+            scrollbar-color: transparent transparent;
+        }
+
+        .ps::-webkit-scrollbar {
+          width: 0;
+          background-color: transparent;
+        }
+        .ps::-webkit-scrollbar-thumb {
+          background-color: transparent;
+        }
+
+        .ps__rail-y,
+        .ps__rail-x {
+            display: none;
+        }
+    }
+}
+
+.ant-menu-item .ant-menu-item-icon + span, .ant-menu-submenu-title .ant-menu-item-icon + span, .ant-menu-item .anticon + span, .ant-menu-submenu-title .anticon + span{
+  margin: 0;
+  margin-inline-start: 10px;
+}
+
+.ant-menu-submenu-title .anticon{
+margin-top: -2px;
+}
+
+
+.ant-menu-submenu-expand-icon, .ant-menu-submenu-arrow{
+  left: auto;
+  right: auto;
+  inset-inline-end: 30px;
+}
+
+.ant-menu-inline .ant-menu-submenu-title{
+  padding: 0;
+  padding-inline-start: 30px;
+  padding-inline-end: 35px;
+}
+.side-nav-menu{
+  &.ant-menu-inline{
+    .ant-menu-item{
+      padding: 0 30px !important;
+      a{
+        @apply flex items-center;
+      }
+    }
+    .ant-menu-submenu{
+      .ant-menu{
+        .ant-menu-item{
+          @apply h-[36px] leading-[36px];
+        }
+      }
+    }
+    .ant-menu-submenu-title{
+      @apply mt-1 mb-1 text-dark dark:text-white/[.87] dark:hover:text-primary;
+    }
+  }
+}
+
+
+.is-expand {
+    @include screen-tablet {
+        .side-nav {
+            inset-inline-start: 0px;
+        }
+    }
+}
+
+.ant-menu-inline.ant-menu-sub  .ant-menu-item a{
+  padding-inline-start: 30px;
+}
+.ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title{
+  padding-inline-start: 60px;
+}
+
+.ant-menu-inline .ant-menu-submenu .ant-menu-submenu .ant-menu-sub .ant-menu-item a{
+  padding-inline-start: 45px;
+  text-transform: capitalize;
+}
+
+.ant-menu-inline-collapsed{
+  .ant-menu-inline.ant-menu-sub  .ant-menu-item a{
+    padding-inline-start: 0;
+  }
+  .ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title{
+    padding-inline-start:0 ;
+  }
+  &.ant-menu-inline .ant-menu-submenu .ant-menu-submenu{
+    padding: 0 30px;
+  }
+  &.ant-menu-inline .ant-menu-submenu .ant-menu-submenu .ant-menu-sub .ant-menu-item a{
+    padding-inline-start: 0;
+  }
+}

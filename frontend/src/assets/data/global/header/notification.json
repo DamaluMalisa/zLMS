@@ -1,0 +1,44 @@
+{
+  "appNotification": [
+    {
+      "link": "javascript:void(0);",
+      "name": "Ibrahim Riaz",
+      "message": "sent you a message",
+      "timestamp": "3 hours ago",
+      "icon": "heart",
+      "badge":"warning"
+    },
+  {
+    "link": "javascript:void(0);",
+    "name": "Shamim Ahmed",
+    "message": "sent you a message",
+    "timestamp": "3 hours ago",
+    "icon": "inbox",
+    "badge":"primary"
+  },
+  {
+    "link": "javascript:void(0);",
+    "name": "Tanjim Ahmed",
+    "message": "sent you a message",
+    "timestamp": "2 hours ago",
+    "icon": "upload",
+    "badge":"secondary"
+  },
+  {
+    "link": "javascript:void(0);",
+    "name": "Masud Rana",
+    "message": "sent you a message",
+    "timestamp": "9 hours ago",
+    "icon": "log-out",
+    "badge":"info"
+  },
+  {
+    "link": "javascript:void(0);",
+    "name": "Abdur Rahim",
+    "message": "sent you a message",
+    "timestamp": "1 min ago",
+    "icon": "at-sign",
+    "badge":"danger"
+  }
+]
+}

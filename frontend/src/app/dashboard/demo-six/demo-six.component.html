@@ -1,0 +1,97 @@
+<div nz-row [nzGutter]="25">
+  <!-- skeleton -->
+<ng-template #loadingSkeleton>
+  <nz-skeleton [nzAvatar]="true" class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true" [nzParagraph]="{ rows: 4 }"></nz-skeleton>
+</ng-template>
+  <!-- skeleton -->
+
+<!-- overview List -->
+<div nz-col nzXs="24" class="[&>.ant-skeleton]:mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-overview-six></nz-overview-six>
+  </ng-container>
+</div>
+<!-- end: overview List -->
+
+<!-- sales revenue -->
+<div nz-col nzXs="24" nzXl="10" nzXXl="8" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-saleGrowth-status
+    [chartOptions]="customChartOptions1"
+    [customColors]="customColors1"
+    [chartTitle]="customChartTitle1"
+    [totalTime]="totalTime1"
+    [chartStatusNumber]="chartStatusNumber1"
+    [chartStatus]="chartStatus1"
+    [chartStatusPercent]="chartStatusPercent1"
+    [chartStatusIcon]="chartStatusIcon1"
+    ></nz-saleGrowth-status>
+  </ng-container>
+</div>
+<!-- end: sales revenue -->
+
+<!-- source revenue -->
+<div nz-col nzXs="24" nzXl="10" nzXXl="8" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-saleGrowth-status
+    [chartOptions]="customChartOptions2"
+    [customColors]="customColors2"
+    [chartTitle]="customChartTitle2"
+    [totalTime]="totalTime2"
+    [chartStatusNumber]="chartStatusNumber2"
+    [chartStatus]="chartStatus2"
+    [chartStatusPercent]="chartStatusPercent2"
+    [chartStatusIcon]="chartStatusIcon2"
+  ></nz-saleGrowth-status>
+  </ng-container>
+</div>
+<!-- end: source revenue -->
+
+<!-- source revenue -->
+<div nz-col nzXs="24" nzXl="10" nzXXl="8" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-saleGrowth-status
+    [chartOptions]="customChartOptions3"
+    [customColors]="customColors3"
+    [chartTitle]="customChartTitle3"
+    [totalTime]="totalTime3"
+    [chartStatusNumber]="chartStatusNumber3"
+    [chartStatus]="chartStatus3"
+    [chartStatusPercent]="chartStatusPercent3"
+    [chartStatusIcon]="chartStatusIcon3"
+  ></nz-saleGrowth-status>
+  </ng-container>
+</div>
+<!-- end: source revenue -->
+
+<!-- new product -->
+<div nz-col nzXs="24" nzXl="10" nzXXl="8" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-saleOverview></nz-saleOverview>
+  </ng-container>
+</div>
+<!-- end: new product -->
+
+<!-- Best Seller -->
+<div nz-col nzXs="24" nzXXl="16" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-saleLocation></nz-saleLocation>
+  </ng-container>
+</div>
+<!-- end: Best Seller -->
+
+<!-- Top Selling -->
+<div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-topSelling [componentId]="'component3'"></nz-topSelling>
+  </ng-container>
+</div>
+
+<!-- Top Selling -->
+<div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <nz-browserStates></nz-browserStates>
+  </ng-container>
+</div>
+
+</div>

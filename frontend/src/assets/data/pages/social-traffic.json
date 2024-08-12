@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "name": "facebook",
+      "traffic": "38,536",
+      "progress": "80",
+      "type":"primary"
+    },
+    {
+      "id": 2,
+      "name": "instagram",
+      "traffic": "28,536",
+      "progress": "70",
+      "type":"secondary"
+    },
+    {
+      "id": 3,
+      "name": "whatsApp",
+      "traffic": "18,536",
+      "progress": "60",
+      "type":"info"
+    },
+    {
+      "id": 4,
+      "name": "twitter",
+      "traffic": "15,536",
+      "progress": "50",
+      "type":"success"
+    },
+    {
+      "id": 5,
+      "name": "youtube",
+      "traffic": "10,536",
+      "progress": "70",
+      "type":"warning"
+    },
+    {
+      "id": 6,
+      "name": "linkedin",
+      "traffic": "9,536",
+      "progress": "70",
+      "type":"danger"
+    }
+]
