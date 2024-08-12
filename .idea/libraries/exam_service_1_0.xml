@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="exam-service-1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/backend/exam-service/target/exam-service-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

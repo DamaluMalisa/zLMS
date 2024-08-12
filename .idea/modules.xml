@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Learning-management-system-main.iml" filepath="$PROJECT_DIR$/.idea/Learning-management-system-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/backend/api-gateway/api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/config-server/config-server.iml" filepath="$PROJECT_DIR$/backend/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/backend/discovery-server/discovery-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/faculty-service/src/main/main.iml" filepath="$PROJECT_DIR$/backend/faculty-service/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/subject-service/src/main/main1.iml" filepath="$PROJECT_DIR$/backend/subject-service/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/auth-service/src/main/main2.iml" filepath="$PROJECT_DIR$/backend/auth-service/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/exam-service/src/main/main3.iml" filepath="$PROJECT_DIR$/backend/exam-service/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/exam-service/target/target.iml" filepath="$PROJECT_DIR$/backend/exam-service/target/target.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/auth-service/target/target1.iml" filepath="$PROJECT_DIR$/backend/auth-service/target/target1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/subject-service/target/target2.iml" filepath="$PROJECT_DIR$/backend/subject-service/target/target2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/faculty-service/target/target3.iml" filepath="$PROJECT_DIR$/backend/faculty-service/target/target3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/auth-service/src/test/test.iml" filepath="$PROJECT_DIR$/backend/auth-service/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/faculty-service/src/test/test1.iml" filepath="$PROJECT_DIR$/backend/faculty-service/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/subject-service/src/test/test2.iml" filepath="$PROJECT_DIR$/backend/subject-service/src/test/test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/exam-service/src/test/test3.iml" filepath="$PROJECT_DIR$/backend/exam-service/src/test/test3.iml" />
+    </modules>
+  </component>
+</project>

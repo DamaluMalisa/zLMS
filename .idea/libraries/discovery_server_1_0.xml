@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="discovery-server-1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/backend/discovery-server/target/discovery-server-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
