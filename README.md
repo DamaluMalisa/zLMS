@@ -1,6 +1,6 @@
-# Learning management system
+# Zahara Learning management system
 
-University's Learning managment system web application built with Spring and Angular.
+University's Learning management system web application built with Spring and Angular.
 
 There are four groups of users: guests, students, teachers, administrators.
 
@@ -16,8 +16,6 @@ The backend is implemented with microservices architecture and database per serv
 
 Authentication and authorization are realized with JWT, including access and refresh tokens.
 
-![system-architecture](https://user-images.githubusercontent.com/66832914/184617342-b7a26ee3-f7be-4aba-914c-4a2a8dfc3749.jpg)
-
 ## Technologies used
 
 - Spring Boot
@@ -27,3 +25,23 @@ Authentication and authorization are realized with JWT, including access and ref
 - Angular Material
 - TailwindCSS
 - Docker
+
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/Screenshot%20from%202024-08-12%2012-16-43.png)
+
+### Assignment Page
+![Assignment Page](screenshots/Screenshot%20from%202024-08-12%2012-17-00.png)
+
+### Announcement Page
+![Announcement Page](screenshots/Screenshot%20from%202024-08-12%2012-17-13.png)
+
+### Take Quiz Page
+![Take Quiz Page](screenshots/Screenshot%20from%202024-08-12%2012-18-45.png)
+
+### People Page
+![People Page](screenshots/Screenshot%20from%202024-08-12%2012-19-58.png)
+
+### Notes Page
+![Notes Page](screenshots/Screenshot%20from%202024-08-12%2012-20-24.png)
